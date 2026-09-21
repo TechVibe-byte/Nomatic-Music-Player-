@@ -1,0 +1,6 @@
+{
+  "name": "Nomatic Music player",
+  "description": "Nomatic Music player - modern music PWA with YouTube audio and video playback, sleep timer, playlists, and background playback capabilities.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

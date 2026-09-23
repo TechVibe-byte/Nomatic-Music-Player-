@@ -16,6 +16,7 @@ interface MobileMiniPlayerProps {
   onToggleNowPlaying: () => void;
   isSleepTimerActive?: boolean;
   sleepTimerRemaining?: string | null;
+  onOpenVlcFullMode?: () => void;
 }
 
 export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
@@ -32,6 +33,7 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
   onToggleNowPlaying,
   isSleepTimerActive = false,
   sleepTimerRemaining,
+  onOpenVlcFullMode,
 }) => {
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -67,9 +69,15 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
       </div>
 
       <div className="h-14 px-3 flex items-center justify-between gap-2.5">
-        {/* Left: Artwork & Track Info (Tap to expand full screen Now Playing player) */}
+        {/* Left: Artwork & Track Info (Tap to expand full screen player) */}
         <div 
-          onClick={onToggleNowPlaying}
+          onClick={() => {
+            if (playbackMode === 'video' && onOpenVlcFullMode) {
+              onOpenVlcFullMode();
+            } else {
+              onToggleNowPlaying();
+            }
+          }}
           className="flex items-center gap-2.5 min-w-0 flex-1 cursor-pointer py-1 active:opacity-80 transition-opacity"
         >
           <div className="relative w-10 h-10 rounded-md overflow-hidden bg-neutral-800 flex-shrink-0 shadow-sm border border-neutral-700/50">

@@ -2640,10 +2640,533 @@ export const INITIAL_TRACKS: Track[] = [
     "tags": [
       "International"
     ]
+  },
+  {
+    "id": "yt-7w7LUaLpM4E",
+    "youtubeId": "7w7LUaLpM4E",
+    "youtubeUrl": "https://www.youtube.com/watch?v=7w7LUaLpM4E",
+    "title": "MALLEPOOLA PALLAKI 8K VIDEO | RAVI TEJA | GV PRAKASH | DAPPU SRINU | IRUMUDI | AYYAPPA SONG",
+    "artist": "T-Series and T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCakPFXX1iG2MLUjjdvUN4dsNiKgQ",
+    "duration": 183,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-NhWaRfiqeCs",
+    "youtubeId": "NhWaRfiqeCs",
+    "youtubeUrl": "https://www.youtube.com/watch?v=NhWaRfiqeCs",
+    "title": "IRUMUDI KATTU: Ravi Teja | GV Prakash Kumar | Ananthu | Shiva Nirvana | Irumudi | #Ayyappa 2026",
+    "artist": "T-Series Bhakti Sagar Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/NhWaRfiqeCs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXdlcBM6sKPVENsWQQnGd3ZL1ZSQ",
+    "duration": 255,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-ov6T2FG-4wk",
+    "youtubeId": "ov6T2FG-4wk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ov6T2FG-4wk",
+    "title": "Ravana Sandanalo Ayyappa | Naarsingi Narsing Rao Ayyappa Songs | SVC Recording Company",
+    "artist": "SVC Recording Company",
+    "thumbnail": "https://i.ytimg.com/vi/ov6T2FG-4wk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABxKANDX9gHVKDuRnSUXR8TtAxJg",
+    "duration": 301,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-L9nI3LLRE40",
+    "youtubeId": "L9nI3LLRE40",
+    "youtubeUrl": "https://www.youtube.com/watch?v=L9nI3LLRE40",
+    "title": "Pandalaraja Panchagireesha | Naarsingi Narsing Rao Ayyappa Song | SVC Recording Company",
+    "artist": "SVC Recording Company",
+    "thumbnail": "https://i.ytimg.com/vi/L9nI3LLRE40/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOasKIpV_CvFL8HbgVqszWXAR9xg",
+    "duration": 319,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-BOjJGALm2kQ",
+    "youtubeId": "BOjJGALm2kQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=BOjJGALm2kQ",
+    "title": "హరివరాసనం || Popular Ayyappa Song by K.J.Yesudas | Ayyappa Swamy Songs | #ayyappaswamysongs",
+    "artist": "Aditya Bhakthi",
+    "thumbnail": "https://i.ytimg.com/vi/BOjJGALm2kQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHd6m-kGZKQ0yHUDo3mCWtBZJROw",
+    "duration": 299,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-JnLrW819tSM",
+    "youtubeId": "JnLrW819tSM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=JnLrW819tSM",
+    "title": "శరణం అయ్యప్ప Ayyappa Song 2024 | TanuSree_KDS | Aeindri Productions | Ayyappa Devotional Song",
+    "artist": "Aeindri Productions",
+    "thumbnail": "https://i.ytimg.com/vi/JnLrW819tSM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOVcpnRrg5o9uzr4lvEJR-pcYEKQ",
+    "duration": 273,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-FpjJgHkroDI",
+    "youtubeId": "FpjJgHkroDI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=FpjJgHkroDI",
+    "title": "Irumudikattu Sabarimalaikku - Lord Ayyappa Swamy Telugu Devotional Songs - Hindu Devotional Songs",
+    "artist": "mcvideostelugu",
+    "thumbnail": "https://i.ytimg.com/vi/FpjJgHkroDI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARt9KgLgDsTR9EVBN1HcRUmUCEHQ",
+    "duration": 290,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-400q5rKZoEw",
+    "youtubeId": "400q5rKZoEw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=400q5rKZoEw",
+    "title": "Ayyappa Swamy Songs | O Jeevama Naa Prana Deepama FULL Song | Bhakti Patalu | Peddapuli Eshwar",
+    "artist": "Peddapuli Eshwar Audios & Videos",
+    "thumbnail": "https://i.ytimg.com/vi/400q5rKZoEw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByPdAVpCfwxkcmbG7YuEQDLPuAXQ",
+    "duration": 335,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-CdMo9iS6SlI",
+    "youtubeId": "CdMo9iS6SlI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=CdMo9iS6SlI",
+    "title": "BALA SWAMY NI BANGARU AYYAPPA FULL SONG | AYYAPPA SWAMY NEW SONG 2024 | NAKSHATRA STUDIOS |",
+    "artist": "Nakshatra Studios",
+    "thumbnail": "https://i.ytimg.com/vi/CdMo9iS6SlI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD3NJaIUonEafacHkw9GJQsscD_1Q",
+    "duration": 303,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-pNGdT5obEys",
+    "youtubeId": "pNGdT5obEys",
+    "youtubeUrl": "https://www.youtube.com/watch?v=pNGdT5obEys",
+    "title": "Devullu Songs - Ayyappa Devaya - Tanish, Prithvi, Raasi - HD",
+    "artist": "Volga Video",
+    "thumbnail": "https://i.ytimg.com/vi/pNGdT5obEys/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBF4urvFCYVn9PM8qFupQq2jShEAw",
+    "duration": 367,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-317vzk6lEcA",
+    "youtubeId": "317vzk6lEcA",
+    "youtubeUrl": "https://www.youtube.com/watch?v=317vzk6lEcA",
+    "title": "AYYAPPA SWAMY NEW FULL SONG || DJ 2024 SONG || STILL VIJAY || VR TALKIES DEVOTIONAL",
+    "artist": "VR Talkies Devotional",
+    "thumbnail": "https://i.ytimg.com/vi/317vzk6lEcA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAA28zKHv9gcyF6BOP9xONtEAGA9g",
+    "duration": 451,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-1ajrWfrDRF8",
+    "youtubeId": "1ajrWfrDRF8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=1ajrWfrDRF8",
+    "title": "Naa Swamy Ayyappa Full Song | Irumudi Song | Sharanu Gosha | Ayyappa Songs | AI Music & Visuals",
+    "artist": "Gaanam Ai",
+    "thumbnail": "https://i.ytimg.com/vi/1ajrWfrDRF8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiRXwwT8mnUpjNoTiDPzgeV4DoYQ",
+    "duration": 287,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-7dAO1cQLR-0",
+    "youtubeId": "7dAO1cQLR-0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=7dAO1cQLR-0",
+    "title": "Ayyappa Swamy songs in 2026   | Ayyappa Devotional Songs",
+    "artist": "Sailu Sunshine",
+    "thumbnail": "https://i.ytimg.com/vi/7dAO1cQLR-0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IE8oFjAP&rs=AOn4CLCvFubNPWLAxZe3eof16RaNX7VFnA",
+    "duration": 2475,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-O_yjeMdYlyk",
+    "youtubeId": "O_yjeMdYlyk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=O_yjeMdYlyk",
+    "title": "Avarannarayya nuvvu levani Ayyappa Swamy Song 2023 | 4K | Gangaputra Narsingh rao | Jdl Official",
+    "artist": "JDL officials",
+    "thumbnail": "https://i.ytimg.com/vi/O_yjeMdYlyk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkCG56ueAdX2pU0PKpP1kk7Nm9LQ",
+    "duration": 358,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-VwzAKZ-NPtE",
+    "youtubeId": "VwzAKZ-NPtE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VwzAKZ-NPtE",
+    "title": "Mallepula Pallaki Bangaru Pallaki || Dappu  Srinu || Tunewave Music",
+    "artist": "TW Devotional",
+    "thumbnail": "https://i.ytimg.com/vi/VwzAKZ-NPtE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0jz8bnmaIsr7E4r8ILdbqADdrlg",
+    "duration": 250,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-sOfh139UMww",
+    "youtubeId": "sOfh139UMww",
+    "youtubeUrl": "https://www.youtube.com/watch?v=sOfh139UMww",
+    "title": "Ayyappa Super Hit Songs 2019 | Nanu Nee Vaadanukuni | Ayyappa Swamy Song | Amulya Audios And Videos",
+    "artist": "Amulya Audios and Videos",
+    "thumbnail": "https://i.ytimg.com/vi/sOfh139UMww/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYUos_hBbF50O3sHclRUrolC1YCg",
+    "duration": 321,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-ad_fXyIabVo",
+    "youtubeId": "ad_fXyIabVo",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ad_fXyIabVo",
+    "title": "Bhagavan Saranam Bagavathi Saranam With Lyrics | భగవాన్ శరణం భగవతి శరణం తెలుగు | Ayyappa Swamy Songs",
+    "artist": "Bhakthi Channel - Bhakthi TV",
+    "thumbnail": "https://i.ytimg.com/vi/ad_fXyIabVo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2R0cnMnGu6X0P3oNh6YTf4IaMAQ",
+    "duration": 366,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-ymuUXrxpywU",
+    "youtubeId": "ymuUXrxpywU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ymuUXrxpywU",
+    "title": "Evergreen Ayyappa Swamy Songs | Juke box | Latest Ayyappa Swamy Songs Telugu | Best Manikanta Songs",
+    "artist": "PK Devotional Tunes",
+    "thumbnail": "https://i.ytimg.com/vi/ymuUXrxpywU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWYS3iRjRHUPEiFfBXhcP39TGiOA",
+    "duration": 4368,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-gPH4erPbpPc",
+    "youtubeId": "gPH4erPbpPc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=gPH4erPbpPc",
+    "title": "Harivarasanam | ഹരിവരാസനം | ஹரிவராசனம் | Ayyappa Devotional Song by Shree Naval Kishori",
+    "artist": "Shree Naval Kishori",
+    "thumbnail": "https://i.ytimg.com/vi/gPH4erPbpPc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvfBwAIB5uNCWRQmUNRm96qEDTyA",
+    "duration": 470,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-IzePl-nFml8",
+    "youtubeId": "IzePl-nFml8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=IzePl-nFml8",
+    "title": "Ayyappa Song 2025 || Singer Version || Singer Karthika Jadav || Santhosh Sheri",
+    "artist": "Aeindri Productions",
+    "thumbnail": "https://i.ytimg.com/vi/IzePl-nFml8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDM68Vb54S3gVjaAFSJJ1C9W8qi4w",
+    "duration": 243,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-MlfPCYAt9cE",
+    "youtubeId": "MlfPCYAt9cE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=MlfPCYAt9cE",
+    "title": "IRUMUDI KATTESINAM FULL SONG | NEW AYYAPPA SWAMY SONG 2024 | VAGDEVI | RAJENDER KONDA | MADEEN SK",
+    "artist": "JDL MUSIC",
+    "thumbnail": "https://i.ytimg.com/vi/MlfPCYAt9cE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFxdjF6c5tAtX6yOJYw2pLGw5C4w",
+    "duration": 282,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-g3bboQt37x0",
+    "youtubeId": "g3bboQt37x0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=g3bboQt37x0",
+    "title": "pallikattu sabarimalaikku #hindu #devotional #song #sabarimala #ayyappa",
+    "artist": "Old South Indian songs ",
+    "thumbnail": "https://i.ytimg.com/vi/g3bboQt37x0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAsIDigIMCAAQARhyIE8oRDAP&rs=AOn4CLAZpsZtZyOhsADDvHj3I_BX6Eiy7Q",
+    "duration": 403,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-9hXWHiAJNcU",
+    "youtubeId": "9hXWHiAJNcU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=9hXWHiAJNcU",
+    "title": "Pacha Pachani Chettura | Lord Ayyappa Devotional Songs | Telugu Bhakti Songs | Amulya Audios",
+    "artist": "Amulya Audios and Videos",
+    "thumbnail": "https://i.ytimg.com/vi/9hXWHiAJNcU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQoMbl3mm0sn1RvfamMspZ5XE7Zw",
+    "duration": 473,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-HwBRWbQP_CU",
+    "youtubeId": "HwBRWbQP_CU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=HwBRWbQP_CU",
+    "title": "Ayyappa Ani pilichina Palukavu Remix Rakesh Lucky",
+    "artist": "DJ RAKESH LUCKY OFFICIAL ",
+    "thumbnail": "https://i.ytimg.com/vi/HwBRWbQP_CU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZK8MokKTf3T3t9oXyXeycJ_yDSA",
+    "duration": 325,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-ZMwWgSyX9FQ",
+    "youtubeId": "ZMwWgSyX9FQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZMwWgSyX9FQ",
+    "title": "NEE KONDAKU RAVALANI UNDI AYYAPPA FULL SONG | AYYAPPA SWAMY NEW SONG 2025 | NAKSHATRA STUDIOS |",
+    "artist": "Nakshatra Studios",
+    "thumbnail": "https://i.ytimg.com/vi/ZMwWgSyX9FQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJEJtHvDPZjvv2ZbBLpd2AfEH6Jw",
+    "duration": 377,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-zV0lDPtAUxw",
+    "youtubeId": "zV0lDPtAUxw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=zV0lDPtAUxw",
+    "title": "Ayyappa Swamy Special Songs | Pallikattu Sabarimalaiki | Telugu Devotional Songs | Devotional  TV",
+    "artist": "Devotional TV",
+    "thumbnail": "https://i.ytimg.com/vi/zV0lDPtAUxw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLMg1Edi-AHKYoZn5vEydFM2qXfg",
+    "duration": 424,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-GOiT1lxmEdI",
+    "youtubeId": "GOiT1lxmEdI",
+    "youtubeUrl": "https://www.youtube.com/watch?v=GOiT1lxmEdI",
+    "title": "శివరాత్రి పాట 2025...నల్లగొండ గద్దర్ ..NEW SONG / RAVI KALYAN // MATLA THIRUPATHI // NALGONDA GADDAR",
+    "artist": "Nalgonda Gaddar Narsanna Official",
+    "thumbnail": "https://i.ytimg.com/vi/GOiT1lxmEdI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBviBQFFFzSsMuG4T1oaHvq2HeHeg",
+    "duration": 283,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-WapW5oW71TU",
+    "youtubeId": "WapW5oW71TU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=WapW5oW71TU",
+    "title": "Ninnu Chudaka Ayyappa Song | Ayyappa Swamy Special Devotional Songs | Amulya Audios and Videos",
+    "artist": "Amulya Audios and Videos",
+    "thumbnail": "https://i.ytimg.com/vi/WapW5oW71TU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLE4IXxFVdWE_bB-S2sWBFTSW1_A",
+    "duration": 446,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-5OHbrR5_S0o",
+    "youtubeId": "5OHbrR5_S0o",
+    "youtubeUrl": "https://www.youtube.com/watch?v=5OHbrR5_S0o",
+    "title": "Ayyappa Swamy Telugu Devotional Songs | Palli Kattu Sabarimalaikku Telugu Audio Song | Devotional TV",
+    "artist": "Devotional TV",
+    "thumbnail": "https://i.ytimg.com/vi/5OHbrR5_S0o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5ZVNxhwr0L_HaHbybhIfX5Gqw3g",
+    "duration": 432,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-Zq9xHq-IdPs",
+    "youtubeId": "Zq9xHq-IdPs",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Zq9xHq-IdPs",
+    "title": "శబరీకొండలలొ ఆబంగరుకొవెల్లొ | Ayyappa Swamy Songs 2024 | Ayyappa Songs | Telugu Devotional Songs",
+    "artist": "Lalithaa Bhakti Patalu ",
+    "thumbnail": "https://i.ytimg.com/vi/Zq9xHq-IdPs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmIv5hW1RhfbmNvkkfWdGYjNtndw",
+    "duration": 389,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-OAnBCz4uOAU",
+    "youtubeId": "OAnBCz4uOAU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=OAnBCz4uOAU",
+    "title": "பள்ளிக்கட்டு | Evergreen Ayyappa Devotional Song | Sung by Veeramani Raju | Pallikkattu",
+    "artist": "Tamil Devotional",
+    "thumbnail": "https://i.ytimg.com/vi/OAnBCz4uOAU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9YFoWNwSAvINEfuiR4NByCi_LfA",
+    "duration": 441,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
+  },
+  {
+    "id": "yt-CSu8VXnuiCY",
+    "youtubeId": "CSu8VXnuiCY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=CSu8VXnuiCY",
+    "title": "Yettettu Kondallo nuvvunagani | Ayyappa Emotional songs | Bhakti songs | Gangaputra Narsingh Rao",
+    "artist": "BHAVISHYA SRI MUSIC",
+    "thumbnail": "https://i.ytimg.com/vi/CSu8VXnuiCY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxjpq617VuQBcTUOXavhtFbHxBrA",
+    "duration": 356,
+    "addedAt": 1790136613864,
+    "tags": [
+      "Devotional",
+      "Ayyappa",
+      "Telugu"
+    ]
   }
 ];
 
 export const INITIAL_PLAYLISTS: Playlist[] = [
+  {
+    "id": "pl-ayyappa-songs-2026",
+    "name": "Ayyappa Song playlist 2026",
+    "description": "Sacred Ayyappa Swamy devotional songs, Harivarasanam, Pallikattu, and powerful bhajans.",
+    "trackIds": [
+      "yt-7w7LUaLpM4E",
+      "yt-NhWaRfiqeCs",
+      "yt-ov6T2FG-4wk",
+      "yt-L9nI3LLRE40",
+      "yt-BOjJGALm2kQ",
+      "yt-JnLrW819tSM",
+      "yt-FpjJgHkroDI",
+      "yt-400q5rKZoEw",
+      "yt-CdMo9iS6SlI",
+      "yt-pNGdT5obEys",
+      "yt-317vzk6lEcA",
+      "yt-1ajrWfrDRF8",
+      "yt-7dAO1cQLR-0",
+      "yt-O_yjeMdYlyk",
+      "yt-VwzAKZ-NPtE",
+      "yt-sOfh139UMww",
+      "yt-ad_fXyIabVo",
+      "yt-ymuUXrxpywU",
+      "yt-gPH4erPbpPc",
+      "yt-IzePl-nFml8",
+      "yt-MlfPCYAt9cE",
+      "yt-g3bboQt37x0",
+      "yt-9hXWHiAJNcU",
+      "yt-HwBRWbQP_CU",
+      "yt-ZMwWgSyX9FQ",
+      "yt-zV0lDPtAUxw",
+      "yt-GOiT1lxmEdI",
+      "yt-WapW5oW71TU",
+      "yt-5OHbrR5_S0o",
+      "yt-Zq9xHq-IdPs",
+      "yt-OAnBCz4uOAU",
+      "yt-CSu8VXnuiCY"
+    ],
+    "coverUrl": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCakPFXX1iG2MLUjjdvUN4dsNiKgQ",
+    "gradient": "from-amber-700 to-[#121212]",
+    "createdAt": 1790136613864,
+    "updatedAt": 1790136613864
+  },
   {
     "id": "pl-telugu-trending-2026",
     "name": "Trending Telugu Hits 2026",

@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { formatTime } from '../../utils/youtube';
+import { VlcConeIcon } from './VlcVideoPlayer';
 
 interface BottomPlayerProps {
   currentTrack: Track | null;
@@ -57,6 +58,7 @@ interface BottomPlayerProps {
   isSleepTimerActive?: boolean;
   sleepTimerRemaining?: string | null;
   onOpenSleepTimer?: () => void;
+  onOpenVlcFullMode?: () => void;
 }
 
 export const BottomPlayer: React.FC<BottomPlayerProps> = ({
@@ -93,6 +95,7 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
   isSleepTimerActive = false,
   sleepTimerRemaining,
   onOpenSleepTimer,
+  onOpenVlcFullMode,
 }) => {
   const [isHoveringProgress, setIsHoveringProgress] = useState(false);
   const progressBarRef = useRef<HTMLDivElement>(null);
@@ -149,13 +152,23 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
                 {currentTrack.artist}
               </p>
               <div className="flex items-center gap-1.5 mt-0.5">
-                <span className={`text-[9px] font-bold px-1.5 py-0.2 rounded uppercase ${
-                  playbackMode === 'audio' 
-                    ? 'bg-emerald-950 text-emerald-400 border border-emerald-800/50' 
-                    : 'bg-red-950 text-red-400 border border-red-800/50'
-                }`}>
-                  {playbackMode === 'audio' ? '🎵 Audio' : '🎬 Video'}
-                </span>
+                <button
+                  onClick={() => {
+                    if (playbackMode === 'video' && onOpenVlcFullMode) {
+                      onOpenVlcFullMode();
+                    } else {
+                      onTogglePlaybackMode();
+                    }
+                  }}
+                  className={`text-[9px] font-bold px-1.5 py-0.2 rounded uppercase cursor-pointer transition ${
+                    playbackMode === 'audio' 
+                      ? 'bg-emerald-950 text-emerald-400 border border-emerald-800/50' 
+                      : 'bg-orange-950 text-orange-400 border border-orange-800/50 hover:bg-orange-900/60'
+                  }`}
+                  title={playbackMode === 'video' ? 'Click to open VLC Dedicated Full Video Player' : 'Switch playback mode'}
+                >
+                  {playbackMode === 'audio' ? '🎵 Audio' : '🎬 VLC Video'}
+                </button>
                 <span 
                   className="hidden sm:inline-flex items-center gap-1 text-[9px] font-semibold text-neutral-400 bg-neutral-800/70 px-1.5 py-0.2 rounded border border-neutral-700/50"
                   title="Background audio & tab-switch protection enabled"
@@ -314,7 +327,7 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
           className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold border transition cursor-pointer ${
             playbackMode === 'audio'
               ? 'bg-neutral-800 border-emerald-500/50 text-emerald-400 hover:bg-neutral-700'
-              : 'bg-neutral-800 border-red-500/50 text-red-400 hover:bg-neutral-700'
+              : 'bg-neutral-800 border-orange-500/60 text-orange-400 hover:bg-neutral-700'
           }`}
           title="Toggle Audio / Video playback option"
         >
@@ -326,10 +339,22 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
           ) : (
             <>
               <Film className="w-3.5 h-3.5" />
-              <span className="hidden xl:inline">Video Only</span>
+              <span className="hidden xl:inline">Video Mode</span>
             </>
           )}
         </button>
+
+        {/* If in video mode, add dedicated VLC Full Player button */}
+        {playbackMode === 'video' && onOpenVlcFullMode && (
+          <button
+            onClick={onOpenVlcFullMode}
+            className="flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-bold bg-[#ff8800] hover:bg-[#ea580c] text-white shadow-md transition cursor-pointer border border-orange-400/40"
+            title="Open Dedicated VLC Video Player in Full Mode"
+          >
+            <VlcConeIcon className="w-3.5 h-3.5" />
+            <span className="hidden xl:inline">VLC Full Player</span>
+          </button>
+        )}
 
         {/* Picture-in-Picture / Floating Background Player */}
         {onTogglePiP && (

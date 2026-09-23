@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from 'react';
-import { Track, PlaybackMode } from '../../types';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { 
   setBackgroundAudioActive, 
   updatePiPDisplay 
 } from '../../utils/backgroundAudio';
+import { VlcHeader, VlcControlsBar, VlcDockedPill } from './VlcVideoPlayer';
+import { Play, Pause } from 'lucide-react';
 
 interface YouTubePlayerEngineProps {
   currentTrack: Track | null;
@@ -21,6 +23,19 @@ interface YouTubePlayerEngineProps {
   seekTargetTime: number | null;
   onSeekHandled: () => void;
   isDockedVideo?: boolean;
+  currentTime?: number;
+  duration?: number;
+  onSeek?: (time: number) => void;
+  onTogglePlay?: () => void;
+  onVolumeChange?: (volume: number) => void;
+  onToggleMute?: () => void;
+  onTogglePlaybackMode?: () => void;
+  repeatMode?: RepeatMode;
+  isShuffled?: boolean;
+  onToggleRepeat?: () => void;
+  onToggleShuffle?: () => void;
+  isVlcFullModeOpen?: boolean;
+  onToggleVlcFullMode?: (open: boolean) => void;
 }
 
 export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
@@ -39,12 +54,156 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
   seekTargetTime,
   onSeekHandled,
   isDockedVideo = false,
+  currentTime = 0,
+  duration = 0,
+  onSeek,
+  onTogglePlay,
+  onVolumeChange,
+  onToggleMute,
+  onTogglePlaybackMode,
+  repeatMode = 'off',
+  isShuffled = false,
+  onToggleRepeat,
+  onToggleShuffle,
+  isVlcFullModeOpen = true,
+  onToggleVlcFullMode,
 }) => {
   const playerRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const isApiLoaded = useRef(false);
   const currentVideoIdRef = useRef<string | null>(null);
   const isPlayingRef = useRef(isPlaying);
+
+  // VLC Player Controls State
+  const [playbackRate, setPlaybackRate] = useState<number>(1.0);
+  const [aspectRatio, setAspectRatio] = useState<'16:9' | 'fill' | '4:3'>('16:9');
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showControls, setShowControls] = useState(true);
+  const [flashAction, setFlashAction] = useState<'play' | 'pause' | null>(null);
+  const hideTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const isVlcActive = playbackMode === 'video' && isVlcFullModeOpen;
+
+  const handleUserActivity = useCallback(() => {
+    setShowControls(true);
+    if (hideTimeoutRef.current) {
+      clearTimeout(hideTimeoutRef.current);
+    }
+    hideTimeoutRef.current = setTimeout(() => {
+      if (isPlayingRef.current) {
+        setShowControls(false);
+      }
+    }, 3500);
+  }, []);
+
+  const handlePlaybackRateChange = (rate: number) => {
+    setPlaybackRate(rate);
+    if (playerRef.current && typeof playerRef.current.setPlaybackRate === 'function') {
+      try {
+        playerRef.current.setPlaybackRate(rate);
+      } catch (e) {
+        console.warn('Could not set playback rate:', e);
+      }
+    }
+  };
+
+  const handleStop = () => {
+    if (playerRef.current) {
+      try {
+        playerRef.current.pauseVideo();
+        playerRef.current.seekTo(0, true);
+        onPlayStateChange(false);
+        onTimeUpdate(0, duration || 0);
+      } catch (e) {
+        console.warn('Could not stop player:', e);
+      }
+    }
+  };
+
+  const handleToggleFullscreen = () => {
+    const elem = document.getElementById('yt-player-persistent-wrapper');
+    if (!elem) return;
+    if (!document.fullscreenElement) {
+      elem.requestFullscreen().catch(() => {});
+    } else {
+      document.exitFullscreen().catch(() => {});
+    }
+  };
+
+  const handleVideoStageClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    handleUserActivity();
+    if (onTogglePlay) {
+      onTogglePlay();
+      setFlashAction(isPlaying ? 'pause' : 'play');
+      setTimeout(() => setFlashAction(null), 600);
+    }
+  };
+
+  // Synchronize fullscreen state
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
+  }, []);
+
+  // Keyboard shortcuts when VLC is active in full mode
+  useEffect(() => {
+    if (!isVlcActive) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (['input', 'textarea'].includes((e.target as HTMLElement)?.tagName?.toLowerCase())) {
+        return;
+      }
+
+      handleUserActivity();
+
+      switch (e.code) {
+        case 'Space':
+          e.preventDefault();
+          if (onTogglePlay) {
+            onTogglePlay();
+            setFlashAction(isPlaying ? 'pause' : 'play');
+            setTimeout(() => setFlashAction(null), 600);
+          }
+          break;
+        case 'KeyF':
+          e.preventDefault();
+          handleToggleFullscreen();
+          break;
+        case 'KeyM':
+          e.preventDefault();
+          if (onToggleMute) onToggleMute();
+          break;
+        case 'ArrowLeft':
+          e.preventDefault();
+          if (onSeek) onSeek(Math.max(0, currentTime - 5));
+          break;
+        case 'ArrowRight':
+          e.preventDefault();
+          if (onSeek) onSeek(Math.min(duration, currentTime + 5));
+          break;
+        case 'ArrowUp':
+          e.preventDefault();
+          if (onVolumeChange) onVolumeChange(Math.min(100, volume + 10));
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          if (onVolumeChange) onVolumeChange(Math.max(0, volume - 10));
+          break;
+        case 'Escape':
+          if (!document.fullscreenElement && onToggleVlcFullMode) {
+            onToggleVlcFullMode(false);
+          }
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isVlcActive, isPlaying, volume, currentTime, duration, onTogglePlay, onToggleMute, onSeek, onVolumeChange, onToggleVlcFullMode, handleUserActivity]);
 
   // Keep ref synchronized
   useEffect(() => {
@@ -369,18 +528,110 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
     }
   }, [currentTrack, isPlaying, playNext, playPrevious, onPlayStateChange]);
 
-  // Styling & In-Viewport placement:
-  // When in audio mode, keep the iframe inside the viewport (not offscreen like -9999px)
-  // with tiny opacity and pointer-events-none so browsers never throttle its thread.
-  const wrapperClass = isDockedVideo && playbackMode === 'video'
-    ? 'w-full h-full relative'
-    : playbackMode === 'video'
-    ? 'fixed bottom-24 right-5 w-72 h-40 z-30 rounded-xl overflow-hidden shadow-2xl border border-neutral-700 bg-black'
+  // Dedicated VLC Video Player vs Invisible Audio Thread:
+  // When in video mode and full mode is open, expand into the dedicated VLC Video Player.
+  // When in audio mode or minimized, stay in the invisible background thread with persistent iframe.
+  const wrapperClass = isVlcActive
+    ? 'fixed inset-0 z-50 bg-[#121316] text-white flex flex-col select-none overflow-hidden font-sans'
     : 'fixed bottom-1 right-1 w-32 h-20 opacity-[0.005] pointer-events-none z-[-1] overflow-hidden';
 
   return (
-    <div id="yt-player-persistent-wrapper" className={wrapperClass}>
-      <div ref={containerRef} className="w-full h-full" />
-    </div>
+    <>
+      <div 
+        id="yt-player-persistent-wrapper" 
+        className={wrapperClass}
+        onMouseMove={isVlcActive ? handleUserActivity : undefined}
+        onTouchStart={isVlcActive ? handleUserActivity : undefined}
+      >
+        {/* 1. VLC Window Header Bar */}
+        {isVlcActive && (
+          <VlcHeader
+            currentTrack={currentTrack}
+            aspectRatio={aspectRatio}
+            isFullscreen={isFullscreen}
+            showControls={showControls}
+            onTogglePlaybackMode={() => onTogglePlaybackMode && onTogglePlaybackMode()}
+            onToggleAspectRatio={() => setAspectRatio(prev => prev === '16:9' ? 'fill' : prev === 'fill' ? '4:3' : '16:9')}
+            onMinimizeToLibrary={() => onToggleVlcFullMode && onToggleVlcFullMode(false)}
+            onToggleFullscreen={handleToggleFullscreen}
+          />
+        )}
+
+        {/* 2. Video Viewport Stage */}
+        <div
+          className={
+            isVlcActive
+              ? 'flex-1 relative flex items-center justify-center bg-black overflow-hidden cursor-pointer'
+              : 'w-full h-full'
+          }
+          onClick={isVlcActive ? handleVideoStageClick : undefined}
+          onDoubleClick={isVlcActive ? handleToggleFullscreen : undefined}
+        >
+          <div
+            className={
+              isVlcActive
+                ? aspectRatio === 'fill'
+                  ? 'w-full h-full pointer-events-auto'
+                  : aspectRatio === '4:3'
+                  ? 'h-full aspect-[4/3] max-w-full pointer-events-auto'
+                  : 'w-full max-w-6xl aspect-video max-h-full shadow-2xl pointer-events-auto'
+                : 'w-full h-full'
+            }
+          >
+            <div ref={containerRef} className="w-full h-full" />
+          </div>
+
+          {/* Central Flash Indicator (Play/Pause) */}
+          {flashAction && isVlcActive && (
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-30 animate-out fade-out zoom-out-95 duration-500">
+              <div className="w-20 h-20 rounded-full bg-black/80 border border-orange-500/60 backdrop-blur-md flex items-center justify-center text-orange-400 shadow-2xl">
+                {flashAction === 'play' ? (
+                  <Play className="w-10 h-10 fill-current translate-x-1" />
+                ) : (
+                  <Pause className="w-10 h-10 fill-current" />
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 3. VLC Bottom Control Toolbar */}
+        {isVlcActive && (
+          <VlcControlsBar
+            currentTime={currentTime}
+            duration={duration}
+            volume={volume}
+            isMuted={isMuted}
+            isPlaying={isPlaying}
+            repeatMode={repeatMode}
+            isShuffled={isShuffled}
+            playbackRate={playbackRate}
+            isFullscreen={isFullscreen}
+            showControls={showControls}
+            onSeek={(t) => onSeek && onSeek(t)}
+            onTogglePlay={() => onTogglePlay && onTogglePlay()}
+            onStop={handleStop}
+            onPlayPrevious={playPrevious}
+            onPlayNext={playNext}
+            onVolumeChange={(v) => onVolumeChange && onVolumeChange(v)}
+            onToggleMute={() => onToggleMute && onToggleMute()}
+            onToggleRepeat={onToggleRepeat}
+            onToggleShuffle={onToggleShuffle}
+            onPlaybackRateChange={handlePlaybackRateChange}
+            onToggleFullscreen={handleToggleFullscreen}
+          />
+        )}
+      </div>
+
+      {/* 4. Minimized VLC Docked Pill (when user browses library in video mode) */}
+      {playbackMode === 'video' && !isVlcFullModeOpen && (
+        <VlcDockedPill
+          currentTrack={currentTrack}
+          isPlaying={isPlaying}
+          onExpand={() => onToggleVlcFullMode && onToggleVlcFullMode(true)}
+          onTogglePlaybackMode={() => onTogglePlaybackMode && onTogglePlaybackMode()}
+        />
+      )}
+    </>
   );
 };

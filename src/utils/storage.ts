@@ -51,6 +51,14 @@ export function loadTracks(): Track[] {
       const parsed = JSON.parse(raw);
       const isLegacyDummy = Array.isArray(parsed) && parsed.some((t: Track) => t.id === 'track-lofi-1' || t.id === 'track-synth-2');
       if (Array.isArray(parsed) && parsed.length > 0 && !isLegacyDummy) {
+        // Merge any newly introduced default tracks
+        const existingIds = new Set(parsed.map((t: Track) => t.id));
+        const missing = INITIAL_TRACKS.filter((t: Track) => !existingIds.has(t.id));
+        if (missing.length > 0) {
+          const merged = [...parsed, ...missing];
+          saveTracks(merged);
+          return merged;
+        }
         return parsed;
       }
     }
@@ -78,6 +86,14 @@ export function loadPlaylists(): Playlist[] {
       const parsed = JSON.parse(raw);
       const isLegacyDummy = Array.isArray(parsed) && parsed.some((p: Playlist) => p.id === 'pl-chill-vibes' || p.id === 'pl-night-drive');
       if (Array.isArray(parsed) && parsed.length > 0 && !isLegacyDummy) {
+        // Merge any newly introduced default playlists
+        const existingIds = new Set(parsed.map((p: Playlist) => p.id));
+        const missing = INITIAL_PLAYLISTS.filter((p: Playlist) => !existingIds.has(p.id));
+        if (missing.length > 0) {
+          const merged = [...missing, ...parsed];
+          savePlaylists(merged);
+          return merged;
+        }
         return parsed;
       }
     }

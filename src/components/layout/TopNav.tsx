@@ -15,6 +15,7 @@ import {
 import { ActiveView, PlaybackMode } from '../../types';
 import { PWAInstallButton } from '../common/PWAInstallButton';
 import { NomaticLogo } from '../common/NomaticLogo';
+import { VlcConeIcon } from '../player/VlcVideoPlayer';
 
 interface TopNavProps {
   activeView: ActiveView;
@@ -30,6 +31,7 @@ interface TopNavProps {
   onForward: () => void;
   canGoBack: boolean;
   canGoForward: boolean;
+  onOpenVlcFullMode?: () => void;
 }
 
 export const TopNav: React.FC<TopNavProps> = ({
@@ -46,6 +48,7 @@ export const TopNav: React.FC<TopNavProps> = ({
   onForward,
   canGoBack,
   canGoForward,
+  onOpenVlcFullMode,
 }) => {
   return (
     <header 
@@ -131,16 +134,22 @@ export const TopNav: React.FC<TopNavProps> = ({
 
           <button
             id="mode-video-btn"
-            onClick={() => playbackMode !== 'video' && onTogglePlaybackMode()}
+            onClick={() => {
+              if (playbackMode !== 'video') {
+                onTogglePlaybackMode();
+              } else if (onOpenVlcFullMode) {
+                onOpenVlcFullMode();
+              }
+            }}
             className={`flex items-center gap-1 px-2 sm:px-3 py-1 rounded-full text-xs font-bold transition-all cursor-pointer ${
               playbackMode === 'video'
-                ? 'bg-red-600 text-white shadow-sm'
+                ? 'bg-[#ea580c] text-white shadow-sm'
                 : 'text-neutral-400 hover:text-white'
             }`}
-            title="Video Only Mode: Watch YouTube video directly"
+            title="Video Mode: Dedicated VLC Video Player"
           >
-            <Film className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Video</span>
+            {playbackMode === 'video' ? <VlcConeIcon className="w-3.5 h-3.5" /> : <Film className="w-3.5 h-3.5" />}
+            <span className="hidden sm:inline">VLC Video</span>
           </button>
         </div>
 

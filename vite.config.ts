@@ -3,11 +3,22 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
 import {VitePWA} from 'vite-plugin-pwa';
-import {parseYouTubePlaylistHtml, extractYouTubePlaylistId} from './src/utils/youtubePlaylist';
+import {parseYouTubePlaylistHtml, parseInvidiousPlaylist, extractYouTubePlaylistId} from './src/utils/youtubePlaylist';
 
 function youtubePlaylistServerPlugin() {
   const handler = async (req: any, res: any, next: any) => {
     if (req.url && req.url.startsWith('/api/youtube/playlist')) {
+      // Set wide CORS headers so mobile devices, local IP, or embeds are never blocked
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', '*');
+
+      if (req.method === 'OPTIONS') {
+        res.statusCode = 200;
+        res.end();
+        return;
+      }
+
       try {
         const urlObj = new URL(req.url, 'http://localhost:3000');
         const param = urlObj.searchParams.get('id') || urlObj.searchParams.get('list') || urlObj.searchParams.get('url');
@@ -20,26 +31,59 @@ function youtubePlaylistServerPlugin() {
         }
 
         const ytUrl = `https://www.youtube.com/playlist?list=${playlistId}`;
-        const fetchRes = await fetch(ytUrl, {
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Accept-Language': 'en-US,en;q=0.9',
-          },
-        });
+        let html = '';
+        let fetchedOk = false;
 
-        if (!fetchRes.ok) {
-          res.statusCode = fetchRes.status;
-          res.setHeader('Content-Type', 'application/json');
-          res.end(JSON.stringify({ error: `YouTube responded with status ${fetchRes.status}` }));
-          return;
+        try {
+          const fetchRes = await fetch(ytUrl, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+              'Accept-Language': 'en-US,en;q=0.9',
+            },
+          });
+
+          if (fetchRes.ok) {
+            html = await fetchRes.text();
+            fetchedOk = true;
+          }
+        } catch {
+          // Continue to Invidious fallback below
         }
 
-        const html = await fetchRes.text();
-        const parsed = parseYouTubePlaylistHtml(html, playlistId);
+        if (fetchedOk && html) {
+          try {
+            const parsed = parseYouTubePlaylistHtml(html, playlistId);
+            if (parsed.tracks.length > 0) {
+              res.statusCode = 200;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify(parsed));
+              return;
+            }
+          } catch {
+            // Continue to Invidious fallback
+          }
+        }
 
-        res.statusCode = 200;
+        // Server-side fallback: Invidious API
+        try {
+          const invRes = await fetch(`https://invidious.f5.si/api/v1/playlists/${encodeURIComponent(playlistId)}`);
+          if (invRes.ok) {
+            const invData = await invRes.json();
+            const parsed = parseInvidiousPlaylist(invData, playlistId);
+            if (parsed.tracks.length > 0) {
+              res.statusCode = 200;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify(parsed));
+              return;
+            }
+          }
+        } catch {
+          // ignore
+        }
+
+        res.statusCode = 502;
         res.setHeader('Content-Type', 'application/json');
-        res.end(JSON.stringify(parsed));
+        res.end(JSON.stringify({ error: 'Failed to retrieve playlist tracks from YouTube or mirrors' }));
       } catch (err: any) {
         res.statusCode = 500;
         res.setHeader('Content-Type', 'application/json');
@@ -103,6 +147,7 @@ export default defineConfig(() => {
         },
         workbox: {
           globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
+          navigateFallbackDenylist: [/^\/api/],
         },
         devOptions: {
           enabled: true,

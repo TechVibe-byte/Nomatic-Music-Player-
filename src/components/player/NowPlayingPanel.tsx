@@ -24,6 +24,7 @@ import {
   Moon
 } from 'lucide-react';
 import { Track, PlaybackMode, RepeatMode } from '../../types';
+import { VlcConeIcon } from './VlcVideoPlayer';
 
 interface NowPlayingPanelProps {
   currentTrack: Track | null;
@@ -52,6 +53,7 @@ interface NowPlayingPanelProps {
   onOpenSleepTimer?: () => void;
   isSleepTimerActive?: boolean;
   sleepTimerRemaining?: string | null;
+  onOpenVlcFullMode?: () => void;
 }
 
 export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
@@ -81,6 +83,7 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
   onOpenSleepTimer,
   isSleepTimerActive = false,
   sleepTimerRemaining,
+  onOpenVlcFullMode,
 }) => {
   const [copied, setCopied] = React.useState(false);
 
@@ -148,15 +151,36 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
       {/* Main Display: Audio vs Video Mode */}
       <div className="mt-5 flex flex-col items-center max-w-md mx-auto w-full">
         {playbackMode === 'video' ? (
-          /* Video Mode Display */
-          <div className="w-full space-y-3">
-            <div className="w-full aspect-video rounded-xl overflow-hidden bg-black shadow-2xl border border-neutral-800 relative">
-              {videoElementContainer}
+          /* Video Mode Display with VLC Player Integration */
+          <div className="w-full space-y-4">
+            <div 
+              onClick={onOpenVlcFullMode}
+              className="w-full aspect-video rounded-xl overflow-hidden bg-neutral-950 shadow-2xl border border-orange-500/40 relative group cursor-pointer"
+              title="Click to Open VLC Dedicated Video Player in Full Mode"
+            >
+              <img
+                src={currentTrack.thumbnail}
+                alt={currentTrack.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors flex flex-col items-center justify-center gap-3 p-4 text-center">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-b from-[#ff8800] to-[#ea580c] text-white flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform border border-orange-300/40">
+                  <Play className="w-7 h-7 fill-current translate-x-0.5" />
+                </div>
+                <div className="flex items-center gap-2 bg-[#1b1c20]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-orange-500/50 shadow-lg">
+                  <VlcConeIcon className="w-4 h-4" />
+                  <span className="text-xs font-bold text-orange-400">Open VLC Dedicated Full Player</span>
+                </div>
+              </div>
             </div>
+
             <div className="flex items-center justify-between text-xs text-neutral-400">
-              <span className="flex items-center gap-1 text-red-400 font-semibold">
-                <Film className="w-3.5 h-3.5" /> Video Feed Active
-              </span>
+              <button
+                onClick={onOpenVlcFullMode}
+                className="flex items-center gap-1.5 text-orange-400 font-bold hover:underline cursor-pointer bg-neutral-800/80 px-2.5 py-1 rounded border border-orange-500/30 transition hover:bg-neutral-700"
+              >
+                <VlcConeIcon className="w-4 h-4" /> Expand VLC Full Player
+              </button>
               <button
                 onClick={onTogglePlaybackMode}
                 className="text-[#1ed760] hover:underline cursor-pointer flex items-center gap-1 font-medium"

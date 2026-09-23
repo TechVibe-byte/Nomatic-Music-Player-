@@ -77,6 +77,7 @@ export default function App() {
   const [isBuffering, setIsBuffering] = useState(false);
   const [isPlayerReady, setIsPlayerReady] = useState(false);
   const [seekTargetTime, setSeekTargetTime] = useState<number | null>(null);
+  const [isVlcFullModeOpen, setIsVlcFullModeOpen] = useState(true);
 
   // 4. Modal & Panel Controls
   const [isNowPlayingOpen, setIsNowPlayingOpen] = useState(false);
@@ -389,9 +390,9 @@ export default function App() {
     setConfig(updated);
     saveConfig(updated);
 
-    // If switching to video, automatically open the Now Playing panel so user can see it!
-    if (nextMode === 'video' && !isNowPlayingOpen) {
-      setIsNowPlayingOpen(true);
+    // If switching to video, automatically open the dedicated VLC Full Mode Player!
+    if (nextMode === 'video') {
+      setIsVlcFullModeOpen(true);
     }
   };
 
@@ -651,6 +652,7 @@ export default function App() {
           onForward={handleForward}
           canGoBack={historyIndex > 0}
           canGoForward={historyIndex < viewHistory.length - 1}
+          onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
         />
 
         {/* Scrollable View Area */}
@@ -777,6 +779,7 @@ export default function App() {
           onOpenSleepTimer={() => setIsSleepTimerModalOpen(true)}
           isSleepTimerActive={sleepTimerState.isActive}
           sleepTimerRemaining={sleepTimerLabel}
+          onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
         />
       )}
 
@@ -825,6 +828,19 @@ export default function App() {
         playPrevious={handlePlayPrevious}
         seekTargetTime={seekTargetTime}
         onSeekHandled={() => setSeekTargetTime(null)}
+        currentTime={currentTime}
+        duration={duration}
+        onSeek={handleSeek}
+        onTogglePlay={handleTogglePlay}
+        onVolumeChange={handleVolumeChange}
+        onToggleMute={handleToggleMute}
+        onTogglePlaybackMode={handleTogglePlaybackMode}
+        repeatMode={repeatMode}
+        isShuffled={isShuffled}
+        onToggleRepeat={handleToggleRepeat}
+        onToggleShuffle={handleToggleShuffle}
+        isVlcFullModeOpen={isVlcFullModeOpen}
+        onToggleVlcFullMode={setIsVlcFullModeOpen}
       />
 
       {/* 6. Desktop Bottom Sticky Spotify Player Bar (Visible on md and above) */}
@@ -863,6 +879,7 @@ export default function App() {
           isSleepTimerActive={sleepTimerState.isActive}
           sleepTimerRemaining={sleepTimerLabel}
           onOpenSleepTimer={() => setIsSleepTimerModalOpen(true)}
+          onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
         />
       </div>
 
@@ -887,6 +904,7 @@ export default function App() {
             onToggleNowPlaying={() => setIsNowPlayingOpen(true)}
             isSleepTimerActive={sleepTimerState.isActive}
             sleepTimerRemaining={sleepTimerLabel}
+            onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
           />
         )}
 

@@ -24,21 +24,39 @@ export interface YouTubePlaylistResult {
 
 /**
  * Extracts a YouTube playlist ID from various URL formats or raw ID string.
+ * Handles mobile YouTube shares (m.youtube.com, youtu.be/?list=, etc.), URL encoded links,
+ * and surrounding share text from Android/iOS YouTube apps.
  */
 export function extractYouTubePlaylistId(input: string): string | null {
   if (!input) return null;
-  const trimmed = input.trim();
+  let decoded = input.trim();
+  try {
+    decoded = decodeURIComponent(decoded);
+  } catch {
+    // ignore decode error
+  }
 
   // 1. Direct query parameter ?list=... or &list=...
-  const listParamMatch = trimmed.match(/[?&]list=([a-zA-Z0-9_-]+)/i);
+  const listParamMatch = decoded.match(/[?&]list=([a-zA-Z0-9_-]+)/i);
   if (listParamMatch && listParamMatch[1]) {
     return listParamMatch[1];
   }
 
-  // 2. Standard playlist prefixes when pasted directly
-  // PL (Standard playlists), RD (Mixes), OLAK5uy (YouTube Music albums), UU (Uploads), LL, FL
-  if (/^(?:PL|RD|OLAK5uy_|UU|LL|FL|TL)[a-zA-Z0-9_-]+$/i.test(trimmed)) {
-    return trimmed;
+  // 2. /playlist/ID or /playlist?list=ID
+  const slashMatch = decoded.match(/\/playlist\/([a-zA-Z0-9_-]+)/i);
+  if (slashMatch && slashMatch[1]) {
+    return slashMatch[1];
+  }
+
+  // 3. Clean raw playlist prefixes (PL, RD, OLAK5uy_, UU, LL, FL, TL)
+  const prefixMatch = decoded.match(/\b(PL|RD|OLAK5uy_|UU|LL|FL|TL)[a-zA-Z0-9_-]{10,}\b/i);
+  if (prefixMatch && prefixMatch[0]) {
+    return prefixMatch[0];
+  }
+
+  // 4. Exact raw ID string
+  if (/^(?:PL|RD|OLAK5uy_|UU|LL|FL|TL)[a-zA-Z0-9_-]+$/i.test(decoded)) {
+    return decoded;
   }
 
   return null;
@@ -202,37 +220,119 @@ export function parseYouTubePlaylistHtml(html: string, playlistId: string): YouT
 }
 
 /**
+ * Parses JSON response from open Invidious instances (which support CORS on mobile browsers)
+ */
+export function parseInvidiousPlaylist(data: any, playlistId: string): YouTubePlaylistResult {
+  const tracks: YouTubePlaylistItem[] = [];
+  const seenIds = new Set<string>();
+
+  if (Array.isArray(data?.videos)) {
+    for (const v of data.videos) {
+      const vid = v.videoId;
+      if (vid && typeof vid === 'string' && !seenIds.has(vid)) {
+        seenIds.add(vid);
+        const thumbs = v.videoThumbnails;
+        const thumbnail =
+          thumbs && Array.isArray(thumbs) && thumbs.length > 0
+            ? thumbs[thumbs.length - 1].url
+            : `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+        tracks.push({
+          videoId: vid,
+          title: v.title || `Track (${vid})`,
+          author: v.author || data.author || 'YouTube',
+          duration: v.lengthSeconds || 180,
+          thumbnail,
+        });
+      }
+    }
+  }
+
+  return {
+    id: playlistId,
+    title: data?.title || `YouTube Playlist (${playlistId.slice(0, 8)})`,
+    author: data?.author || 'YouTube',
+    description: data?.description || 'Imported YouTube playlist',
+    thumbnail: tracks[0]?.thumbnail || `https://img.youtube.com/vi/${playlistId}/hqdefault.jpg`,
+    itemCount: tracks.length,
+    tracks,
+  };
+}
+
+/**
  * Fetches playlist details and items from YouTube:
- * 1. Checks local proxy endpoint /api/youtube/playlist?id=...
- * 2. If that fails or isn't available, falls back to public proxies
+ * 1. Checks local or deployed server API /api/youtube/playlist?id=... (with JSON check & timeout)
+ * 2. If blocked or on static/mobile preview, queries high-speed open Invidious instances (CORS enabled)
+ * 3. Tries direct browser fetch (if environment allows)
+ * 4. Tries updated CORS proxies with short timeout
  */
 export async function fetchYouTubePlaylist(playlistIdOrUrl: string): Promise<YouTubePlaylistResult> {
   const playlistId = extractYouTubePlaylistId(playlistIdOrUrl);
   if (!playlistId) {
-    throw new Error('Invalid YouTube Playlist URL or ID.');
+    throw new Error('Invalid YouTube Playlist URL or ID. Please check the link.');
   }
 
-  // 1. Try local server API
+  // 1. Try local/deployed server API (Dev server or Vercel serverless)
   try {
-    const apiRes = await fetch(`/api/youtube/playlist?id=${encodeURIComponent(playlistId)}`);
-    if (apiRes.ok) {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
+    const apiRes = await fetch(`/api/youtube/playlist?id=${encodeURIComponent(playlistId)}`, {
+      signal: controller.signal,
+      headers: {
+        'Accept': 'application/json',
+      },
+    });
+    clearTimeout(timeoutId);
+
+    const contentType = apiRes.headers.get('content-type') || '';
+    if (apiRes.ok && contentType.includes('application/json')) {
       const data = await apiRes.json();
       if (data && Array.isArray(data.tracks) && data.tracks.length > 0) {
         return data as YouTubePlaylistResult;
       }
     }
   } catch {
-    // Continue to fallbacks
+    // Continue to next tier
   }
 
-  // 2. Try direct fetch (works if running without CORS restriction or behind reverse proxy)
+  // 2. High-speed Invidious CORS APIs (Works directly in Mobile Chrome and Brave without cookies/tokens)
+  const invidiousEndpoints = [
+    `https://invidious.f5.si/api/v1/playlists/${encodeURIComponent(playlistId)}`,
+  ];
+
+  for (const invEndpoint of invidiousEndpoints) {
+    try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
+      const res = await fetch(invEndpoint, {
+        signal: controller.signal,
+        headers: { 'Accept': 'application/json' },
+      });
+      clearTimeout(timeoutId);
+
+      if (res.ok) {
+        const data = await res.json();
+        const parsed = parseInvidiousPlaylist(data, playlistId);
+        if (parsed.tracks.length > 0) {
+          return parsed;
+        }
+      }
+    } catch {
+      // Try next
+    }
+  }
+
+  // 3. Try direct fetch (works if running without CORS restriction or behind reverse proxy)
   const targetUrl = `https://www.youtube.com/playlist?list=${playlistId}`;
   try {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 3500);
     const directRes = await fetch(targetUrl, {
+      signal: controller.signal,
       headers: {
         'Accept-Language': 'en-US,en;q=0.9',
       },
     });
+    clearTimeout(timeoutId);
     if (directRes.ok) {
       const html = await directRes.text();
       const parsed = parseYouTubePlaylistHtml(html, playlistId);
@@ -244,23 +344,32 @@ export async function fetchYouTubePlaylist(playlistIdOrUrl: string): Promise<You
     // Continue to proxy fallback
   }
 
-  // 3. Fallback CORS proxy
+  // 4. Fallback CORS Proxies (Using active, keyless endpoints with fast timeout)
   const proxyEndpoints = [
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(targetUrl)}`,
-    `https://corsproxy.io/?url=${encodeURIComponent(targetUrl)}`,
+    `https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`,
+    `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(targetUrl)}`,
   ];
 
   for (const proxyUrl of proxyEndpoints) {
     try {
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 8000);
+      const timeoutId = setTimeout(() => controller.abort(), 4000);
       const res = await fetch(proxyUrl, { signal: controller.signal });
       clearTimeout(timeoutId);
       if (res.ok) {
-        const html = await res.text();
-        const parsed = parseYouTubePlaylistHtml(html, playlistId);
-        if (parsed.tracks.length > 0) {
-          return parsed;
+        let html = '';
+        if (proxyUrl.includes('allorigins.win/get')) {
+          const json = await res.json();
+          html = json?.contents || '';
+        } else {
+          html = await res.text();
+        }
+
+        if (html) {
+          const parsed = parseYouTubePlaylistHtml(html, playlistId);
+          if (parsed.tracks.length > 0) {
+            return parsed;
+          }
         }
       }
     } catch {
@@ -269,7 +378,7 @@ export async function fetchYouTubePlaylist(playlistIdOrUrl: string): Promise<You
   }
 
   throw new Error(
-    'Could not retrieve songs from this YouTube playlist. Please check that the playlist is Public or Unlisted, or try copying individual track links.'
+    'Could not retrieve songs from this YouTube playlist. Mobile browser shields (like Brave Shields or Chrome tracking prevention) may be blocking public proxy endpoints. Try using the "Bulk Add" tab to paste links directly, or disable Brave Shields for this domain.'
   );
 }
 

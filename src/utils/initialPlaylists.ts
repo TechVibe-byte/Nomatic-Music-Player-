@@ -8,7 +8,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=5rsgBCPT8dc",
     "title": "Band Melam - Thippukuntannav Lyrical | Harsh Roshan, Sridevi | Vijai Bulganin | Ramu Rathod",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/5rsgBCPT8dc/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLC5ZFoOewoz697DBYDzsAukBMy3Kw",
+    "thumbnail": "https://i.ytimg.com/vi/5rsgBCPT8dc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -21,7 +21,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=LXaBrusqBcI",
     "title": "Rambai Neemeedha Naku Video Song | Raju Weds Rambai | Suresh Bobbili | Anurag Kulkarni",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/LXaBrusqBcI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAZSg15p53p_r6rPACdaYH0wHMoqg",
+    "thumbnail": "https://i.ytimg.com/vi/LXaBrusqBcI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -34,7 +34,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=G9Stes_DM44",
     "title": "Sancharame Video Song | EPIC - First Semester | Anand Deverakonda,Vaishnavi | Aditya Haasan | Hesham",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/G9Stes_DM44/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAtgrZFM5pfwIKEIIKlCiJVOkXSRg",
+    "thumbnail": "https://i.ytimg.com/vi/G9Stes_DM44/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -47,7 +47,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=UY8LtHLvOY8",
     "title": "Jajikaya Jajikaya Full Video Song | Akhanda 2 | NBK | Samyuktha | Boyapati Srinu | Thaman S",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/UY8LtHLvOY8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCYf95MsS-goaTuMCQMJofb8TWqfg",
+    "thumbnail": "https://i.ytimg.com/vi/UY8LtHLvOY8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -60,7 +60,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=i5rxcQA9HU4",
     "title": "#AnagaAnagaAmerica Lyrical | VISA - Vintara Saradaga | Ashok Galla, Sri Gouri Priya | Vijai Bulganin",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/i5rxcQA9HU4/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBm7Gs70iT3DAA-gMtC9H6ZYQX-uQ",
+    "thumbnail": "https://i.ytimg.com/vi/i5rxcQA9HU4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -73,7 +73,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=45h_xXANqtQ",
     "title": "Bhimavaram Balma Full Video | Anaganaga Oka Raju | Naveen Polishetty, Meenakshi | Mickey J Meyer",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/45h_xXANqtQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCQrnLWSydhfubn_4k_01iaaCbMdw",
+    "thumbnail": "https://i.ytimg.com/vi/45h_xXANqtQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -86,7 +86,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-Gwk6fbESJ8",
     "title": "Dheere Dheere Video Song | FUNKY | Vishwak Sen, Kayadu Lohar | Anudeep KV | Bheems Ceciroleo",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-Gwk6fbESJ8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCyuRVqQHXsTXk3D6IxrACc4X1tZg",
+    "thumbnail": "https://i.ytimg.com/vi/-Gwk6fbESJ8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -99,7 +99,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=TjuDR0bEzhk",
     "title": "Pallelloni Sandhallanni Meeve Full Video Song | Band Melam | Harsh Roshan, Sridevi | Vijai Bulganin",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/TjuDR0bEzhk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCzCcyNraFqxMSpS4tNXgU8mGAp6Q",
+    "thumbnail": "https://i.ytimg.com/vi/TjuDR0bEzhk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -112,7 +112,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=R_GASQsAHyQ",
     "title": "FUNKY - Yama Yamma Video Song | Vishwak Sen, Kayadu Lohar | Anudeep KV | Bheems Ceciroleo",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/R_GASQsAHyQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCNVz_t0jBJS3hv2bu35uKlVm-8lA",
+    "thumbnail": "https://i.ytimg.com/vi/R_GASQsAHyQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -125,7 +125,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fFnBG6hQBw8",
     "title": "Raju Gaari Pelli Ro Full Video | Anaganaga Oka Raju | Naveen Polishetty, Meenakshi | Mickey J Meyer",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fFnBG6hQBw8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAP0i2JSZbHJdCxfdfI8Xx1xFv3iQ",
+    "thumbnail": "https://i.ytimg.com/vi/fFnBG6hQBw8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -138,7 +138,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=kKYXevuSSYo",
     "title": "Tollywood Queens - Viral Dance Hits | Oo Antava to Radhika | Trending Telugu Dance Songs Jukebox",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/kKYXevuSSYo/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAKoO2EP23gTrZgzLPQA_-Fkh7oow",
+    "thumbnail": "https://i.ytimg.com/vi/kKYXevuSSYo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -151,7 +151,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=cQ5r9b-YwWQ",
     "title": "Naa Praanam Full Video Song | Couple Friendly | Santosh Soban, Manasa Varanasi | Ashwin Chandrasekar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/cQ5r9b-YwWQ/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAnAq3a7LF798D5Vnxh7FpV7nuARw",
+    "thumbnail": "https://i.ytimg.com/vi/cQ5r9b-YwWQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -164,7 +164,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Rzsbrszu0AI",
     "title": "Best of Vandemataram Srinivas Audio Jukebox | All Time Telugu Super Hit Songs | Most Popular Songs 1 hour,",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Rzsbrszu0AI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDJVvui1OssC_jCmwxvBCQFNj0psA",
+    "thumbnail": "https://i.ytimg.com/vi/Rzsbrszu0AI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -177,7 +177,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=3zDgbUfiWAU",
     "title": "FUNKY - Rattatataav Video Song | Vishwak Sen, Kayadu Lohar | Anudeep| Ram Miriyala |Bheems Ceciroleo",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/3zDgbUfiWAU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAXNEP3hlhPeK3hP6mX3SYlqF3rcQ",
+    "thumbnail": "https://i.ytimg.com/vi/3zDgbUfiWAU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -190,7 +190,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ppvqxzB_xKk",
     "title": "Couple Friendly - Naa Kallalo Full Video Song | Santosh Soban, Manasa Varanasi | Ashwin Chandrasekar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ppvqxzB_xKk/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAFg1CcUloy4e4ZTu8E49uZifgO8Q",
+    "thumbnail": "https://i.ytimg.com/vi/ppvqxzB_xKk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -203,7 +203,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=TdtR8JTxiok",
     "title": "Shiva Shiva Full Video Song | Akhanda 2 Thaandavam | NBK | Kanakavva | Thaman S | Boyapati Srinu",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/TdtR8JTxiok/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCvuVwcABwaHj6q93MDCk3XNT9uZw",
+    "thumbnail": "https://i.ytimg.com/vi/TdtR8JTxiok/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -216,7 +216,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=RJx8Y0rRCag",
     "title": "Andhra to Telangana Full Video | Anaganaga Oka Raju | Naveen Polishetty, Saanve Megghana",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/RJx8Y0rRCag/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCJ08_qBhXYkTWfzH4EhbJ--yGdNg",
+    "thumbnail": "https://i.ytimg.com/vi/RJx8Y0rRCag/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -229,7 +229,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=CfsEpS0NBDg",
     "title": "Janu O My Janu (Happy) Video Song | Band Melam | Harsh Roshan, Sridevi | Vijai Bulganin",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/CfsEpS0NBDg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLB7UJ6ADk5x2ACiHBGstH0IvFgCNQ",
+    "thumbnail": "https://i.ytimg.com/vi/CfsEpS0NBDg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -242,7 +242,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=J82IA2CY08c",
     "title": "The Thaandavam Full Video Song | Akhanda 2 Thaandavam | NBK | Boyapati Srinu | Thaman S",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/J82IA2CY08c/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCISIjxXWpsDEsIDMEZeS8OhFSTYQ",
+    "thumbnail": "https://i.ytimg.com/vi/J82IA2CY08c/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -255,7 +255,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=77v_YnwNRos",
     "title": "Enno Vaasanthaalu Video Song | Euphoria | Bhumika, Sara Arjun, Vignesh | Gunasekhar | Kaala Bhairava",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/77v_YnwNRos/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCWT2ZTfKb64StksDB3tKJIsTOfaQ",
+    "thumbnail": "https://i.ytimg.com/vi/77v_YnwNRos/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -268,7 +268,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=EhRttif11VU",
     "title": "Couple Friendly - Naato Raa Ila Full Video Song | Santosh Soban,Manasa Varanasi |Ashwin Chandrasekar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/EhRttif11VU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCvszbrm7T4hQV2MsnYcd5ZoZXZPA",
+    "thumbnail": "https://i.ytimg.com/vi/EhRttif11VU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -281,7 +281,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=N1FfxMPXm2c",
     "title": "FUNKY - Chandamama Video Song | Vishwak Sen, Kayadu Lohar | Anudeep KV | Bheems Ceciroleo",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/N1FfxMPXm2c/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCn_OABlmIVTWj3nZQtumYnTkd4wQ",
+    "thumbnail": "https://i.ytimg.com/vi/N1FfxMPXm2c/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -294,7 +294,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fydVV-Qv9D8",
     "title": "O Nesthamai Full Video Song | Couple Friendly | Santosh Soban, Manasa Varanasi | Ashwin Chandrasekar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fydVV-Qv9D8/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCWE4Xn4rK6f5P719dPE7ItSQobuw",
+    "thumbnail": "https://i.ytimg.com/vi/fydVV-Qv9D8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -307,7 +307,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=CS7KA7VSg9M",
     "title": "Telugu Love Songs Video Jukebox 2026 | Superhit Telugu Love Melody Songs | Nonstop Romantic Hits 1 hour,",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/CS7KA7VSg9M/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLAJaW5QXZWefMdYFZRPtLjcMStw_A",
+    "thumbnail": "https://i.ytimg.com/vi/CS7KA7VSg9M/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -320,7 +320,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ecayPQ2N5XI",
     "title": "Bubblegum - Promotional Video Song | Sharwanand, Malvika Nair | Abhilash Reddy | Ghibran Vaibodha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ecayPQ2N5XI/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBNDvSFyTLq_F2S0D5_PNpld4ULeg",
+    "thumbnail": "https://i.ytimg.com/vi/ecayPQ2N5XI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -333,7 +333,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=IA6G_UPU56A",
     "title": "Fighter Fighter Full Video | Biker | Sharwanand, Malvika Nair | Dr Rajashekhar | Ghibran | Abhilash",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/IA6G_UPU56A/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLBKzrOC4mxD5Dvdg8NF14-IVVGveQ",
+    "thumbnail": "https://i.ytimg.com/vi/IA6G_UPU56A/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -346,7 +346,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Hof25VSQkKg",
     "title": "Varaale Panche Full Video Song | Couple Friendly| Santosh Soban,Manasa Varanasi |Ashwin Chandrasekar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Hof25VSQkKg/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDaURuUDx7Ny_q1IV1ljZ-n81VWWg",
+    "thumbnail": "https://i.ytimg.com/vi/Hof25VSQkKg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -359,7 +359,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=8befVlfMbuw",
     "title": "Valentine's Day Audio Jukebox 2026 |  Trending Love Songs Telugu | Best Romantic Love Songs 2 hours,",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/8befVlfMbuw/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCE38qK8UVFrYjETJwQbylDiB4U3g",
+    "thumbnail": "https://i.ytimg.com/vi/8befVlfMbuw/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -372,7 +372,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=XFtSqiLd6DU",
     "title": "Inka Inka Gurthe Undhi Full Video Song | Suyodhana | Priyadarshi, Drishika| Jay Krish|YS Madav Reddy",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/XFtSqiLd6DU/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLDsR5nywTHLt00QhvvtJ0IZNyDuLA",
+    "thumbnail": "https://i.ytimg.com/vi/XFtSqiLd6DU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -385,7 +385,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=xv7YYJAR1Os",
     "title": "Kadhile Megham Tho Full Video Song | Krishna Leela | Devan, Dhanya Balakrishnan | Bheems Ceciroleo",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/xv7YYJAR1Os/hqdefault.jpg?sqp=-oaymwEgCNACELwBSFXyq4qpAxIIARUAAIhCGAFwAcABBrgC9xg=&rs=AOn4CLCvk0WpncYJvAEfnt-Q5oO2s3Hpvg",
+    "thumbnail": "https://i.ytimg.com/vi/xv7YYJAR1Os/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722020,
     "tags": [
@@ -398,7 +398,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=RIriENOmOpo",
     "title": "Nuvvostanante Nenoddantana Video Songs | Chandrulo Unde Video Song | Siddharth",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/RIriENOmOpo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLATjG3kN_pA90Vxh7oZYQg-vF37Uw",
+    "thumbnail": "https://i.ytimg.com/vi/RIriENOmOpo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -411,7 +411,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=TIOZUdc0aL8",
     "title": "Aarya-2 - Uppenantha Video | Allu Arjun | Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/TIOZUdc0aL8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCGAMzZ8FZys7txZI3-N_rGwMH2ew",
+    "thumbnail": "https://i.ytimg.com/vi/TIOZUdc0aL8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -424,7 +424,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fdEzDqiSC3U",
     "title": "Nuvvostanante Nenoddantana Video Songs | Niluvaddam Ninne Video Song | Siddharth",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fdEzDqiSC3U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8spcEg8y8aOyOkGqVGsRJ8c4IXQ",
+    "thumbnail": "https://i.ytimg.com/vi/fdEzDqiSC3U/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -437,7 +437,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=6JGGFYIcrLY",
     "title": "Aaraduguluntada Full Video Song || SVSC Movie || Venkatesh, Mahesh Babu, Samantha, Anjali",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/6JGGFYIcrLY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBq-nCWgG44c1I2Ds5_4k7R0jP8xw",
+    "thumbnail": "https://i.ytimg.com/vi/6JGGFYIcrLY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -450,7 +450,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ZwGPx75hVLk",
     "title": "Mari Antaga Video Song || SVSC Movie Video Songs || Venkatesh, Mahesh Babu, Samantha, Anjali",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ZwGPx75hVLk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-G3rFMh_t9IDCSbzFgqHzwL6IvQ",
+    "thumbnail": "https://i.ytimg.com/vi/ZwGPx75hVLk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -463,7 +463,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=TvNAnuBh5Nw",
     "title": "Naa Autograph (Sweet Memories) Songs - Gurtukostunnayi - Ravi Teja,",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/TvNAnuBh5Nw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC78eydrCto0vXRGj4GQNOXT3VEBg",
+    "thumbnail": "https://i.ytimg.com/vi/TvNAnuBh5Nw/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -476,7 +476,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=5J-8vmMVKjs",
     "title": "Inka Cheppale Full Video Song || Svsc Video Songs || Venkatesh, Mahesh Babu, Samantha, Anjali",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/5J-8vmMVKjs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAF9sjblvDBUardyGxiTokPJDNJTA",
+    "thumbnail": "https://i.ytimg.com/vi/5J-8vmMVKjs/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -489,7 +489,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=cULVDmIDIzI",
     "title": "Jatha Kalise | Full Video Song | Srimanthudu Movie | Mahesh Babu | Shruti Haasan | DSP",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/cULVDmIDIzI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCbVnhYPd_qP80suQgK9lTDysD5-g",
+    "thumbnail": "https://i.ytimg.com/vi/cULVDmIDIzI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -502,7 +502,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=VQ2-HPwxAZY",
     "title": "Mirchi Songs | Idedo Bagundi Video Song | Latest Telugu Songs | Prabhas, Anushka @SriBalajiMovies",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/VQ2-HPwxAZY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHyqh-KHz75Xowge0eFsAv-DANTQ",
+    "thumbnail": "https://i.ytimg.com/vi/VQ2-HPwxAZY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -515,7 +515,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=qFYj1w69OZA",
     "title": "Inkem Inkem Full Video Song | Geetha Govindam | Vijay Deverakonda, Rashmika, Gopi Sunder",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/qFYj1w69OZA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaUiZULAFemwDXGtyd-U6Ek2QeOQ",
+    "thumbnail": "https://i.ytimg.com/vi/qFYj1w69OZA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -528,7 +528,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=dAUHa5K38t4",
     "title": "Yenti Yenti Full Video Song | Geetha Govindam | Vijay Deverakonda, Rashmika Mandanna, Gopi Sunder",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/dAUHa5K38t4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDVYgG7h0LbJimJ-zKIWR9mxoW7fw",
+    "thumbnail": "https://i.ytimg.com/vi/dAUHa5K38t4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -541,7 +541,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-twi5MBq1TQ",
     "title": "Ninnu Kori Telugu Movie Full Songs 4K | Unnattundi Gundey Video Song | Nani | Nivetha Thomas | Aadhi",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-twi5MBq1TQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQyd5sqVstcSCcSP4Okk2JYWMnEA",
+    "thumbnail": "https://i.ytimg.com/vi/-twi5MBq1TQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -554,7 +554,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=jGugscZJxis",
     "title": "Ela Ela Song With Lyrics- Panjaa Full Songs - Pawan Kalyan, Sarah Jane - Aditya Music Telugu",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/jGugscZJxis/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApi3xOtKf6C7oCl25f_IDUiMYhrw",
+    "thumbnail": "https://i.ytimg.com/vi/jGugscZJxis/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -567,7 +567,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=lewVFlngGCk",
     "title": "Undiporaadhey Lyrical || Hushaaru Songs || Sree Harsha Konuganti || Sid Sriram || Radhan",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/lewVFlngGCk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNqQT-wmeO_Jb3n7J-vzazxrTEXA",
+    "thumbnail": "https://i.ytimg.com/vi/lewVFlngGCk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -580,7 +580,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=HcNfL0Lf6vQ",
     "title": "Gaali Vaaluga Lyrical| Agnyaathavaasi Songs|Pawan Kalyan,Keerthy Suresh| Anirudh | Telugu Love Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/HcNfL0Lf6vQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhlqhx6IpsKCFNnoHRbSjQbtmbKQ",
+    "thumbnail": "https://i.ytimg.com/vi/HcNfL0Lf6vQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -593,7 +593,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=JXIiQFSj8Yg",
     "title": "Baitikochi Chuste Lyrical | Agnyaathavaasi Songs| Pawan Kalyan,Keerthy Suresh,Anu Emmanuel | Anirudh",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/JXIiQFSj8Yg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANZbYZ4PF5ApRRYYfI-usJ342R5g",
+    "thumbnail": "https://i.ytimg.com/vi/JXIiQFSj8Yg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -606,7 +606,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=91EzD9VgwGk",
     "title": "Gang Leader - Hoyna Hoyna Video Telugu | Nani | Anirudh | Vikram K Kumar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/91EzD9VgwGk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRa_1d5vegB5SiCyJDAfSA51sGJQ",
+    "thumbnail": "https://i.ytimg.com/vi/91EzD9VgwGk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -619,7 +619,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=cChZEYVRvIE",
     "title": "Spirit Of Jersey - Lyrical | Jersey | Nani, Shraddha Srinath | Anirudh Ravichander",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/cChZEYVRvIE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAmD7ZwmoPzZ3-GKG88k8OnlIMZxQ",
+    "thumbnail": "https://i.ytimg.com/vi/cChZEYVRvIE/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -632,7 +632,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=zl1CsDDmN6s",
     "title": "Aarambhame Le - Anthem Of JERSEY | Lyrical | Nani & Shraddha Srinath | Anirudh Ravichander",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/zl1CsDDmN6s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCPygcdmTCnaU1TX8i8P-nRGWDZ4A",
+    "thumbnail": "https://i.ytimg.com/vi/zl1CsDDmN6s/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -645,7 +645,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=IW9i3bJ8bkU",
     "title": "Mr. Majnu - Kopam Ga Kopam Ga Video | Akhil Akkineni, Nidhhi Agerwal | BVSN Prasad | Thaman S",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/IW9i3bJ8bkU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALkvom8LLGyStd48o-WW1JalHUrw",
+    "thumbnail": "https://i.ytimg.com/vi/IW9i3bJ8bkU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -658,7 +658,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=803l9Wz_XFY",
     "title": "Hello Title Video Song | Hello Video Songs | Akhil Akkineni, Kalyani Priyadarshan",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/803l9Wz_XFY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCtmj3CyHZSHQWtIR2xAlYj58voUg",
+    "thumbnail": "https://i.ytimg.com/vi/803l9Wz_XFY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -671,7 +671,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=F3Td3_c96vo",
     "title": "Anaganaga Oka Uru Video Song || Hello Video Songs || Akhil Akkineni, Kalyani Priyadarshan",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/F3Td3_c96vo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDRLuPmNFOmd-6xTQqwhB8rMN8dyw",
+    "thumbnail": "https://i.ytimg.com/vi/F3Td3_c96vo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -684,7 +684,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=yBBu8rVB0DQ",
     "title": "Thalachi Thalachi",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/yBBu8rVB0DQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAF7UP7qcHNFag3cE3DZHUxaiaqpQ",
+    "thumbnail": "https://i.ytimg.com/vi/yBBu8rVB0DQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -697,7 +697,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=e4N9al7vhVQ",
     "title": "Oosupodu Full Video Song || Fidaa Full Video Songs || Varun Tej, Sai Pallavi || Sekhar Kammula",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/e4N9al7vhVQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBP3v-tIVs-_rlWaKiMRJEUQnDhpw",
+    "thumbnail": "https://i.ytimg.com/vi/e4N9al7vhVQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -710,7 +710,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=KMocA8G_puU",
     "title": "Maate Vinadhuga Lyrical || Taxiwaala Songs || Vijay Deverakonda, Priyanka jawalkar || Sid Sriram",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/KMocA8G_puU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCeklM1mjiWAlqzYjKg9KKAMByYIg",
+    "thumbnail": "https://i.ytimg.com/vi/KMocA8G_puU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -723,7 +723,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=k22zWP3p42Y",
     "title": "Inthalo Ennenni Vinthalo (Male) Full Song II Karthikeya Movie II Nikhil, Swathi Reddy",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/k22zWP3p42Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAqx4wqSKrb7SYU5VipJOKLTH4rcA",
+    "thumbnail": "https://i.ytimg.com/vi/k22zWP3p42Y/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -736,7 +736,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=DDb7OILQMMA",
     "title": "Oohalu Gusagusalade Video Songs HD - Em Sandeham Ledu Song - Vel Records",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/DDb7OILQMMA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfJKa7ioerfD117pbOcyUJpEpYmA",
+    "thumbnail": "https://i.ytimg.com/vi/DDb7OILQMMA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -749,7 +749,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7VY191_NiHA",
     "title": "Nannaku Prematho Full Video Song | Jr.NTR | Rakul Preeet Singh | DSP | Latest Telugu Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/7VY191_NiHA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAMYv_WQHJv77p2Sma2BxeSjTwJnw",
+    "thumbnail": "https://i.ytimg.com/vi/7VY191_NiHA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -762,7 +762,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=wlWtJrCscyE",
     "title": "Mr. Nookayya Songs || Oke Oka Jeevitham - Manoj Manchu, Kriti Kharbanda, Sana Khan",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/wlWtJrCscyE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApNlJh_dz8a0nT_JK2Vcgt-O8zTA",
+    "thumbnail": "https://i.ytimg.com/vi/wlWtJrCscyE/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -775,7 +775,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ex3qqcsO1mk",
     "title": "Vedam Video Songs - Rupai - Allu Arjun, Anushka, Manchu Manoj, Lekha Washington",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ex3qqcsO1mk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCeemLJR-UVdO779nYgKsUmDDiP7w",
+    "thumbnail": "https://i.ytimg.com/vi/ex3qqcsO1mk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -788,7 +788,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=VffosKXVZoY",
     "title": "Awaara - Nee Yadalo Naaku Video | Yuvanshankar | Karthi",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/VffosKXVZoY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBey-TZLejgPSTiUK915_dDoR2wQg",
+    "thumbnail": "https://i.ytimg.com/vi/VffosKXVZoY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -801,7 +801,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-6uqH-0TiDk",
     "title": "Kallu Moosi Yoschisthey - Veedokkade Songs | Suriya | Tamannaah | Harris Jayaraj | KV Anand | AVM",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-6uqH-0TiDk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUJJr8vgCZzvRD_RZA4NwK69nnRQ",
+    "thumbnail": "https://i.ytimg.com/vi/-6uqH-0TiDk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -814,7 +814,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7dhKeHT2Bdk",
     "title": "Surya Son of Krishnan Movie | Nalone Pongenu Narmada Video Song | Surya, Sameera Reddy, Ramya",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/7dhKeHT2Bdk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCVCEN3nOUGjYSZ9K-FSsvFmz5i4w",
+    "thumbnail": "https://i.ytimg.com/vi/7dhKeHT2Bdk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -827,7 +827,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=291X-45t83A",
     "title": "Oh Priya Priya Full Video Song || Ishq Movie || Nitin || Nithya Menon || Anup Rubens",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/291X-45t83A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDDQSsnXPnfq2y9dvQJBIDnuQwukw",
+    "thumbnail": "https://i.ytimg.com/vi/291X-45t83A/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -840,7 +840,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=4SIsUWIIFMo",
     "title": "Chinnadana Neekosam Full Video Song || Ishq Movie || Nitin || Nithya Menon || Anup Rubens",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/4SIsUWIIFMo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBKIIoT09iFZaeoWQZ8uOLGhA3CFQ",
+    "thumbnail": "https://i.ytimg.com/vi/4SIsUWIIFMo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -853,7 +853,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ANrTbPl6-Ew",
     "title": "Nenu Nuvvantu",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ANrTbPl6-Ew/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBdPoU-6N5JljGKRD9flq6IByooPg",
+    "thumbnail": "https://i.ytimg.com/vi/ANrTbPl6-Ew/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -866,7 +866,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=QCTtc36u-Kk",
     "title": "Crazy Feeling Full Video Song | Nenu Sailaja Movie | Ram Pothineni | Keerthy Suresh| Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/QCTtc36u-Kk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoD1dqZa2JWd-ivomAgUnEE0hKMw",
+    "thumbnail": "https://i.ytimg.com/vi/QCTtc36u-Kk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -879,7 +879,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=XJelQ8FUZ0o",
     "title": "Nee Jathaga Full Video Song || Yevadu Movie Video Songs || Ram Charan Teja, Shruti Haasan || DSP",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/XJelQ8FUZ0o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLALt3Zr-ygWiWWTVxRhnu0E0v_JSg",
+    "thumbnail": "https://i.ytimg.com/vi/XJelQ8FUZ0o/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -892,7 +892,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=2N_scTuXjbc",
     "title": "Ramayya Vasthavayya | Neneppudaina Full Hd Video Song || Jr.NTR,Samantha,Shruti Haasan | Thaman.S",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/2N_scTuXjbc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDC0KD2Q7pypScqBKqM7LwjQYMWPw",
+    "thumbnail": "https://i.ytimg.com/vi/2N_scTuXjbc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -905,7 +905,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=3M377ycIwDA",
     "title": "Aarya-2 - Karige Loga Video | Allu Arjun | Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/3M377ycIwDA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAZyC2i1pR4BvtVQGfMhdogUdjJPA",
+    "thumbnail": "https://i.ytimg.com/vi/3M377ycIwDA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -918,7 +918,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=lwz5bMN8jX8",
     "title": "Aarya-2 - Baby He Loves You Video | Allu Arjun | Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/lwz5bMN8jX8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2gaZc0qDaGoWUX4Yd-IsWjuyJuA",
+    "thumbnail": "https://i.ytimg.com/vi/lwz5bMN8jX8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -931,7 +931,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=sNKD014uRj0",
     "title": "Ninnila Full Video Song | Tholi Prema Video Songs | Varun Tej, Raashi Khanna | SS Thaman",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/sNKD014uRj0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-dWk3pyks4-YOG31Hv9Z6enkuNg",
+    "thumbnail": "https://i.ytimg.com/vi/sNKD014uRj0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -944,7 +944,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=XqxruZnyHKM",
     "title": "Choosi Chudangane Lyrical || Chalo Movie Songs || Naga Shaurya, Rashmika Mandanna || Sagar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/XqxruZnyHKM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYSa8fBZylZEm3PmqEjlsmv7Aqpg",
+    "thumbnail": "https://i.ytimg.com/vi/XqxruZnyHKM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -957,7 +957,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=NFbmkNCV4K4",
     "title": "Apudo Ipudo Full Song | Siddharth, Genelia I Bommarillu Songs | Telugu Love Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/NFbmkNCV4K4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCZFXb2PUfjFuNmw1x6wGsvtnRI8Q",
+    "thumbnail": "https://i.ytimg.com/vi/NFbmkNCV4K4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -970,7 +970,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=1d1LOyBesMA",
     "title": "Bommarillu Songs With Lyrics - Bommani Geesthe Song - Siddharth, Genelia",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/1d1LOyBesMA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCjl48ey-_O1CmNVrxa9IVVlCOpXg",
+    "thumbnail": "https://i.ytimg.com/vi/1d1LOyBesMA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -983,7 +983,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=H47mzxzTDuI",
     "title": "Nammavemo Full Song | Parugu | Allu Arjun,Mani Sharma | Aditya Music | Telugu Melody Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/H47mzxzTDuI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2jRaATREWIO026RwQt7xH-PDBjQ",
+    "thumbnail": "https://i.ytimg.com/vi/H47mzxzTDuI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -996,7 +996,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-Z9jQn442Ts",
     "title": "Kushi Telugu Movie Songs | Cheliya Cheliya Video Song | Pawan Kalyan | Bhumika Chawla | Mani Sharma",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-Z9jQn442Ts/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmvb-xpisMMhDlhU9-hVddgM5xgQ",
+    "thumbnail": "https://i.ytimg.com/vi/-Z9jQn442Ts/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1009,7 +1009,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=gmLekIa4J5E",
     "title": "Ghatikudu - Asale Pilla Video | Suriya | Nayanthara | Harris Jayaraj",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/gmLekIa4J5E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWbbGX4IPeSnpSg4LJmf7Q8J3vjA",
+    "thumbnail": "https://i.ytimg.com/vi/gmLekIa4J5E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1022,7 +1022,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=EYFc6IKnZ-Y",
     "title": "Emantave Song - Kurradu Video Songs - Varun Sandesh, Neha Sharma",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/EYFc6IKnZ-Y/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTTB0lVgwyx1kx7mbcyeGfOTKOXw",
+    "thumbnail": "https://i.ytimg.com/vi/EYFc6IKnZ-Y/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1035,7 +1035,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=g77Yt9JIul0",
     "title": "Oye Songs | Oye (Title Song) Video Song | Telugu Latest Video Songs | Siddharth | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/g77Yt9JIul0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD_1SBJIw-13N7zsDnDSeaL8BbRjw",
+    "thumbnail": "https://i.ytimg.com/vi/g77Yt9JIul0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1048,7 +1048,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=2HSIhUEp0G8",
     "title": "Oye Songs | Seheri Seheri Video Song | Telugu Latest Video Songs | Siddharth | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/2HSIhUEp0G8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdTBP4Fxu252DF08Es2auPoPMObg",
+    "thumbnail": "https://i.ytimg.com/vi/2HSIhUEp0G8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1061,7 +1061,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=HuFPFbErlYs",
     "title": "Oye Songs | Anukoledenadu Video Song | Telugu Latest Video Songs | Siddharth | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/HuFPFbErlYs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC99CDv04qbTIcCULUkBRd2ldCyNg",
+    "thumbnail": "https://i.ytimg.com/vi/HuFPFbErlYs/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1074,7 +1074,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7UG_DjiD-e8",
     "title": "Oye Songs | Saradaga Video Song | Telugu Latest Video Songs | Siddharth | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/7UG_DjiD-e8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCYX5zJqslUHTiE4pw1XUGcYjTwXA",
+    "thumbnail": "https://i.ytimg.com/vi/7UG_DjiD-e8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1087,7 +1087,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=vR5fYsnSoG0",
     "title": "Andhrudu Songs | Kokilamma Video Song | Gopichand, Gowri Pandit | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/vR5fYsnSoG0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCN1BQrtCnAHn_aWQlBsdT9XVaerw",
+    "thumbnail": "https://i.ytimg.com/vi/vR5fYsnSoG0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1100,7 +1100,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=YdqO4MhIH9M",
     "title": "Dil Deewana Pyar Haseena - Superhit Song - In Gemini Telugu Movie",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/YdqO4MhIH9M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcOTgtkfnlkdydxE3bFemrCOSLYQ",
+    "thumbnail": "https://i.ytimg.com/vi/YdqO4MhIH9M/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1113,7 +1113,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=atBwzD_m_6E",
     "title": "Sye Songs | Nalla Nallaani Kalla Video Song | Nithin, Genelia | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/atBwzD_m_6E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwXxr__ycJMXCWKv3p0fb-ROhbMQ",
+    "thumbnail": "https://i.ytimg.com/vi/atBwzD_m_6E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1126,7 +1126,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=WL8sboG-6tg",
     "title": "Nuvvu Nuvvu Full  Video Song || Khadgam Movie || Srikanth, Sonali Bendre, Sangeetha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/WL8sboG-6tg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-C-5vT0HCsZBcb3bScWROzcbG-A",
+    "thumbnail": "https://i.ytimg.com/vi/WL8sboG-6tg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1139,7 +1139,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=xzUeWZmV8P4",
     "title": "Muvvala Navvakala Song | Pournami Movie Songs | Prabhas | Trisha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/xzUeWZmV8P4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLANLEiC9Rl1SiS_AR_y8O9Wq0z7MQ",
+    "thumbnail": "https://i.ytimg.com/vi/xzUeWZmV8P4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1152,7 +1152,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=DcdAnDTtmHk",
     "title": "Kopama Napina Full Song - Varsham Movie Songs  - Prabhas, Trisha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/DcdAnDTtmHk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqouaczgZaZZ6fBzqenXIOH5uDLg",
+    "thumbnail": "https://i.ytimg.com/vi/DcdAnDTtmHk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1165,7 +1165,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=0Olv8zM_rps",
     "title": "Darling - Neeve Video | Prabhas | G.V. Prakash Kumar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/0Olv8zM_rps/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqBs17KZIXLr51AhzPJzXBBEiHAw",
+    "thumbnail": "https://i.ytimg.com/vi/0Olv8zM_rps/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1178,7 +1178,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=PTAScUlG7ZA",
     "title": "Happy Days Video Songs | Arey Rey Video Song | Varun Sandesh, Tamannah | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/PTAScUlG7ZA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAeixUG0R0DjucOB4HwogQmtEhT1A",
+    "thumbnail": "https://i.ytimg.com/vi/PTAScUlG7ZA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1191,7 +1191,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=3lI0V5g_bZ4",
     "title": "Kotha Bangaru Lokam Songs | Nenani Neevani Video Song | Varun Sandesh | Shweta Basu Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/3lI0V5g_bZ4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBkci_tYpzGrCQyMf6kD6Sf3FagTw",
+    "thumbnail": "https://i.ytimg.com/vi/3lI0V5g_bZ4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1204,7 +1204,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=pmC2aVle85A",
     "title": "Nenunnanu Video Songs | Nenunnanani Video Song | Nagarjuna, Aarti, Shriya | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/pmC2aVle85A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhG2-Pi0_lwu1RBJn5sOsOocYOpQ",
+    "thumbnail": "https://i.ytimg.com/vi/pmC2aVle85A/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1217,7 +1217,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=lM28Mt4PhyA",
     "title": "Style Songs | Merupai Saagara Video Song | Raghava Lawrence, Prabhu Deva | Sri Balaji Video",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/lM28Mt4PhyA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDeTVJw1GLIGZaPYR0w3N_eAzE1wg",
+    "thumbnail": "https://i.ytimg.com/vi/lM28Mt4PhyA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1230,7 +1230,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=8qhpfB7qWtM",
     "title": "Allasani Vaari Full Video Song | Tholi Prema Video Songs | Varun Tej, Raashi Khanna | SS Thaman",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/8qhpfB7qWtM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBc3TZwOR1gy_0VOAyTDpgDbp8hWw",
+    "thumbnail": "https://i.ytimg.com/vi/8qhpfB7qWtM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1243,7 +1243,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Y7sVX52309U",
     "title": "Ye Kadha Video Song - Kerintha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Y7sVX52309U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBB1zwvQG3U8c4S_ypevqtZEGDA8A",
+    "thumbnail": "https://i.ytimg.com/vi/Y7sVX52309U/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1256,7 +1256,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=JN4tw2MMz50",
     "title": "Kerintha Video Song - Kerintha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/JN4tw2MMz50/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCdPjc0FuEhknWjSptedrpypyIiVw",
+    "thumbnail": "https://i.ytimg.com/vi/JN4tw2MMz50/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1269,7 +1269,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=yTMranLmKHc",
     "title": "Kerintha Full Video Songs - Thanks to Zindagi Video Song",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/yTMranLmKHc/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhAIFYoZTAP&rs=AOn4CLCF773Nzsl706U6dWRN9lGkyEKSIA",
+    "thumbnail": "https://i.ytimg.com/vi/yTMranLmKHc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1282,7 +1282,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Jfvfh2aPyno",
     "title": "Avunanaa Kadhanaa Song With Lyrics || Leader Movie || Rana, Richa Gangopadhyay, Priya Anand",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Jfvfh2aPyno/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCjDymeb6mGllQbtB0ydDcAw70_2Q",
+    "thumbnail": "https://i.ytimg.com/vi/Jfvfh2aPyno/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1295,7 +1295,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=A9XHJ00yLrM",
     "title": "Rooba Rooba Full Song With Telugu Lyrics ||\"మా పాట మీ నోట\"|| Ram Charan Teja, Genelia D'Souza",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/A9XHJ00yLrM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLBSJe5ccporBj-HewSswNNcZapQ",
+    "thumbnail": "https://i.ytimg.com/vi/A9XHJ00yLrM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1308,7 +1308,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=WtiUfL64FTo",
     "title": "Hello Rammante Full Song II Orange Movie II Ram Charan Teja, Genelia D'Souza",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/WtiUfL64FTo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-8bcXQzsMl0DDUkdXnvh-VZFCTA",
+    "thumbnail": "https://i.ytimg.com/vi/WtiUfL64FTo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1321,7 +1321,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=qkwr0t_z3jU",
     "title": "Orange Movie Song With Lyrics - Chilipiga Choosthavala - Ram Charan Teja,Genelia | Telugu Love Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/qkwr0t_z3jU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAJvWyhXCQ-J56qNDBJEirMUaN48w",
+    "thumbnail": "https://i.ytimg.com/vi/qkwr0t_z3jU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1334,7 +1334,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=hpdLYL5MXSU",
     "title": "Mila Mila Video Song - Kerintha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/hpdLYL5MXSU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB_ek2Ra_hk7Ww0pgzdi9hwtPJkVQ",
+    "thumbnail": "https://i.ytimg.com/vi/hpdLYL5MXSU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1347,7 +1347,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=rC0YWZ0lly8",
     "title": "Darling - Inka Edho Video | Prabhas | G.V. Prakash Kumar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/rC0YWZ0lly8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDhsntqMI-e74K-bwDbtHAqXGEupw",
+    "thumbnail": "https://i.ytimg.com/vi/rC0YWZ0lly8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1360,7 +1360,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=t8UkfCF5reU",
     "title": "Darling - Pranama Video | Prabhas | G.V. Prakash Kumar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/t8UkfCF5reU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8MNn9n2imQGlil2jWQQbHP7a5yQ",
+    "thumbnail": "https://i.ytimg.com/vi/t8UkfCF5reU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1373,7 +1373,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=FRTUZZ-djxQ",
     "title": "Chal Chalo Chalo Full Song : S/O Satyamurthy Full Video Song - Allu Arjun, Upendra, Sneha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/FRTUZZ-djxQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACN-rpIdzpWGdFjkWERvUUCEuofg",
+    "thumbnail": "https://i.ytimg.com/vi/FRTUZZ-djxQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1386,7 +1386,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=MpkWTwtfA6E",
     "title": "Jaaruko Full Song : S/O Satyamurthy Full Video Song - Allu Arjun, Upendra, Sneha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/MpkWTwtfA6E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAS94NA7Cii1I3IW-sk8YmC5Oo0yw",
+    "thumbnail": "https://i.ytimg.com/vi/MpkWTwtfA6E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1399,7 +1399,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=kVorLxDOhog",
     "title": "Seethakalam Full Song : S/O Satyamurthy Full Video Song - Allu Arjun, Upendra, Sneha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/kVorLxDOhog/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCo3mIzCJfE6uX8aAEu_Aw1QDFM7Q",
+    "thumbnail": "https://i.ytimg.com/vi/kVorLxDOhog/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1412,7 +1412,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=hgpNla8AkIQ",
     "title": "Sailaja Sailaja Full Video Song | Nenu Sailaja Movie | Ram Pothineni | Keerthi Suresh | DSP",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/hgpNla8AkIQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLASoZkVYuo3Z7E69HrKHgO-PwAEeA",
+    "thumbnail": "https://i.ytimg.com/vi/hgpNla8AkIQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1425,7 +1425,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=U5ZmG4ZD-Vo",
     "title": "Masti Masti Full Video Song | Nenu Sailaja Movie | Ram Pothineni | Keerthi Suresh | Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/U5ZmG4ZD-Vo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAfYFRsnC646O2aYR8vKON4gNgDiQ",
+    "thumbnail": "https://i.ytimg.com/vi/U5ZmG4ZD-Vo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1438,7 +1438,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=tpvNtKjlf5E",
     "title": "Chitralahari - Prema Vennela Video (Telugu) | Sai Tej | Devi Sri Prasad",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/tpvNtKjlf5E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDdIawzNuxr5OaeFMzoSMgs5_X1NQ",
+    "thumbnail": "https://i.ytimg.com/vi/tpvNtKjlf5E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1451,7 +1451,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=vb3rQ9VDRKc",
     "title": "Yevevo Video Song || Hello Video Songs || Akhil Akkineni, Kalyani Priyadarshan",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/vb3rQ9VDRKc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCeBoKIG3D-szwHdftT64-mATZXGg",
+    "thumbnail": "https://i.ytimg.com/vi/vb3rQ9VDRKc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1464,7 +1464,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=l3R9ao3W03E",
     "title": "Hrudhayam Full Song |Parugu |Allu Arjun,Mani Sharma| Allu Arjun Mani Sharma Hits | Aditya Music",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/l3R9ao3W03E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAl-Me5KquYhgjQ6nk6RVcyWZ6xyA",
+    "thumbnail": "https://i.ytimg.com/vi/l3R9ao3W03E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1477,7 +1477,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=X5q-8QSh_YU",
     "title": "Egire Mabbulalona Telugu Video Song || Happy Movie || Allu Arjun, Genelia",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/X5q-8QSh_YU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDLaoEPLKeEjKW_KD8wrF1Elphh2A",
+    "thumbnail": "https://i.ytimg.com/vi/X5q-8QSh_YU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1490,7 +1490,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=qTE453yc1rc",
     "title": "Panchadara Bomma Full Video Song || Magadheera Movie || Ram Charan, Kajal Agarwal",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/qTE453yc1rc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDy6RD2I2g5A-fXwPrstvu_sMWgbA",
+    "thumbnail": "https://i.ytimg.com/vi/qTE453yc1rc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1503,7 +1503,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=C5cSb4rDNfg",
     "title": "My Heart Is Beating Full HD Video Song || Jalsa Telugu Movie || Pawan Kalyan , Ileana",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/C5cSb4rDNfg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCYujL39g7pl-3XL7OX2ao4N8cEA",
+    "thumbnail": "https://i.ytimg.com/vi/C5cSb4rDNfg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1516,7 +1516,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=NPnxw00z63I",
     "title": "Iddarammayilatho Video Songs | Violin Song (Girl Just) Video Song | Allu Arjun, Amala Paul",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/NPnxw00z63I/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA4EO4VVJgASEKwTlTgZi01sbUJvA",
+    "thumbnail": "https://i.ytimg.com/vi/NPnxw00z63I/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1529,7 +1529,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=cFzAw52wR2E",
     "title": "DJ Duvvada Jagannadham Video Songs - Gudilo Badilo Full Video Song -  Allu Arjun, Pooja Hegde",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/cFzAw52wR2E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUlqbzfjXUc6p4SHzu4kNRLjFUMw",
+    "thumbnail": "https://i.ytimg.com/vi/cFzAw52wR2E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1542,7 +1542,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=1FMDlWOu-AI",
     "title": "Choosa Choosa Full Video Song | Dhruva Full Video Songs | Ram Charan,Rakul Preet | HipHopTamizha",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/1FMDlWOu-AI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCKkvfVWGmweGWGS-njzbTD7ebxrg",
+    "thumbnail": "https://i.ytimg.com/vi/1FMDlWOu-AI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1555,7 +1555,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=cjoz0FZ-wWs",
     "title": "I - Manoharudu - Poolane Kunukeyamantaa Video | Vikram, Amy Jackson | A.R. Rahman",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/cjoz0FZ-wWs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDFJMbp1hSbpZtdZGEykNEDK-UMjg",
+    "thumbnail": "https://i.ytimg.com/vi/cjoz0FZ-wWs/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1568,7 +1568,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=h2JH0vqDcYc",
     "title": "Saaho : Baby Won't You Tell Me Full Video | Prabhas, Shraddha K | Shweta M, Siddharth M, Shankar M",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/h2JH0vqDcYc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDj6yKAc9FCR9cgxOZuuVBKP4ccGw",
+    "thumbnail": "https://i.ytimg.com/vi/h2JH0vqDcYc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1581,7 +1581,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=XD1cW3z5epg",
     "title": "Ye Chota Nuvvunna Full video | Saaho | Prabhas, Shraddha K| Guru R, Tulsi K, Haricharan S |Krishna K",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/XD1cW3z5epg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDnD6_A-Jey8fDfFUGZKon72fHDDg",
+    "thumbnail": "https://i.ytimg.com/vi/XD1cW3z5epg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1594,7 +1594,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-GydnFPTgus",
     "title": "Vellipomaake Full Video Song | Saahasam Swaasaga Saagipo Full Video Songs | NagaChaitanya, Manjima",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-GydnFPTgus/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAUrqTxSTtmrIZJwo7ObgZkZJ1pCw",
+    "thumbnail": "https://i.ytimg.com/vi/-GydnFPTgus/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1607,7 +1607,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=A56mZxSXKn8",
     "title": "I Wanna Fly Full Video Song || Krishnarjuna Yudham Songs || Nani,Hiphop Tamizha | Telugu Video Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/A56mZxSXKn8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAj2gMOWl9srkFqOY0iKGZo3fXQ2w",
+    "thumbnail": "https://i.ytimg.com/vi/A56mZxSXKn8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1620,7 +1620,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fFWL-UrjOkU",
     "title": "Naalo Chilipi Kala Full Video Song | Lover | Raj Tarun, Riddhi Kumar | Yazin Nizar | Sai Kartheek",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fFWL-UrjOkU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBN5mFrx26Xkk612fqV60MmNn3oIA",
+    "thumbnail": "https://i.ytimg.com/vi/fFWL-UrjOkU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1633,7 +1633,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ElpQ4sjJjbY",
     "title": "Adbhutam Full Video Song || Lover Video Song ||  Raj Tarun, Riddhi Kumar, Annish Krishna",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ElpQ4sjJjbY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0EKGlSwpW8xKt9xofoV7EAaYapQ",
+    "thumbnail": "https://i.ytimg.com/vi/ElpQ4sjJjbY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1646,7 +1646,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=GrzZ2qSayfY",
     "title": "Beautiful Love Full Video Song | Naa Peru Surya Naa illu India | Allu Arjun Hits | Telugu Love Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/GrzZ2qSayfY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIhJOtn6kWGEqYOmI9zed95-1uDA",
+    "thumbnail": "https://i.ytimg.com/vi/GrzZ2qSayfY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1659,7 +1659,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=-t5b7MrWENk",
     "title": "Adhento Gaani Vunnapaatuga | JERSEY | Nani, Shraddha Srinath | Anirudh Ravichander | Telugu Song",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/-t5b7MrWENk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8VCEK1is4GHR8JeclrKVqzjp-Mw",
+    "thumbnail": "https://i.ytimg.com/vi/-t5b7MrWENk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1672,7 +1672,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=hHih9UOh_bs",
     "title": "Hushaaru Friendship Full Video Song || Hushaaru Songs || Sree Harsha Konuganti || Sunny M.R.",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/hHih9UOh_bs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAgDNcQYr8Fy9EooOqJy4qzn-2tGw",
+    "thumbnail": "https://i.ytimg.com/vi/hHih9UOh_bs/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1685,7 +1685,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=L67njBCJvZY",
     "title": "Aagi Aagi Full Video Song | Ee Nagaraniki Emaindi | Tharun Bhascker | Suresh Babu |Telugu Love Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/L67njBCJvZY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC6n9I9-I76E5oQKiXc5PeLPqmQQQ",
+    "thumbnail": "https://i.ytimg.com/vi/L67njBCJvZY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722527,
     "tags": [
@@ -1698,7 +1698,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=3p9ho8LFZj8",
     "title": "Gali Lona Deepam Vole FULL Song | Latest Ayyappa Swamy Songs | Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/3p9ho8LFZj8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4Hw8zFQvrgOFo5Y6XzxnLTxN7Xw",
+    "thumbnail": "https://i.ytimg.com/vi/3p9ho8LFZj8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1711,7 +1711,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=400q5rKZoEw",
     "title": "Ayyappa Swamy Songs | O Jeevama Naa Prana Deepama FULL Song | Bhakti Patalu | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/400q5rKZoEw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByPdAVpCfwxkcmbG7YuEQDLPuAXQ",
+    "thumbnail": "https://i.ytimg.com/vi/400q5rKZoEw/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1724,7 +1724,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=L3mPD8xe5Qc",
     "title": "నిను మరవలేను తండ్రి FULL Song | Ayyappa Swamy Patalu | Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/L3mPD8xe5Qc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCWgu84xfjV9oyE-uwonmE9i_TPJQ",
+    "thumbnail": "https://i.ytimg.com/vi/L3mPD8xe5Qc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1737,7 +1737,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=AIaAtIvp7G8",
     "title": "Ayyappa Padayatra Song | Kaalla Pokkulu Chithike Song | Ayyappa Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/AIaAtIvp7G8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0vTliBB2bO-DQe8ZPklP6z7KOHA",
+    "thumbnail": "https://i.ytimg.com/vi/AIaAtIvp7G8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1750,7 +1750,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=W-ZMkeCvbjM",
     "title": "Yedhani Vetakali Nenu Ayyappa Deva Song | Latest Ayyappa Swamy Devotional Songs | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/W-ZMkeCvbjM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB-EHgFLuZsjyjxKVQ7ouezSsHCcQ",
+    "thumbnail": "https://i.ytimg.com/vi/W-ZMkeCvbjM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1763,7 +1763,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=k1K193DN4d8",
     "title": "Evaro Anukunna Na Chinni Baludu FULL Song | Ayyappa Songs Telugu | Kapil Madduri | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/k1K193DN4d8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-CKEAj1s18QPe3wU_FltZnZioOA",
+    "thumbnail": "https://i.ytimg.com/vi/k1K193DN4d8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1776,7 +1776,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=oiZgnh7m-JI",
     "title": "Irumudi Yettukovali Ayyappa Swamy Song | Ayyappa Swamy Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/oiZgnh7m-JI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjqKeqQymfq4tztfePOeIxrH-f3A",
+    "thumbnail": "https://i.ytimg.com/vi/oiZgnh7m-JI/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1789,7 +1789,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=OXXd4daSKfg",
     "title": "Ayyappa Swamy SUPER HIT Songs | Nee Malalonna Nene Dasudanaitini Song | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/OXXd4daSKfg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzxCNjX702iQepvswPZ_EE7vY6gA",
+    "thumbnail": "https://i.ytimg.com/vi/OXXd4daSKfg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1802,7 +1802,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fygtdIw460A",
     "title": "Gali Lona Deepam Vole Song PROMO | Latest Ayyappa Swamy Songs | Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fygtdIw460A/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmasBOocrPYEsRvInck5RGBF1xTw",
+    "thumbnail": "https://i.ytimg.com/vi/fygtdIw460A/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1815,7 +1815,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=a6DLutwl46U",
     "title": "ఏడాని వెతకాలి నేను అయ్యప్ప Song | #AyyappaSwamy Telugu Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/a6DLutwl46U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB9Xp4sPAdyWURL94IqCLqUXyVEsQ",
+    "thumbnail": "https://i.ytimg.com/vi/a6DLutwl46U/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1828,7 +1828,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=C_IBcth-X78",
     "title": "Ayyappa Swamy Songs | Chikati Chemmithe FULL Song | Ayyappa Padayatra 2025 Song | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/C_IBcth-X78/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDgBSMYeuqe7kQv89pwNC4PN13D7Q",
+    "thumbnail": "https://i.ytimg.com/vi/C_IBcth-X78/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1841,7 +1841,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=AZuO_0vgaoA",
     "title": "Peddapuli Eshwar 2025 Ayyappa Song | Evaro Anukunna Na Chinni Baludu Song PROMO | Kapil Madduri",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/AZuO_0vgaoA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDxlCx6a_IqoC2wQcEMtBHylHeeUw",
+    "thumbnail": "https://i.ytimg.com/vi/AZuO_0vgaoA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1854,7 +1854,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=pJSrVVOZVCY",
     "title": "నిను మరవలేను తండ్రి PROMO | Ayyappa Swamy Bhakti Patalu | Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/pJSrVVOZVCY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC2TAl2xmqVLhn_h4ymHBGv17PniQ",
+    "thumbnail": "https://i.ytimg.com/vi/pJSrVVOZVCY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1867,7 +1867,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=32wCID5bzgk",
     "title": "Ayyappa Swamy Back To Back Songs | Bhakti Patalu | Ayyappa Songs |Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/32wCID5bzgk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC8oGmanJIeTqna-yLyJes7IMyScA",
+    "thumbnail": "https://i.ytimg.com/vi/32wCID5bzgk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1880,7 +1880,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=jUQa0PimkLA",
     "title": "Deputy Speaker Padma Rao Ayyappa Pooja 2022 | Allasina Solasina Song | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/jUQa0PimkLA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDBuESBlTUp2EEyFeDsmruuJgNWww",
+    "thumbnail": "https://i.ytimg.com/vi/jUQa0PimkLA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1893,7 +1893,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=wIPxdH8ekUE",
     "title": "Deputy Speaker PadmaRao | 2022 Ayyappa Swamy Pooja | Dhanasu Banam Chetapatti Song |Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/wIPxdH8ekUE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBnLP1HfmicwigFfklg4dUN-epRfg",
+    "thumbnail": "https://i.ytimg.com/vi/wIPxdH8ekUE/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1906,7 +1906,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=YIjeoOwAKKU",
     "title": "Ayyappa Swamy Devotional Songs | Aidhu Kondala Naduma Ayyappa Song | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/YIjeoOwAKKU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8Wo66rA6PZbIL1_FEfo_sG54h7Q",
+    "thumbnail": "https://i.ytimg.com/vi/YIjeoOwAKKU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1919,7 +1919,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=BgpoA1g8Eg0",
     "title": "Ayyappa Padayatra 2025 Song | Chikati Chemmithe Song PROMO | Ayyappa Swamy Songs | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/BgpoA1g8Eg0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLADQevN6utQbZ8KWIDpSJw_eLrxRg",
+    "thumbnail": "https://i.ytimg.com/vi/BgpoA1g8Eg0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1932,7 +1932,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=wed4-eUusto",
     "title": "Ayyappa Swamy Devotional Songs | Uyyala Uguthunnadu Song | Peddapuli Eshwar Live Performance",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/wed4-eUusto/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmuCNZ0VsT4tkff_pXSe5Ccdzcuw",
+    "thumbnail": "https://i.ytimg.com/vi/wed4-eUusto/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1945,7 +1945,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=btl9o8h8qNU",
     "title": "Ayyappa Songs | Ayyappa Swamy Bhakti Patalu | Devotional Songs | Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/btl9o8h8qNU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCDJ9HYp3nBYbkXOHUHP7Y9R0Rv6Q",
+    "thumbnail": "https://i.ytimg.com/vi/btl9o8h8qNU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1958,7 +1958,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ChRiOqPj1gs",
     "title": "Ayyappa Swamy Bhakti Songs | Ayya Nee Seva Cheya Puttinanu Song | Peddapuli Eshwar Live Performance",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ChRiOqPj1gs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQa0qs4iSofHk0NZGruMuinzeygw",
+    "thumbnail": "https://i.ytimg.com/vi/ChRiOqPj1gs/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1971,7 +1971,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=CiLSbvlhTd8",
     "title": "Peddapuli Eshwar Live Performance | Ayyappa Swamy Devotional Songs | Latest Telugu Bhakti Songs",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/CiLSbvlhTd8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHZ75OT1rMlLFd-AVGyDnj9--Qtw",
+    "thumbnail": "https://i.ytimg.com/vi/CiLSbvlhTd8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1984,7 +1984,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=8nD8i1HQsgQ",
     "title": "Deputy Speaker Padma Rao | Ayyappa Swamy Jathara Anta Song | 2022 Ayyappa Pooja | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/8nD8i1HQsgQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSEqPGt4671UMicuGzbMaak9iG-g",
+    "thumbnail": "https://i.ytimg.com/vi/8nD8i1HQsgQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -1997,7 +1997,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=64ztL6cpEoU",
     "title": "Ayyappa Swamy Songs | Yedhani Vetakali Nenu Ayyappa Deva Song | Peddapuli Eshwar Live Performance",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/64ztL6cpEoU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-jruiJXLyVcMRU_lGZ4gd3zPN0w",
+    "thumbnail": "https://i.ytimg.com/vi/64ztL6cpEoU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2010,7 +2010,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=YHaQAQX-XBU",
     "title": "Shivude Devudani Nenante Song | Ayyappa Swamy Jatara | Telugu Devotional Songs | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/YHaQAQX-XBU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhSzZESFbaUNUiDBK7yGreijA-sA",
+    "thumbnail": "https://i.ytimg.com/vi/YHaQAQX-XBU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2023,7 +2023,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=rOVEZD5blI8",
     "title": "Lord Ayyappa Songs | O Jeevama Naa Prana Deepama Song | #YTShorts | Bhakti Patalu | Peddapuli Eshwar",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/rOVEZD5blI8/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgBzgWAAoAKigIMCAAQARhlIFsoMjAP&rs=AOn4CLBXy-z0QjKqHACKF_w95xNNCGXG3A",
+    "thumbnail": "https://i.ytimg.com/vi/rOVEZD5blI8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2036,7 +2036,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=yHadHUg8vFE",
     "title": "2022 Ayyappa Jatara | Gavvala Dandalu Yellamma Song | Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/yHadHUg8vFE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCvNIJdtGVu7OX-ZsIaHymdDFp49Q",
+    "thumbnail": "https://i.ytimg.com/vi/yHadHUg8vFE/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2049,7 +2049,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=FgjF1m3DDco",
     "title": "Ayyappa Swamy Devotional Songs | Back To Back Bhakti Patalu | Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/FgjF1m3DDco/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDy330H1SkppdsJviXLwC4Fqw4pnA",
+    "thumbnail": "https://i.ytimg.com/vi/FgjF1m3DDco/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2062,7 +2062,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ZHn7wJSPU7E",
     "title": "Kanne Swamula Vaibhogam Anta Song | Ayyappa Jatara Songs | Peddapuli Eshwar Audios And Videos",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ZHn7wJSPU7E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAzZWWId-xj80JIv9vddPyT1mglrA",
+    "thumbnail": "https://i.ytimg.com/vi/ZHn7wJSPU7E/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2075,7 +2075,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=_hJCSc_wWRo",
     "title": "Ayyappa Swamy Back To Back Songs | Latest Telugu Devotional Songs | Peddapuli Eshwar Audios",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/_hJCSc_wWRo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmUPom8MeFs3srV3h0Jpsu6ABX8w",
+    "thumbnail": "https://i.ytimg.com/vi/_hJCSc_wWRo/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992722730,
     "tags": [
@@ -2088,7 +2088,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fKopy74weus",
     "title": "Imagine Dragons - Thunder",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fKopy74weus/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwHy2I5whFlgw_VtGafI3xh3o52g",
+    "thumbnail": "https://i.ytimg.com/vi/fKopy74weus/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2101,7 +2101,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7wtfhZwyrcc",
     "title": "Imagine Dragons - Believer (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/7wtfhZwyrcc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAoCoSToaAJJgJrCI_0-1iZ0G88kg",
+    "thumbnail": "https://i.ytimg.com/vi/7wtfhZwyrcc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2114,7 +2114,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=aJOTlE1K90k",
     "title": "Maroon 5 - Girls Like You ft. Cardi B (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/aJOTlE1K90k/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYxvniaHam_wHL7KUdRxf3PgcNtw",
+    "thumbnail": "https://i.ytimg.com/vi/aJOTlE1K90k/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2127,7 +2127,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=W2MpGCL8-9o",
     "title": "Måneskin - Beggin' (Lyrics/Testo)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/W2MpGCL8-9o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABj2Wc-LHVG6HoB4_wi4LrlS-XCg",
+    "thumbnail": "https://i.ytimg.com/vi/W2MpGCL8-9o/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2140,7 +2140,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=hT_nvWreIhg",
     "title": "OneRepublic - Counting Stars",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/hT_nvWreIhg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD4ZkdBZxlYjMNx8xnLPU4AdoVhiQ",
+    "thumbnail": "https://i.ytimg.com/vi/hT_nvWreIhg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2153,7 +2153,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ktvTqknDobU",
     "title": "Imagine Dragons - Radioactive",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ktvTqknDobU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDws5qyaS09fXtnYqrZif1aJa8WxA",
+    "thumbnail": "https://i.ytimg.com/vi/ktvTqknDobU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2166,7 +2166,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=NUO9F4eUO_A",
     "title": "grandson - Blood // Water (Official Lyric Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/NUO9F4eUO_A/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhmIGYoZjAP&rs=AOn4CLDcv5EloiTiu9IOULCbvljH3YmLOA",
+    "thumbnail": "https://i.ytimg.com/vi/NUO9F4eUO_A/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2179,7 +2179,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=QK8mJJJvaes",
     "title": "MACKLEMORE & RYAN LEWIS - THRIFT SHOP FEAT. WANZ (OFFICIAL VIDEO)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/QK8mJJJvaes/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCoJHoGGKnsTEw1OjJZTn4rRr-CLQ",
+    "thumbnail": "https://i.ytimg.com/vi/QK8mJJJvaes/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2192,7 +2192,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=gOsM-DYAEhY",
     "title": "Imagine Dragons - Whatever It Takes (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/gOsM-DYAEhY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDutiu5zLbJViNeJG_sjTbpHtVZhQ",
+    "thumbnail": "https://i.ytimg.com/vi/gOsM-DYAEhY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2205,7 +2205,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=09R8_2nJtjg",
     "title": "Maroon 5 - Sugar (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDm96BQ2qsjx_LG0Q4kUZeP4NbmWg",
+    "thumbnail": "https://i.ytimg.com/vi/09R8_2nJtjg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2218,7 +2218,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=L3wKzyIN1yk",
     "title": "Rag'n'Bone Man - Human (Official Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/L3wKzyIN1yk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLT1pPA25SBjMJ5zPSWSAe8PuO1g",
+    "thumbnail": "https://i.ytimg.com/vi/L3wKzyIN1yk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2231,7 +2231,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=k2qgadSvNyU",
     "title": "Dua Lipa - New Rules (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/k2qgadSvNyU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCozxOIIxY31GwqykVhh_Q8TDAVAA",
+    "thumbnail": "https://i.ytimg.com/vi/k2qgadSvNyU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2244,7 +2244,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=r6zIGXun57U",
     "title": "Legends Never Die (ft. Against The Current) | Worlds 2017 - League of Legends",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/r6zIGXun57U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBv9tKhyLzQIMaJ88gEuoX8izVfMA",
+    "thumbnail": "https://i.ytimg.com/vi/r6zIGXun57U/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2257,7 +2257,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=0I647GU3Jsc",
     "title": "Imagine Dragons - Natural",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/0I647GU3Jsc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqPixhu9WdXWyxiMRnXvULtwneHg",
+    "thumbnail": "https://i.ytimg.com/vi/0I647GU3Jsc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2270,7 +2270,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Jqs5EaAaueA",
     "title": "5 Seconds of Summer - Youngblood (Alt Version)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Jqs5EaAaueA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA44nf4TmYx6e3yiHKSbtHHFQYyAw",
+    "thumbnail": "https://i.ytimg.com/vi/Jqs5EaAaueA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2283,7 +2283,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=pXRviuL6vMY",
     "title": "twenty one pilots: Stressed Out [OFFICIAL VIDEO]",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/pXRviuL6vMY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAH5xt736yvW5IBFKv9P6VL-0-rGg",
+    "thumbnail": "https://i.ytimg.com/vi/pXRviuL6vMY/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2296,7 +2296,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=vWaRiD5ym74",
     "title": "DNCE - Cake By The Ocean",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/vWaRiD5ym74/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBpqBUDIOJwpli1bK3i_xvgrnWI-g",
+    "thumbnail": "https://i.ytimg.com/vi/vWaRiD5ym74/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2309,7 +2309,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=IPXIgEAGe4U",
     "title": "Panic! At The Disco - High Hopes (Official Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/IPXIgEAGe4U/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCIKnkOSx-RZK1e3rkWeV8RE7Tt_A",
+    "thumbnail": "https://i.ytimg.com/vi/IPXIgEAGe4U/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2322,7 +2322,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=31crA53Dgu0",
     "title": "Sia - Cheap Thrills (Performance Edit)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/31crA53Dgu0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCjpdhjyekZ0aEpz-WuUjIOQoA_hQ",
+    "thumbnail": "https://i.ytimg.com/vi/31crA53Dgu0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2335,7 +2335,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=1nXxPTsy5Gc",
     "title": "MACKLEMORE FEAT SKYLAR GREY - GLORIOUS",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/1nXxPTsy5Gc/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARghIGAocjAP&rs=AOn4CLAfhh1Ugk1QHQL4BIXE05Q8A5-NRw",
+    "thumbnail": "https://i.ytimg.com/vi/1nXxPTsy5Gc/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2348,7 +2348,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=0KSOMA3QBU0",
     "title": "Katy Perry - Dark Horse ft. Juicy J",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/0KSOMA3QBU0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCQP875IVlCmbswjdGCFIj676UrIA",
+    "thumbnail": "https://i.ytimg.com/vi/0KSOMA3QBU0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2361,7 +2361,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=1yYV9-KoSUM",
     "title": "MACKLEMORE FEAT KESHA - GOOD OLD DAYS (OFFICIAL MUSIC VIDEO)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/1yYV9-KoSUM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAIO7Xk7elOtf8SiUVufpN0hOj_1A",
+    "thumbnail": "https://i.ytimg.com/vi/1yYV9-KoSUM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2374,7 +2374,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=mWRsgZuwf_8",
     "title": "Imagine Dragons - Demons (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/mWRsgZuwf_8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJSmxr3qrOI2ibwR3N6YCdGH9X_w",
+    "thumbnail": "https://i.ytimg.com/vi/mWRsgZuwf_8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2387,7 +2387,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=q0hyYWKXF0Q",
     "title": "TONES AND I - DANCE MONKEY (OFFICIAL VIDEO)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/q0hyYWKXF0Q/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCcTmrW5Os6F-Br74X_ItMTZDNhgg",
+    "thumbnail": "https://i.ytimg.com/vi/q0hyYWKXF0Q/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2400,7 +2400,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=PUdyuKaGQd4",
     "title": "Alice Merton - No Roots",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/PUdyuKaGQd4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAomSCCqCKs2FRLtMxM9Ek0hpRgSw",
+    "thumbnail": "https://i.ytimg.com/vi/PUdyuKaGQd4/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2413,7 +2413,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fmI_Ndrxy14",
     "title": "Warriors (ft. Imagine Dragons) | Worlds 2014 - League of Legends",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fmI_Ndrxy14/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBmEv0aIP1VYBb_7MKroF6t3e0o_Q",
+    "thumbnail": "https://i.ytimg.com/vi/fmI_Ndrxy14/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2426,7 +2426,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=GzU8KqOY8YA",
     "title": "Sean Paul - No Lie ft. Dua Lipa",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/GzU8KqOY8YA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXu5Ru3pR8boe6FdBFJgz3JgnuBg",
+    "thumbnail": "https://i.ytimg.com/vi/GzU8KqOY8YA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2439,7 +2439,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=jzD_yyEcp0M",
     "title": "Marshmello & Anne-Marie - FRIENDS (Music Video) *OFFICIAL FRIENDZONE ANTHEM*",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/jzD_yyEcp0M/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBM9GuxkOa7Z380LYdAIdcfjA1tdw",
+    "thumbnail": "https://i.ytimg.com/vi/jzD_yyEcp0M/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2452,7 +2452,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Io0fBr1XBUA",
     "title": "The Chainsmokers - Don't Let Me Down (Official Video) ft. Daya",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/Io0fBr1XBUA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBUS3mNDfFrk6iiR77IyU7TO3RqCg",
+    "thumbnail": "https://i.ytimg.com/vi/Io0fBr1XBUA/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2465,7 +2465,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=UprcpdwuwCg",
     "title": "twenty one pilots: Heathens (from Suicide Squad: The Album) [OFFICIAL VIDEO]",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/UprcpdwuwCg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDW2ucqQPhGRBLBjwO95hOyBsf5Uw",
+    "thumbnail": "https://i.ytimg.com/vi/UprcpdwuwCg/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2478,7 +2478,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=KBtk5FUeJbk",
     "title": "Sub Urban - Cradles [Official Music Video]",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/KBtk5FUeJbk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhq3jamGEyTd67cruYTXvAMkwF_g",
+    "thumbnail": "https://i.ytimg.com/vi/KBtk5FUeJbk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2491,7 +2491,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fnlJw9H0xAM",
     "title": "NF - The Search",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fnlJw9H0xAM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXp2VszOhcTgHNeUhT71RJ4x37Jw",
+    "thumbnail": "https://i.ytimg.com/vi/fnlJw9H0xAM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2504,7 +2504,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=BQ0mxQXmLsk",
     "title": "Camila Cabello - Havana (Official Video) ft. Young Thug",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/BQ0mxQXmLsk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCrXvZDd6UKirAqq3bVMt7sIgFpFA",
+    "thumbnail": "https://i.ytimg.com/vi/BQ0mxQXmLsk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2517,7 +2517,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=LkIWmsP3c_s",
     "title": "Fall Out Boy - My Songs Know What You Did In The Dark (Light Em Up) - Part 1 of 11",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/LkIWmsP3c_s/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDmv-vM2_5HnL-SCO5PYkAzNKEWsQ",
+    "thumbnail": "https://i.ytimg.com/vi/LkIWmsP3c_s/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2530,7 +2530,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=RgKAFK5djSk",
     "title": "Wiz Khalifa - See You Again ft. Charlie Puth [Official Video] Furious 7 Soundtrack",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/RgKAFK5djSk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhwpRCeR0BhQArxzwQO_lgrLV3jQ",
+    "thumbnail": "https://i.ytimg.com/vi/RgKAFK5djSk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2543,7 +2543,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=JGwWNGJdvx8",
     "title": "Ed Sheeran - Shape of You (Official Music Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDlT6L0sEzlJ81zLRYRh9Ja0fXW3g",
+    "thumbnail": "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2556,7 +2556,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=fHI8X4OXluQ",
     "title": "The Weeknd - Blinding Lights (Official Audio)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/fHI8X4OXluQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBqGnrUeWZx5D7BH1wN6YbLHCo7cw",
+    "thumbnail": "https://i.ytimg.com/vi/fHI8X4OXluQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2569,7 +2569,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
     "title": "Mark Ronson - Uptown Funk (Official Video) ft. Bruno Mars",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAPd0HXdCPOkPl9cXjL6KKV-3O24w",
+    "thumbnail": "https://i.ytimg.com/vi/OPf0YbXqDm0/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2582,7 +2582,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=YykjpeuMNEk",
     "title": "Coldplay - Hymn For The Weekend (Official Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/YykjpeuMNEk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAojx8_Yokuhhp5_eH6SqfiOVqNfQ",
+    "thumbnail": "https://i.ytimg.com/vi/YykjpeuMNEk/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2595,7 +2595,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=LBr7kECsjcQ",
     "title": "Fall Out Boy - Centuries (Official Video)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/LBr7kECsjcQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCS0OEjRXP1PR7Wrv_3sn7bFPzf0w",
+    "thumbnail": "https://i.ytimg.com/vi/LBr7kECsjcQ/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2608,7 +2608,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=papuvlVeZg8",
     "title": "Clean Bandit - Rockabye (feat. Sean Paul & Anne-Marie) [Official Video]",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/papuvlVeZg8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAXcgP0wOVN5zejQdXAQhIjGKWIog",
+    "thumbnail": "https://i.ytimg.com/vi/papuvlVeZg8/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2621,7 +2621,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=2zNSgSzhBfM",
     "title": "MACKLEMORE & RYAN LEWIS - CAN'T HOLD US FEAT. RAY DALTON (OFFICIAL MUSIC VIDEO)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/2zNSgSzhBfM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCljF7o2X9eIAwkbrRKGR4XPPAagQ",
+    "thumbnail": "https://i.ytimg.com/vi/2zNSgSzhBfM/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2634,7 +2634,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ApXoWvfEYVU",
     "title": "Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)",
     "artist": "YouTube",
-    "thumbnail": "https://i.ytimg.com/vi/ApXoWvfEYVU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAhIbSP_qHLmWI-K4tHIXK35nCvAA",
+    "thumbnail": "https://i.ytimg.com/vi/ApXoWvfEYVU/hqdefault.jpg",
     "duration": 210,
     "addedAt": 1789992723049,
     "tags": [
@@ -2647,7 +2647,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7w7LUaLpM4E",
     "title": "MALLEPOOLA PALLAKI 8K VIDEO | RAVI TEJA | GV PRAKASH | DAPPU SRINU | IRUMUDI | AYYAPPA SONG",
     "artist": "T-Series and T-Series Telugu",
-    "thumbnail": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCakPFXX1iG2MLUjjdvUN4dsNiKgQ",
+    "thumbnail": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg",
     "duration": 183,
     "addedAt": 1790136613864,
     "tags": [
@@ -2662,7 +2662,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=NhWaRfiqeCs",
     "title": "IRUMUDI KATTU: Ravi Teja | GV Prakash Kumar | Ananthu | Shiva Nirvana | Irumudi | #Ayyappa 2026",
     "artist": "T-Series Bhakti Sagar Telugu",
-    "thumbnail": "https://i.ytimg.com/vi/NhWaRfiqeCs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBXdlcBM6sKPVENsWQQnGd3ZL1ZSQ",
+    "thumbnail": "https://i.ytimg.com/vi/NhWaRfiqeCs/hqdefault.jpg",
     "duration": 255,
     "addedAt": 1790136613864,
     "tags": [
@@ -2677,7 +2677,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ov6T2FG-4wk",
     "title": "Ravana Sandanalo Ayyappa | Naarsingi Narsing Rao Ayyappa Songs | SVC Recording Company",
     "artist": "SVC Recording Company",
-    "thumbnail": "https://i.ytimg.com/vi/ov6T2FG-4wk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLABxKANDX9gHVKDuRnSUXR8TtAxJg",
+    "thumbnail": "https://i.ytimg.com/vi/ov6T2FG-4wk/hqdefault.jpg",
     "duration": 301,
     "addedAt": 1790136613864,
     "tags": [
@@ -2692,7 +2692,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=L9nI3LLRE40",
     "title": "Pandalaraja Panchagireesha | Naarsingi Narsing Rao Ayyappa Song | SVC Recording Company",
     "artist": "SVC Recording Company",
-    "thumbnail": "https://i.ytimg.com/vi/L9nI3LLRE40/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBOasKIpV_CvFL8HbgVqszWXAR9xg",
+    "thumbnail": "https://i.ytimg.com/vi/L9nI3LLRE40/hqdefault.jpg",
     "duration": 319,
     "addedAt": 1790136613864,
     "tags": [
@@ -2707,7 +2707,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=BOjJGALm2kQ",
     "title": "హరివరాసనం || Popular Ayyappa Song by K.J.Yesudas | Ayyappa Swamy Songs | #ayyappaswamysongs",
     "artist": "Aditya Bhakthi",
-    "thumbnail": "https://i.ytimg.com/vi/BOjJGALm2kQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBHd6m-kGZKQ0yHUDo3mCWtBZJROw",
+    "thumbnail": "https://i.ytimg.com/vi/BOjJGALm2kQ/hqdefault.jpg",
     "duration": 299,
     "addedAt": 1790136613864,
     "tags": [
@@ -2722,7 +2722,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=JnLrW819tSM",
     "title": "శరణం అయ్యప్ప Ayyappa Song 2024 | TanuSree_KDS | Aeindri Productions | Ayyappa Devotional Song",
     "artist": "Aeindri Productions",
-    "thumbnail": "https://i.ytimg.com/vi/JnLrW819tSM/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDOVcpnRrg5o9uzr4lvEJR-pcYEKQ",
+    "thumbnail": "https://i.ytimg.com/vi/JnLrW819tSM/hqdefault.jpg",
     "duration": 273,
     "addedAt": 1790136613864,
     "tags": [
@@ -2737,7 +2737,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=FpjJgHkroDI",
     "title": "Irumudikattu Sabarimalaikku - Lord Ayyappa Swamy Telugu Devotional Songs - Hindu Devotional Songs",
     "artist": "mcvideostelugu",
-    "thumbnail": "https://i.ytimg.com/vi/FpjJgHkroDI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLARt9KgLgDsTR9EVBN1HcRUmUCEHQ",
+    "thumbnail": "https://i.ytimg.com/vi/FpjJgHkroDI/hqdefault.jpg",
     "duration": 290,
     "addedAt": 1790136613864,
     "tags": [
@@ -2752,7 +2752,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=400q5rKZoEw",
     "title": "Ayyappa Swamy Songs | O Jeevama Naa Prana Deepama FULL Song | Bhakti Patalu | Peddapuli Eshwar",
     "artist": "Peddapuli Eshwar Audios & Videos",
-    "thumbnail": "https://i.ytimg.com/vi/400q5rKZoEw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByPdAVpCfwxkcmbG7YuEQDLPuAXQ",
+    "thumbnail": "https://i.ytimg.com/vi/400q5rKZoEw/hqdefault.jpg",
     "duration": 335,
     "addedAt": 1790136613864,
     "tags": [
@@ -2767,7 +2767,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=CdMo9iS6SlI",
     "title": "BALA SWAMY NI BANGARU AYYAPPA FULL SONG | AYYAPPA SWAMY NEW SONG 2024 | NAKSHATRA STUDIOS |",
     "artist": "Nakshatra Studios",
-    "thumbnail": "https://i.ytimg.com/vi/CdMo9iS6SlI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD3NJaIUonEafacHkw9GJQsscD_1Q",
+    "thumbnail": "https://i.ytimg.com/vi/CdMo9iS6SlI/hqdefault.jpg",
     "duration": 303,
     "addedAt": 1790136613864,
     "tags": [
@@ -2782,7 +2782,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=pNGdT5obEys",
     "title": "Devullu Songs - Ayyappa Devaya - Tanish, Prithvi, Raasi - HD",
     "artist": "Volga Video",
-    "thumbnail": "https://i.ytimg.com/vi/pNGdT5obEys/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBF4urvFCYVn9PM8qFupQq2jShEAw",
+    "thumbnail": "https://i.ytimg.com/vi/pNGdT5obEys/hqdefault.jpg",
     "duration": 367,
     "addedAt": 1790136613864,
     "tags": [
@@ -2797,7 +2797,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=317vzk6lEcA",
     "title": "AYYAPPA SWAMY NEW FULL SONG || DJ 2024 SONG || STILL VIJAY || VR TALKIES DEVOTIONAL",
     "artist": "VR Talkies Devotional",
-    "thumbnail": "https://i.ytimg.com/vi/317vzk6lEcA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAA28zKHv9gcyF6BOP9xONtEAGA9g",
+    "thumbnail": "https://i.ytimg.com/vi/317vzk6lEcA/hqdefault.jpg",
     "duration": 451,
     "addedAt": 1790136613864,
     "tags": [
@@ -2812,7 +2812,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=1ajrWfrDRF8",
     "title": "Naa Swamy Ayyappa Full Song | Irumudi Song | Sharanu Gosha | Ayyappa Songs | AI Music & Visuals",
     "artist": "Gaanam Ai",
-    "thumbnail": "https://i.ytimg.com/vi/1ajrWfrDRF8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAiRXwwT8mnUpjNoTiDPzgeV4DoYQ",
+    "thumbnail": "https://i.ytimg.com/vi/1ajrWfrDRF8/hqdefault.jpg",
     "duration": 287,
     "addedAt": 1790136613864,
     "tags": [
@@ -2827,7 +2827,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=7dAO1cQLR-0",
     "title": "Ayyappa Swamy songs in 2026   | Ayyappa Devotional Songs",
     "artist": "Sailu Sunshine",
-    "thumbnail": "https://i.ytimg.com/vi/7dAO1cQLR-0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARh_IE8oFjAP&rs=AOn4CLCvFubNPWLAxZe3eof16RaNX7VFnA",
+    "thumbnail": "https://i.ytimg.com/vi/7dAO1cQLR-0/hqdefault.jpg",
     "duration": 2475,
     "addedAt": 1790136613864,
     "tags": [
@@ -2842,7 +2842,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=O_yjeMdYlyk",
     "title": "Avarannarayya nuvvu levani Ayyappa Swamy Song 2023 | 4K | Gangaputra Narsingh rao | Jdl Official",
     "artist": "JDL officials",
-    "thumbnail": "https://i.ytimg.com/vi/O_yjeMdYlyk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCkCG56ueAdX2pU0PKpP1kk7Nm9LQ",
+    "thumbnail": "https://i.ytimg.com/vi/O_yjeMdYlyk/hqdefault.jpg",
     "duration": 358,
     "addedAt": 1790136613864,
     "tags": [
@@ -2857,7 +2857,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=VwzAKZ-NPtE",
     "title": "Mallepula Pallaki Bangaru Pallaki || Dappu  Srinu || Tunewave Music",
     "artist": "TW Devotional",
-    "thumbnail": "https://i.ytimg.com/vi/VwzAKZ-NPtE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB0jz8bnmaIsr7E4r8ILdbqADdrlg",
+    "thumbnail": "https://i.ytimg.com/vi/VwzAKZ-NPtE/hqdefault.jpg",
     "duration": 250,
     "addedAt": 1790136613864,
     "tags": [
@@ -2872,7 +2872,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=sOfh139UMww",
     "title": "Ayyappa Super Hit Songs 2019 | Nanu Nee Vaadanukuni | Ayyappa Swamy Song | Amulya Audios And Videos",
     "artist": "Amulya Audios and Videos",
-    "thumbnail": "https://i.ytimg.com/vi/sOfh139UMww/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYUos_hBbF50O3sHclRUrolC1YCg",
+    "thumbnail": "https://i.ytimg.com/vi/sOfh139UMww/hqdefault.jpg",
     "duration": 321,
     "addedAt": 1790136613864,
     "tags": [
@@ -2887,7 +2887,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ad_fXyIabVo",
     "title": "Bhagavan Saranam Bagavathi Saranam With Lyrics | భగవాన్ శరణం భగవతి శరణం తెలుగు | Ayyappa Swamy Songs",
     "artist": "Bhakthi Channel - Bhakthi TV",
-    "thumbnail": "https://i.ytimg.com/vi/ad_fXyIabVo/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2R0cnMnGu6X0P3oNh6YTf4IaMAQ",
+    "thumbnail": "https://i.ytimg.com/vi/ad_fXyIabVo/hqdefault.jpg",
     "duration": 366,
     "addedAt": 1790136613864,
     "tags": [
@@ -2902,7 +2902,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ymuUXrxpywU",
     "title": "Evergreen Ayyappa Swamy Songs | Juke box | Latest Ayyappa Swamy Songs Telugu | Best Manikanta Songs",
     "artist": "PK Devotional Tunes",
-    "thumbnail": "https://i.ytimg.com/vi/ymuUXrxpywU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDWYS3iRjRHUPEiFfBXhcP39TGiOA",
+    "thumbnail": "https://i.ytimg.com/vi/ymuUXrxpywU/hqdefault.jpg",
     "duration": 4368,
     "addedAt": 1790136613864,
     "tags": [
@@ -2917,7 +2917,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=gPH4erPbpPc",
     "title": "Harivarasanam | ഹരിവരാസനം | ஹரிவராசனம் | Ayyappa Devotional Song by Shree Naval Kishori",
     "artist": "Shree Naval Kishori",
-    "thumbnail": "https://i.ytimg.com/vi/gPH4erPbpPc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvfBwAIB5uNCWRQmUNRm96qEDTyA",
+    "thumbnail": "https://i.ytimg.com/vi/gPH4erPbpPc/hqdefault.jpg",
     "duration": 470,
     "addedAt": 1790136613864,
     "tags": [
@@ -2932,7 +2932,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=IzePl-nFml8",
     "title": "Ayyappa Song 2025 || Singer Version || Singer Karthika Jadav || Santhosh Sheri",
     "artist": "Aeindri Productions",
-    "thumbnail": "https://i.ytimg.com/vi/IzePl-nFml8/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDM68Vb54S3gVjaAFSJJ1C9W8qi4w",
+    "thumbnail": "https://i.ytimg.com/vi/IzePl-nFml8/hqdefault.jpg",
     "duration": 243,
     "addedAt": 1790136613864,
     "tags": [
@@ -2947,7 +2947,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=MlfPCYAt9cE",
     "title": "IRUMUDI KATTESINAM FULL SONG | NEW AYYAPPA SWAMY SONG 2024 | VAGDEVI | RAJENDER KONDA | MADEEN SK",
     "artist": "JDL MUSIC",
-    "thumbnail": "https://i.ytimg.com/vi/MlfPCYAt9cE/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAFxdjF6c5tAtX6yOJYw2pLGw5C4w",
+    "thumbnail": "https://i.ytimg.com/vi/MlfPCYAt9cE/hqdefault.jpg",
     "duration": 282,
     "addedAt": 1790136613864,
     "tags": [
@@ -2962,7 +2962,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=g3bboQt37x0",
     "title": "pallikattu sabarimalaikku #hindu #devotional #song #sabarimala #ayyappa",
     "artist": "Old South Indian songs ",
-    "thumbnail": "https://i.ytimg.com/vi/g3bboQt37x0/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB1AaAAsIDigIMCAAQARhyIE8oRDAP&rs=AOn4CLAZpsZtZyOhsADDvHj3I_BX6Eiy7Q",
+    "thumbnail": "https://i.ytimg.com/vi/g3bboQt37x0/hqdefault.jpg",
     "duration": 403,
     "addedAt": 1790136613864,
     "tags": [
@@ -2977,7 +2977,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=9hXWHiAJNcU",
     "title": "Pacha Pachani Chettura | Lord Ayyappa Devotional Songs | Telugu Bhakti Songs | Amulya Audios",
     "artist": "Amulya Audios and Videos",
-    "thumbnail": "https://i.ytimg.com/vi/9hXWHiAJNcU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBQoMbl3mm0sn1RvfamMspZ5XE7Zw",
+    "thumbnail": "https://i.ytimg.com/vi/9hXWHiAJNcU/hqdefault.jpg",
     "duration": 473,
     "addedAt": 1790136613864,
     "tags": [
@@ -2992,7 +2992,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=HwBRWbQP_CU",
     "title": "Ayyappa Ani pilichina Palukavu Remix Rakesh Lucky",
     "artist": "DJ RAKESH LUCKY OFFICIAL ",
-    "thumbnail": "https://i.ytimg.com/vi/HwBRWbQP_CU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDZK8MokKTf3T3t9oXyXeycJ_yDSA",
+    "thumbnail": "https://i.ytimg.com/vi/HwBRWbQP_CU/hqdefault.jpg",
     "duration": 325,
     "addedAt": 1790136613864,
     "tags": [
@@ -3007,7 +3007,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=ZMwWgSyX9FQ",
     "title": "NEE KONDAKU RAVALANI UNDI AYYAPPA FULL SONG | AYYAPPA SWAMY NEW SONG 2025 | NAKSHATRA STUDIOS |",
     "artist": "Nakshatra Studios",
-    "thumbnail": "https://i.ytimg.com/vi/ZMwWgSyX9FQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBJEJtHvDPZjvv2ZbBLpd2AfEH6Jw",
+    "thumbnail": "https://i.ytimg.com/vi/ZMwWgSyX9FQ/hqdefault.jpg",
     "duration": 377,
     "addedAt": 1790136613864,
     "tags": [
@@ -3022,7 +3022,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=zV0lDPtAUxw",
     "title": "Ayyappa Swamy Special Songs | Pallikattu Sabarimalaiki | Telugu Devotional Songs | Devotional  TV",
     "artist": "Devotional TV",
-    "thumbnail": "https://i.ytimg.com/vi/zV0lDPtAUxw/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCLMg1Edi-AHKYoZn5vEydFM2qXfg",
+    "thumbnail": "https://i.ytimg.com/vi/zV0lDPtAUxw/hqdefault.jpg",
     "duration": 424,
     "addedAt": 1790136613864,
     "tags": [
@@ -3037,7 +3037,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=GOiT1lxmEdI",
     "title": "శివరాత్రి పాట 2025...నల్లగొండ గద్దర్ ..NEW SONG / RAVI KALYAN // MATLA THIRUPATHI // NALGONDA GADDAR",
     "artist": "Nalgonda Gaddar Narsanna Official",
-    "thumbnail": "https://i.ytimg.com/vi/GOiT1lxmEdI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBviBQFFFzSsMuG4T1oaHvq2HeHeg",
+    "thumbnail": "https://i.ytimg.com/vi/GOiT1lxmEdI/hqdefault.jpg",
     "duration": 283,
     "addedAt": 1790136613864,
     "tags": [
@@ -3052,7 +3052,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=WapW5oW71TU",
     "title": "Ninnu Chudaka Ayyappa Song | Ayyappa Swamy Special Devotional Songs | Amulya Audios and Videos",
     "artist": "Amulya Audios and Videos",
-    "thumbnail": "https://i.ytimg.com/vi/WapW5oW71TU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBLE4IXxFVdWE_bB-S2sWBFTSW1_A",
+    "thumbnail": "https://i.ytimg.com/vi/WapW5oW71TU/hqdefault.jpg",
     "duration": 446,
     "addedAt": 1790136613864,
     "tags": [
@@ -3067,7 +3067,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=5OHbrR5_S0o",
     "title": "Ayyappa Swamy Telugu Devotional Songs | Palli Kattu Sabarimalaikku Telugu Audio Song | Devotional TV",
     "artist": "Devotional TV",
-    "thumbnail": "https://i.ytimg.com/vi/5OHbrR5_S0o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5ZVNxhwr0L_HaHbybhIfX5Gqw3g",
+    "thumbnail": "https://i.ytimg.com/vi/5OHbrR5_S0o/hqdefault.jpg",
     "duration": 432,
     "addedAt": 1790136613864,
     "tags": [
@@ -3082,7 +3082,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=Zq9xHq-IdPs",
     "title": "శబరీకొండలలొ ఆబంగరుకొవెల్లొ | Ayyappa Swamy Songs 2024 | Ayyappa Songs | Telugu Devotional Songs",
     "artist": "Lalithaa Bhakti Patalu ",
-    "thumbnail": "https://i.ytimg.com/vi/Zq9xHq-IdPs/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCmIv5hW1RhfbmNvkkfWdGYjNtndw",
+    "thumbnail": "https://i.ytimg.com/vi/Zq9xHq-IdPs/hqdefault.jpg",
     "duration": 389,
     "addedAt": 1790136613864,
     "tags": [
@@ -3097,7 +3097,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=OAnBCz4uOAU",
     "title": "பள்ளிக்கட்டு | Evergreen Ayyappa Devotional Song | Sung by Veeramani Raju | Pallikkattu",
     "artist": "Tamil Devotional",
-    "thumbnail": "https://i.ytimg.com/vi/OAnBCz4uOAU/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD9YFoWNwSAvINEfuiR4NByCi_LfA",
+    "thumbnail": "https://i.ytimg.com/vi/OAnBCz4uOAU/hqdefault.jpg",
     "duration": 441,
     "addedAt": 1790136613864,
     "tags": [
@@ -3112,7 +3112,7 @@ export const INITIAL_TRACKS: Track[] = [
     "youtubeUrl": "https://www.youtube.com/watch?v=CSu8VXnuiCY",
     "title": "Yettettu Kondallo nuvvunagani | Ayyappa Emotional songs | Bhakti songs | Gangaputra Narsingh Rao",
     "artist": "BHAVISHYA SRI MUSIC",
-    "thumbnail": "https://i.ytimg.com/vi/CSu8VXnuiCY/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxjpq617VuQBcTUOXavhtFbHxBrA",
+    "thumbnail": "https://i.ytimg.com/vi/CSu8VXnuiCY/hqdefault.jpg",
     "duration": 356,
     "addedAt": 1790136613864,
     "tags": [
@@ -3162,7 +3162,7 @@ export const INITIAL_PLAYLISTS: Playlist[] = [
       "yt-OAnBCz4uOAU",
       "yt-CSu8VXnuiCY"
     ],
-    "coverUrl": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCakPFXX1iG2MLUjjdvUN4dsNiKgQ",
+    "coverUrl": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg",
     "gradient": "from-amber-700 to-[#121212]",
     "createdAt": 1790136613864,
     "updatedAt": 1790136613864

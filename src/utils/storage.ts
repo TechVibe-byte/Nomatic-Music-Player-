@@ -1,5 +1,6 @@
 import { Track, Playlist, AppConfig } from '../types';
 import { INITIAL_TRACKS, INITIAL_PLAYLISTS } from './initialPlaylists';
+import { normalizeYouTubeThumbnail } from './youtube';
 
 export { INITIAL_TRACKS, INITIAL_PLAYLISTS };
 
@@ -51,23 +52,28 @@ export function loadTracks(): Track[] {
       const parsed = JSON.parse(raw);
       const isLegacyDummy = Array.isArray(parsed) && parsed.some((t: Track) => t.id === 'track-lofi-1' || t.id === 'track-synth-2');
       if (Array.isArray(parsed) && parsed.length > 0 && !isLegacyDummy) {
-        // Merge any newly introduced default tracks
+        // Merge any newly introduced default tracks and heal any legacy expired thumbnail URLs
         const existingIds = new Set(parsed.map((t: Track) => t.id));
         const missing = INITIAL_TRACKS.filter((t: Track) => !existingIds.has(t.id));
-        if (missing.length > 0) {
-          const merged = [...parsed, ...missing];
-          saveTracks(merged);
-          return merged;
-        }
-        return parsed;
+        const combined = missing.length > 0 ? [...parsed, ...missing] : parsed;
+        const normalized = combined.map((t: Track) => ({
+          ...t,
+          thumbnail: normalizeYouTubeThumbnail(t.thumbnail, t.youtubeId),
+        }));
+        saveTracks(normalized);
+        return normalized;
       }
     }
   } catch (e) {
     console.warn('Failed to load tracks', e);
   }
   // Fallback to initial tracks
-  saveTracks(INITIAL_TRACKS);
-  return INITIAL_TRACKS;
+  const normalizedInitial = INITIAL_TRACKS.map((t: Track) => ({
+    ...t,
+    thumbnail: normalizeYouTubeThumbnail(t.thumbnail, t.youtubeId),
+  }));
+  saveTracks(normalizedInitial);
+  return normalizedInitial;
 }
 
 export function saveTracks(tracks: Track[]): void {
@@ -89,12 +95,13 @@ export function loadPlaylists(): Playlist[] {
         // Merge any newly introduced default playlists
         const existingIds = new Set(parsed.map((p: Playlist) => p.id));
         const missing = INITIAL_PLAYLISTS.filter((p: Playlist) => !existingIds.has(p.id));
-        if (missing.length > 0) {
-          const merged = [...missing, ...parsed];
-          savePlaylists(merged);
-          return merged;
-        }
-        return parsed;
+        const combined = missing.length > 0 ? [...missing, ...parsed] : parsed;
+        const normalized = combined.map((p: Playlist) => ({
+          ...p,
+          coverUrl: p.coverUrl ? normalizeYouTubeThumbnail(p.coverUrl) : p.coverUrl,
+        }));
+        savePlaylists(normalized);
+        return normalized;
       }
     }
   } catch (e) {

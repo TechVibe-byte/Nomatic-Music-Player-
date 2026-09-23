@@ -3,6 +3,7 @@
  * and converting them into Nomatic Track and Playlist objects.
  */
 import { Track } from '../types';
+import { normalizeYouTubeThumbnail } from './youtube';
 
 export interface YouTubePlaylistItem {
   videoId: string;
@@ -154,10 +155,8 @@ export function parseYouTubePlaylistHtml(html: string, playlistId: string): YouT
           let title = label.replace(/\s+\d+\s+(?:minutes?|seconds?|hours?)(?:,\s*\d+\s+seconds?)?$/i, '').trim();
           if (!title) title = `Track (${videoId})`;
 
-          const thumbSources = lv.contentImage?.thumbnailViewModel?.image?.sources;
-          const thumbnail = thumbSources && thumbSources.length > 0
-            ? thumbSources[thumbSources.length - 1].url
-            : `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+          // Always generate canonical, permanent, unexpired YouTube thumbnail
+          const thumbnail = normalizeYouTubeThumbnail('', videoId);
 
           tracks.push({ videoId, title, author, thumbnail });
         }
@@ -172,10 +171,7 @@ export function parseYouTubePlaylistHtml(html: string, playlistId: string): YouT
           const title = pvr.title?.runs?.[0]?.text || pvr.title?.simpleText || `Track (${videoId})`;
           const author = pvr.shortBylineText?.runs?.[0]?.text || playlistAuthor;
           const duration = parseInt(pvr.lengthSeconds || '0', 10);
-          const thumbSources = pvr.thumbnail?.thumbnails;
-          const thumbnail = thumbSources && thumbSources.length > 0
-            ? thumbSources[thumbSources.length - 1].url
-            : `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+          const thumbnail = normalizeYouTubeThumbnail('', videoId);
 
           tracks.push({ videoId, title, author, duration, thumbnail });
         }
@@ -200,13 +196,13 @@ export function parseYouTubePlaylistHtml(html: string, playlistId: string): YouT
           videoId: vid,
           title: `Track ${tracks.length + 1} (${vid})`,
           author: playlistAuthor,
-          thumbnail: `https://img.youtube.com/vi/${vid}/hqdefault.jpg`,
+          thumbnail: normalizeYouTubeThumbnail('', vid),
         });
       }
     }
   }
 
-  const playlistThumbnail = tracks[0]?.thumbnail || `https://img.youtube.com/vi/${playlistId}/hqdefault.jpg`;
+  const playlistThumbnail = tracks[0]?.thumbnail || normalizeYouTubeThumbnail('', playlistId);
 
   return {
     id: playlistId,
@@ -231,11 +227,8 @@ export function parseInvidiousPlaylist(data: any, playlistId: string): YouTubePl
       const vid = v.videoId;
       if (vid && typeof vid === 'string' && !seenIds.has(vid)) {
         seenIds.add(vid);
-        const thumbs = v.videoThumbnails;
-        const thumbnail =
-          thumbs && Array.isArray(thumbs) && thumbs.length > 0
-            ? thumbs[thumbs.length - 1].url
-            : `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+        // Canonical YouTube thumbnail from official Google CDN, bypassing fragile Invidious proxy paths
+        const thumbnail = normalizeYouTubeThumbnail('', vid);
         tracks.push({
           videoId: vid,
           title: v.title || `Track (${vid})`,
@@ -252,7 +245,7 @@ export function parseInvidiousPlaylist(data: any, playlistId: string): YouTubePl
     title: data?.title || `YouTube Playlist (${playlistId.slice(0, 8)})`,
     author: data?.author || 'YouTube',
     description: data?.description || 'Imported YouTube playlist',
-    thumbnail: tracks[0]?.thumbnail || `https://img.youtube.com/vi/${playlistId}/hqdefault.jpg`,
+    thumbnail: tracks[0]?.thumbnail || normalizeYouTubeThumbnail('', playlistId),
     itemCount: tracks.length,
     tracks,
   };
@@ -398,7 +391,7 @@ export function convertPlaylistItemsToTracks(
       youtubeUrl: `https://www.youtube.com/watch?v=${item.videoId}`,
       title: item.title,
       artist: item.author,
-      thumbnail: item.thumbnail,
+      thumbnail: normalizeYouTubeThumbnail(item.thumbnail, item.videoId),
       duration: item.duration || 180,
       addedAt: now + index, // preserve order
       modePreference: defaultMode,

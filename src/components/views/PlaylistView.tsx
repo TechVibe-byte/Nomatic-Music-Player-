@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Track, Playlist, PlaybackMode } from '../../types';
 import { formatTime } from '../../utils/youtube';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface PlaylistViewProps {
   playlist: Playlist;
@@ -80,9 +81,10 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
         <div className="flex flex-col sm:flex-row items-center sm:items-end gap-5 sm:gap-6 max-w-7xl mx-auto text-center sm:text-left">
           {/* Playlist Artwork */}
           <div className="w-40 h-40 sm:w-56 sm:h-56 rounded-xl overflow-hidden shadow-2xl bg-neutral-900 flex-shrink-0 flex items-center justify-center border border-white/10 mx-auto sm:mx-0">
-            {playlistTracks[0]?.thumbnail ? (
-              <img
-                src={playlistTracks[0].thumbnail}
+            {playlistTracks[0] ? (
+              <TrackThumbnail
+                src={playlist.coverUrl || playlistTracks[0].thumbnail}
+                videoId={playlistTracks[0].youtubeId}
                 alt={playlist.name}
                 className="w-full h-full object-cover"
               />
@@ -235,8 +237,9 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
 
                     {/* Title & Artist & Thumbnail */}
                     <div className="col-span-6 sm:col-span-5 flex items-center gap-3 min-w-0">
-                      <img
+                      <TrackThumbnail
                         src={track.thumbnail}
+                        videoId={track.youtubeId}
                         alt={track.title}
                         className="w-10 h-10 rounded object-cover flex-shrink-0 bg-neutral-800"
                       />

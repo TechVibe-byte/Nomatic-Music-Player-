@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search, Youtube, Play, Heart, Plus, Sparkles, Music } from 'lucide-react';
 import { Track, Playlist, ActiveView } from '../../types';
 import { formatTime } from '../../utils/youtube';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface SearchViewProps {
   searchQuery: string;
@@ -123,8 +124,9 @@ export const SearchView: React.FC<SearchViewProps> = ({
                   >
                     <div className="flex items-center gap-3.5 min-w-0 flex-1">
                       <div className="relative w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 bg-neutral-800">
-                        <img
+                        <TrackThumbnail
                           src={track.thumbnail}
+                          videoId={track.youtubeId}
                           alt={track.title}
                           className="w-full h-full object-cover"
                         />

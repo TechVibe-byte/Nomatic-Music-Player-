@@ -36,6 +36,7 @@ import {
   YouTubePlaylistResult,
   convertPlaylistItemsToTracks,
 } from '../../utils/youtubePlaylist';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface AddTrackModalProps {
   isOpen: boolean;
@@ -720,8 +721,9 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
               {/* Parsed Preview Card */}
               {parsedId && (
                 <div className="p-3 bg-neutral-900 rounded-xl border border-neutral-800 flex gap-3 items-center animate-fadeIn">
-                  <img
-                    src={thumbnail || `https://img.youtube.com/vi/${parsedId}/hqdefault.jpg`}
+                  <TrackThumbnail
+                    src={thumbnail}
+                    videoId={parsedId}
                     alt="Thumbnail"
                     className="w-16 h-16 rounded-lg object-cover bg-neutral-800 flex-shrink-0"
                   />
@@ -956,8 +958,9 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
                 <form onSubmit={handlePlaylistImportSubmit} className="space-y-4">
                   {/* Playlist Summary Banner */}
                   <div className="p-3.5 bg-gradient-to-br from-neutral-800/90 to-neutral-900 rounded-xl border border-neutral-700/80 flex items-center gap-3.5 shadow-lg">
-                    <img
+                    <TrackThumbnail
                       src={detectedPlaylist.thumbnail}
+                      videoId={detectedPlaylist.tracks[0]?.videoId}
                       alt={detectedPlaylist.title}
                       className="w-16 h-16 rounded-lg object-cover bg-neutral-800 flex-shrink-0 border border-neutral-700"
                     />
@@ -1229,8 +1232,9 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
                             <span className="text-[11px] text-neutral-500 w-5 text-right font-mono flex-shrink-0">
                               {idx + 1}
                             </span>
-                            <img
+                            <TrackThumbnail
                               src={item.thumbnail}
+                              videoId={item.videoId}
                               alt={item.title}
                               className="w-8 h-8 rounded object-cover bg-neutral-800 flex-shrink-0"
                             />
@@ -1565,8 +1569,8 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
                         <span className="text-xs text-neutral-500 w-4 text-center font-mono">
                           {idx + 1}
                         </span>
-                        <img
-                          src={`https://img.youtube.com/vi/${item.videoId}/mqdefault.jpg`}
+                        <TrackThumbnail
+                          videoId={item.videoId}
                           alt="Thumbnail"
                           className="w-10 h-7 rounded object-cover bg-neutral-800 flex-shrink-0"
                         />

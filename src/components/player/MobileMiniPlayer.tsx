@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { Play, Pause, SkipForward, Heart, Moon } from 'lucide-react';
 import { Track, PlaybackMode } from '../../types';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface MobileMiniPlayerProps {
   currentTrack: Track;
@@ -81,8 +82,9 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
           className="flex items-center gap-2.5 min-w-0 flex-1 cursor-pointer py-1 active:opacity-80 transition-opacity"
         >
           <div className="relative w-10 h-10 rounded-md overflow-hidden bg-neutral-800 flex-shrink-0 shadow-sm border border-neutral-700/50">
-            <img
+            <TrackThumbnail
               src={currentTrack.thumbnail}
+              videoId={currentTrack.youtubeId}
               alt={currentTrack.title}
               className="w-full h-full object-cover"
               loading="eager"

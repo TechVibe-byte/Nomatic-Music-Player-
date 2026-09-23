@@ -32,12 +32,78 @@ export function extractYouTubeId(input: string): string | null {
 
 export function getYouTubeThumbnail(videoId: string, quality: 'high' | 'medium' | 'default' = 'high'): string {
   if (quality === 'high') {
-    return `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    return `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
   }
   if (quality === 'medium') {
-    return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+    return `https://i.ytimg.com/vi/${videoId}/mqdefault.jpg`;
   }
-  return `https://img.youtube.com/vi/${videoId}/default.jpg`;
+  return `https://i.ytimg.com/vi/${videoId}/default.jpg`;
+}
+
+/**
+ * Normalizes any YouTube thumbnail URL to canonical, permanent, public URLs without expired session query parameters.
+ * If given a videoId, directly returns the canonical hqdefault.jpg.
+ */
+export function normalizeYouTubeThumbnail(urlOrId?: string, fallbackVideoId?: string): string {
+  const raw = (urlOrId || '').trim();
+  const fallback = (fallbackVideoId || '').trim();
+
+  // If fallback is an 11-char video ID, preferred
+  if (fallback && /^[a-zA-Z0-9_-]{11}$/.test(fallback)) {
+    return `https://i.ytimg.com/vi/${fallback}/hqdefault.jpg`;
+  }
+
+  // If raw is an 11-char video ID
+  if (raw && /^[a-zA-Z0-9_-]{11}$/.test(raw)) {
+    return `https://i.ytimg.com/vi/${raw}/hqdefault.jpg`;
+  }
+
+  // If raw is empty or placeholder
+  if (!raw) {
+    if (fallback) {
+      return `https://i.ytimg.com/vi/${fallback}/hqdefault.jpg`;
+    }
+    return 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&auto=format&fit=crop&q=80';
+  }
+
+  // Check if raw contains an 11-char YouTube ID (e.g., in /vi/..., v=..., etc.)
+  const idMatch = raw.match(/(?:vi\/|v=|\/embed\/|\/shorts\/|youtu\.be\/|i\.ytimg\.com\/vi\/|img\.youtube\.com\/vi\/)([a-zA-Z0-9_-]{11})/);
+  if (idMatch && idMatch[1]) {
+    return `https://i.ytimg.com/vi/${idMatch[1]}/hqdefault.jpg`;
+  }
+
+  // Handle protocol-relative URL
+  if (raw.startsWith('//')) {
+    return `https:${raw}`;
+  }
+
+  // If it's a YouTube CDN image URL with query params (e.g. ?sqp=...&rs=...), strip the query params
+  if (raw.includes('ytimg.com') || raw.includes('youtube.com')) {
+    return raw.split('?')[0];
+  }
+
+  return raw;
+}
+
+export function getYouTubeThumbnailFallbacks(urlOrId: string, videoId?: string): string[] {
+  let vid = videoId;
+  if (!vid || vid.length !== 11) {
+    const match = urlOrId.match(/(?:vi\/|v=|\/embed\/|\/shorts\/|youtu\.be\/|i\.ytimg\.com\/vi\/|img\.youtube\.com\/vi\/)([a-zA-Z0-9_-]{11})/);
+    if (match) vid = match[1];
+    else if (/^[a-zA-Z0-9_-]{11}$/.test(urlOrId)) vid = urlOrId;
+  }
+
+  if (vid && vid.length === 11) {
+    return [
+      `https://i.ytimg.com/vi/${vid}/hqdefault.jpg`,
+      `https://img.youtube.com/vi/${vid}/hqdefault.jpg`,
+      `https://i.ytimg.com/vi/${vid}/mqdefault.jpg`,
+      `https://img.youtube.com/vi/${vid}/mqdefault.jpg`,
+      `https://i.ytimg.com/vi/${vid}/default.jpg`,
+    ];
+  }
+
+  return [urlOrId];
 }
 
 export interface YouTubeMetadata {

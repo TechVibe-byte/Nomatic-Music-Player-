@@ -2,6 +2,7 @@ import React from 'react';
 import { X, Play, Music2, Trash2, Headphones } from 'lucide-react';
 import { Track } from '../../types';
 import { formatTime } from '../../utils/youtube';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface QueueDrawerProps {
   isOpen: boolean;
@@ -64,8 +65,9 @@ export const QueueDrawer: React.FC<QueueDrawerProps> = ({
           </h4>
           {currentTrack ? (
             <div className="flex items-center gap-3 p-2.5 rounded-xl bg-neutral-800/90 border border-neutral-700/80">
-              <img
+              <TrackThumbnail
                 src={currentTrack.thumbnail}
+                videoId={currentTrack.youtubeId}
                 alt={currentTrack.title}
                 className="w-11 h-11 rounded-lg object-cover flex-shrink-0"
               />
@@ -102,8 +104,9 @@ export const QueueDrawer: React.FC<QueueDrawerProps> = ({
                     </span>
                     <Play className="w-4 h-4 text-[#1ed760] hidden group-hover:block flex-shrink-0" />
 
-                    <img
+                    <TrackThumbnail
                       src={track.thumbnail}
+                      videoId={track.youtubeId}
                       alt={track.title}
                       className="w-9 h-9 rounded object-cover flex-shrink-0"
                     />

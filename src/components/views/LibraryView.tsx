@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { Track, Playlist, ActiveView } from '../../types';
 import { formatTime } from '../../utils/youtube';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface LibraryViewProps {
   tracks: Track[];
@@ -209,8 +210,9 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                       <span className="text-xs text-neutral-500 font-mono w-5 text-center">
                         {i + 1}
                       </span>
-                      <img
+                      <TrackThumbnail
                         src={track.thumbnail}
+                        videoId={track.youtubeId}
                         alt={track.title}
                         className="w-11 h-11 rounded-lg object-cover flex-shrink-0 bg-neutral-800"
                       />

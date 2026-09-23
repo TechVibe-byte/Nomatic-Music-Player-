@@ -12,6 +12,7 @@ import {
   ListMusic
 } from 'lucide-react';
 import { Track, Playlist, ActiveView } from '../../types';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface HomeViewProps {
   tracks: Track[];
@@ -126,8 +127,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
               className="flex items-center gap-4 bg-neutral-800/60 hover:bg-neutral-800 rounded-md overflow-hidden transition-all duration-200 cursor-pointer group shadow-sm"
             >
               <div className="w-16 h-16 bg-neutral-700 flex items-center justify-center text-neutral-400 flex-shrink-0 overflow-hidden">
-                {firstTrackThumb ? (
-                  <img src={firstTrackThumb} alt={pl.name} className="w-full h-full object-cover" />
+                {firstTrackThumb || pl.coverUrl ? (
+                  <TrackThumbnail
+                    src={pl.coverUrl || firstTrackThumb}
+                    videoId={plTracks[0]?.youtubeId}
+                    alt={pl.name}
+                    className="w-full h-full object-cover"
+                  />
                 ) : (
                   <Music className="w-6 h-6 text-neutral-500" />
                 )}
@@ -183,8 +189,9 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 <div>
                   {/* Thumbnail & Floating Play Button */}
                   <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-neutral-800 shadow-md mb-3">
-                    <img
+                    <TrackThumbnail
                       src={track.thumbnail}
+                      videoId={track.youtubeId}
                       alt={track.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />

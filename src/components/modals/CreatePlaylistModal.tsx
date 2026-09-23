@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Plus, Music, Sparkles, Loader2, ListMusic, CheckCircle2, AlertTriangle, ClipboardPaste } from 'lucide-react';
 import { Playlist, Track } from '../../types';
 import { extractYouTubePlaylistId, fetchYouTubePlaylist, convertPlaylistItemsToTracks, YouTubePlaylistResult } from '../../utils/youtubePlaylist';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface CreatePlaylistModalProps {
   isOpen: boolean;
@@ -252,8 +253,9 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
 
               {detectedResult && (
                 <div className="p-2.5 bg-neutral-800/80 rounded-lg border border-emerald-500/30 flex items-center gap-3">
-                  <img
+                  <TrackThumbnail
                     src={detectedResult.thumbnail}
+                    videoId={detectedResult.tracks[0]?.videoId}
                     alt={detectedResult.title}
                     className="w-12 h-12 rounded object-cover bg-neutral-900 flex-shrink-0"
                   />

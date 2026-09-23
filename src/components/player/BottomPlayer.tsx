@@ -23,6 +23,7 @@ import {
 import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { formatTime } from '../../utils/youtube';
 import { VlcConeIcon } from './VlcVideoPlayer';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface BottomPlayerProps {
   currentTrack: Track | null;
@@ -125,8 +126,9 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
               onClick={onToggleNowPlaying}
               className="relative group w-14 h-14 rounded-md overflow-hidden bg-neutral-800 flex-shrink-0 cursor-pointer shadow-md"
             >
-              <img
+              <TrackThumbnail
                 src={currentTrack.thumbnail}
+                videoId={currentTrack.youtubeId}
                 alt={currentTrack.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition duration-300"
               />

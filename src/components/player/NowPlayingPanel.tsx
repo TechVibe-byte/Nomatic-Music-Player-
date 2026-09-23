@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { VlcConeIcon } from './VlcVideoPlayer';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface NowPlayingPanelProps {
   currentTrack: Track | null;
@@ -158,8 +159,9 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
               className="w-full aspect-video rounded-xl overflow-hidden bg-neutral-950 shadow-2xl border border-orange-500/40 relative group cursor-pointer"
               title="Click to Open VLC Dedicated Video Player in Full Mode"
             >
-              <img
+              <TrackThumbnail
                 src={currentTrack.thumbnail}
+                videoId={currentTrack.youtubeId}
                 alt={currentTrack.title}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -194,8 +196,9 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
           <div className="w-full space-y-4">
             {/* Artwork Card */}
             <div className="relative group w-full aspect-square max-w-xs sm:max-w-sm mx-auto rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 border border-neutral-800">
-              <img
+              <TrackThumbnail
                 src={currentTrack.thumbnail}
+                videoId={currentTrack.youtubeId}
                 alt={currentTrack.title}
                 className={`w-full h-full object-cover transition-transform duration-700 ${
                   isPlaying ? 'scale-105' : 'scale-100'

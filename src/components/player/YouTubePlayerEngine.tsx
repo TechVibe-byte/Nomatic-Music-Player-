@@ -4,6 +4,7 @@ import {
   setBackgroundAudioActive, 
   updatePiPDisplay 
 } from '../../utils/backgroundAudio';
+import { normalizeYouTubeThumbnail } from '../../utils/youtube';
 import { VlcHeader, VlcControlsBar, VlcDockedPill } from './VlcVideoPlayer';
 import { Play, Pause } from 'lucide-react';
 
@@ -469,16 +470,17 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
     if (!('mediaSession' in navigator) || !currentTrack) return;
 
     try {
+      const canonicalThumb = normalizeYouTubeThumbnail(currentTrack.thumbnail, currentTrack.youtubeId);
       navigator.mediaSession.metadata = new MediaMetadata({
         title: currentTrack.title,
         artist: currentTrack.artist,
         album: 'Nomatic Music player',
         artwork: [
-          { src: currentTrack.thumbnail, sizes: '96x96', type: 'image/jpeg' },
-          { src: currentTrack.thumbnail, sizes: '128x128', type: 'image/jpeg' },
-          { src: currentTrack.thumbnail, sizes: '192x192', type: 'image/jpeg' },
-          { src: currentTrack.thumbnail, sizes: '256x256', type: 'image/jpeg' },
-          { src: currentTrack.thumbnail, sizes: '512x512', type: 'image/jpeg' },
+          { src: canonicalThumb, sizes: '96x96', type: 'image/jpeg' },
+          { src: canonicalThumb, sizes: '128x128', type: 'image/jpeg' },
+          { src: canonicalThumb, sizes: '192x192', type: 'image/jpeg' },
+          { src: canonicalThumb, sizes: '256x256', type: 'image/jpeg' },
+          { src: canonicalThumb, sizes: '512x512', type: 'image/jpeg' },
         ],
       });
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { X, Activity, Radio, Sparkles } from 'lucide-react';
 import { Track } from '../../types';
+import { TrackThumbnail } from '../common/TrackThumbnail';
 
 interface VisualizerModalProps {
   isOpen: boolean;
@@ -36,8 +37,9 @@ export const VisualizerModal: React.FC<VisualizerModalProps> = ({
               isPlaying ? 'animate-[spin_18s_linear_infinite]' : ''
             }`}
           >
-            <img
+            <TrackThumbnail
               src={currentTrack.thumbnail}
+              videoId={currentTrack.youtubeId}
               alt={currentTrack.title}
               className="w-full h-full object-cover"
             />

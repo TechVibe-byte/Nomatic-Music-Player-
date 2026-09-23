@@ -18,7 +18,8 @@ import {
   Sparkles,
   PictureInPicture2,
   Sun,
-  Moon
+  Moon,
+  Mic2
 } from 'lucide-react';
 import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { formatTime } from '../../utils/youtube';
@@ -52,6 +53,8 @@ interface BottomPlayerProps {
   onToggleQueue: () => void;
   isVisualizerOpen: boolean;
   onToggleVisualizer: () => void;
+  isLyricsOpen?: boolean;
+  onToggleLyrics?: () => void;
   isPiPActive?: boolean;
   onTogglePiP?: () => void;
   wakeLockActive?: boolean;
@@ -89,6 +92,8 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
   onToggleQueue,
   isVisualizerOpen,
   onToggleVisualizer,
+  isLyricsOpen = false,
+  onToggleLyrics,
   isPiPActive = false,
   onTogglePiP,
   wakeLockActive = false,
@@ -408,6 +413,23 @@ export const BottomPlayer: React.FC<BottomPlayerProps> = ({
               <span className="text-[10px] font-mono font-bold text-[#1ed760] hidden xl:inline">
                 {sleepTimerRemaining}
               </span>
+            )}
+          </button>
+        )}
+
+        {/* Lyrics Toggle Button (English & Telugu) */}
+        {onToggleLyrics && (
+          <button
+            id="player-lyrics-btn"
+            onClick={onToggleLyrics}
+            className={`p-1.5 rounded hover:scale-105 transition cursor-pointer relative ${
+              isLyricsOpen ? 'text-[#1ed760]' : 'text-neutral-400 hover:text-white'
+            }`}
+            title={isLyricsOpen ? 'Disable / Close Lyrics' : 'Enable / Show Lyrics (English & Telugu)'}
+          >
+            <Mic2 className={`w-4 h-4 ${isLyricsOpen ? 'stroke-[2.5]' : ''}`} />
+            {isLyricsOpen && (
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1ed760] absolute top-1 right-1" />
             )}
           </button>
         )}

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Play, Pause, SkipForward, Heart, Moon } from 'lucide-react';
+import { Play, Pause, SkipForward, Heart, Moon, Mic2 } from 'lucide-react';
 import { Track, PlaybackMode } from '../../types';
 import { TrackThumbnail } from '../common/TrackThumbnail';
 
@@ -18,6 +18,8 @@ interface MobileMiniPlayerProps {
   isSleepTimerActive?: boolean;
   sleepTimerRemaining?: string | null;
   onOpenVlcFullMode?: () => void;
+  isLyricsOpen?: boolean;
+  onToggleLyrics?: () => void;
 }
 
 export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
@@ -35,6 +37,8 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
   isSleepTimerActive = false,
   sleepTimerRemaining,
   onOpenVlcFullMode,
+  isLyricsOpen = false,
+  onToggleLyrics,
 }) => {
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -115,8 +119,21 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
           </div>
         </div>
 
-        {/* Right: Like, Play/Pause, Next */}
+        {/* Right: Lyrics, Like, Play/Pause, Next */}
         <div className="flex items-center gap-0.5 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
+          {onToggleLyrics && (
+            <button
+              id="mobile-mini-lyrics-btn"
+              onClick={onToggleLyrics}
+              className={`w-9 h-9 flex items-center justify-center rounded-full active:scale-90 transition cursor-pointer ${
+                isLyricsOpen ? 'text-[#1ed760]' : 'text-neutral-400 hover:text-white'
+              }`}
+              title={isLyricsOpen ? 'Disable / Close Lyrics' : 'Enable / Show Lyrics (English & Telugu)'}
+            >
+              <Mic2 className="w-4 h-4" />
+            </button>
+          )}
+
           <button
             id="mobile-mini-like-btn"
             onClick={() => onToggleLike(currentTrack.id)}

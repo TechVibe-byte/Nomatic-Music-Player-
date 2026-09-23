@@ -31,6 +31,7 @@ import { MobileMiniPlayer } from './components/player/MobileMiniPlayer';
 import { NowPlayingPanel } from './components/player/NowPlayingPanel';
 import { YouTubePlayerEngine } from './components/player/YouTubePlayerEngine';
 import { VisualizerModal } from './components/player/VisualizerModal';
+import { LyricsModal } from './components/player/LyricsModal';
 import { AddTrackModal } from './components/modals/AddTrackModal';
 import { CreatePlaylistModal } from './components/modals/CreatePlaylistModal';
 import { ConfigModal } from './components/modals/ConfigModal';
@@ -84,6 +85,7 @@ export default function App() {
   const [isNowPlayingOpen, setIsNowPlayingOpen] = useState(false);
   const [isQueueOpen, setIsQueueOpen] = useState(false);
   const [isVisualizerOpen, setIsVisualizerOpen] = useState(false);
+  const [isLyricsOpen, setIsLyricsOpen] = useState(false);
   const [isSleepTimerModalOpen, setIsSleepTimerModalOpen] = useState(false);
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [addModalDefaultPlaylistId, setAddModalDefaultPlaylistId] = useState<string | undefined>(undefined);
@@ -414,6 +416,33 @@ export default function App() {
     setConfig(updated);
     saveConfig(updated);
   };
+
+  const handleToggleLyrics = useCallback(() => {
+    setIsLyricsOpen((prev) => !prev);
+  }, []);
+
+  // Global keyboard shortcut: Press 'L' to toggle lyrics
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      const target = e.target as HTMLElement;
+      if (
+        target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable)
+      ) {
+        return;
+      }
+      if (e.key === 'l' || e.key === 'L') {
+        if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+          e.preventDefault();
+          handleToggleLyrics();
+        }
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handleToggleLyrics]);
 
   const handleToggleLike = (trackId: string) => {
     let updated: string[];
@@ -835,6 +864,8 @@ export default function App() {
           isSleepTimerActive={sleepTimerState.isActive}
           sleepTimerRemaining={sleepTimerLabel}
           onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
+          isLyricsOpen={isLyricsOpen}
+          onToggleLyrics={handleToggleLyrics}
         />
       )}
 
@@ -927,6 +958,8 @@ export default function App() {
           onToggleQueue={() => setIsQueueOpen((prev) => !prev)}
           isVisualizerOpen={isVisualizerOpen}
           onToggleVisualizer={() => setIsVisualizerOpen((prev) => !prev)}
+          isLyricsOpen={isLyricsOpen}
+          onToggleLyrics={handleToggleLyrics}
           isPiPActive={isPiPActiveState}
           onTogglePiP={handleTogglePiP}
           wakeLockActive={wakeLockActive}
@@ -960,6 +993,8 @@ export default function App() {
             isSleepTimerActive={sleepTimerState.isActive}
             sleepTimerRemaining={sleepTimerLabel}
             onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
+            isLyricsOpen={isLyricsOpen}
+            onToggleLyrics={handleToggleLyrics}
           />
         )}
 
@@ -1026,6 +1061,17 @@ export default function App() {
         onClose={() => setIsVisualizerOpen(false)}
         currentTrack={currentTrack}
         isPlaying={isPlaying}
+      />
+
+      <LyricsModal
+        isOpen={isLyricsOpen}
+        onClose={() => setIsLyricsOpen(false)}
+        currentTrack={currentTrack}
+        currentTime={currentTime}
+        duration={duration}
+        isPlaying={isPlaying}
+        onSeek={handleSeek}
+        onTogglePlay={handleTogglePlay}
       />
 
       {/* Toast Notification Banner */}

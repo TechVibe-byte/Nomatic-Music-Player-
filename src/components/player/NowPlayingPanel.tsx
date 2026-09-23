@@ -21,7 +21,8 @@ import {
   Repeat,
   ListMusic,
   Activity,
-  Moon
+  Moon,
+  Mic2
 } from 'lucide-react';
 import { Track, PlaybackMode, RepeatMode } from '../../types';
 import { VlcConeIcon } from './VlcVideoPlayer';
@@ -55,6 +56,8 @@ interface NowPlayingPanelProps {
   isSleepTimerActive?: boolean;
   sleepTimerRemaining?: string | null;
   onOpenVlcFullMode?: () => void;
+  isLyricsOpen?: boolean;
+  onToggleLyrics?: () => void;
 }
 
 export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
@@ -85,6 +88,8 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
   isSleepTimerActive = false,
   sleepTimerRemaining,
   onOpenVlcFullMode,
+  isLyricsOpen = false,
+  onToggleLyrics,
 }) => {
   const [copied, setCopied] = React.useState(false);
 
@@ -417,6 +422,22 @@ export const NowPlayingPanel: React.FC<NowPlayingPanelProps> = ({
             )}
           </button>
         </div>
+
+        {/* Lyrics Button (English & Telugu) */}
+        {onToggleLyrics && (
+          <button
+            id="now-playing-lyrics-btn"
+            onClick={onToggleLyrics}
+            className={`w-full flex items-center justify-center gap-2 mt-3 py-2.5 px-3 rounded-lg border text-xs font-bold transition cursor-pointer shadow-sm ${
+              isLyricsOpen
+                ? 'bg-emerald-950/90 border-[#1ed760] text-[#1ed760]'
+                : 'bg-neutral-800/80 border-neutral-700 hover:bg-neutral-700 text-white'
+            }`}
+          >
+            <Mic2 className="w-4 h-4 text-[#1ed760]" />
+            <span>{isLyricsOpen ? 'Disable / Close Lyrics' : 'Enable Lyrics (English & Telugu)'}</span>
+          </button>
+        )}
 
         {/* Sleep Timer Button */}
         {onOpenSleepTimer && (

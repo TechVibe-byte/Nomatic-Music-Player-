@@ -21,6 +21,9 @@ export interface Playlist {
   createdAt: number;
   updatedAt: number;
   isCustom?: boolean;
+  youtubePlaylistId?: string; // YouTube Playlist ID if imported/linked
+  lastSyncedAt?: number; // Timestamp of last successful sync
+  autoSync?: boolean; // Whether to automatically check for additions on playlist view
 }
 
 export type PlaybackMode = 'audio' | 'video';

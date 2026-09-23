@@ -96,10 +96,15 @@ export function loadPlaylists(): Playlist[] {
         const existingIds = new Set(parsed.map((p: Playlist) => p.id));
         const missing = INITIAL_PLAYLISTS.filter((p: Playlist) => !existingIds.has(p.id));
         const combined = missing.length > 0 ? [...missing, ...parsed] : parsed;
-        const normalized = combined.map((p: Playlist) => ({
-          ...p,
-          coverUrl: p.coverUrl ? normalizeYouTubeThumbnail(p.coverUrl) : p.coverUrl,
-        }));
+        const normalized = combined.map((p: Playlist) => {
+          const defaultMatch = INITIAL_PLAYLISTS.find((ip: Playlist) => ip.id === p.id);
+          return {
+            ...p,
+            youtubePlaylistId: p.youtubePlaylistId || defaultMatch?.youtubePlaylistId,
+            autoSync: p.autoSync !== undefined ? p.autoSync : defaultMatch?.autoSync,
+            coverUrl: p.coverUrl ? normalizeYouTubeThumbnail(p.coverUrl) : p.coverUrl,
+          };
+        });
         savePlaylists(normalized);
         return normalized;
       }

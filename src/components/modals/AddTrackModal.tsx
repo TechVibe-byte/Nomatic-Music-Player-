@@ -423,6 +423,9 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
           createdAt: Date.now(),
           updatedAt: Date.now(),
           isCustom: true,
+          youtubePlaylistId: detectedPlaylist.id,
+          lastSyncedAt: Date.now(),
+          autoSync: true,
         };
 
         if (onImportPlaylist) {

@@ -3120,10 +3120,745 @@ export const INITIAL_TRACKS: Track[] = [
       "Ayyappa",
       "Telugu"
     ]
+  },
+  {
+    "id": "track-telugu-devotional-QnQnz9G2LNw",
+    "youtubeId": "QnQnz9G2LNw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=QnQnz9G2LNw",
+    "title": "MALLEPOOLA PALLAKI (Song) | Ravi Teja | GV Prakash | Dappu Srinu | Shiva Nirvana | Irumudi",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/QnQnz9G2LNw/hqdefault.jpg",
+    "duration": 192,
+    "addedAt": 1730000000000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-zGDjn2uZa5k",
+    "youtubeId": "zGDjn2uZa5k",
+    "youtubeUrl": "https://www.youtube.com/watch?v=zGDjn2uZa5k",
+    "title": "Namo Namo - Lyrical | Kedarnath | Sushant Rajput | Sara Ali Khan | Amit Trivedi | Amitabh B",
+    "artist": "Bollywood Lyrical Songs",
+    "thumbnail": "https://i.ytimg.com/vi/zGDjn2uZa5k/hqdefault.jpg",
+    "duration": 329,
+    "addedAt": 1730000001000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-lWyFLohRF8E",
+    "youtubeId": "lWyFLohRF8E",
+    "youtubeUrl": "https://www.youtube.com/watch?v=lWyFLohRF8E",
+    "title": "Pallikattu Sabarimalaikku Song by #Maithrayan 😊| Super Singer Junior 9 | Episode Preview",
+    "artist": "Vijay Television",
+    "thumbnail": "https://i.ytimg.com/vi/lWyFLohRF8E/hqdefault.jpg",
+    "duration": 292,
+    "addedAt": 1730000002000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-yALvgZi-84o",
+    "youtubeId": "yALvgZi-84o",
+    "youtubeUrl": "https://www.youtube.com/watch?v=yALvgZi-84o",
+    "title": "Namo Namo - Lyrical | Kedarnath | Sushant Rajput | Sara Ali Khan | Amit Trivedi | Amitabh B",
+    "artist": "Bollywood Chartbusters",
+    "thumbnail": "https://i.ytimg.com/vi/yALvgZi-84o/hqdefault.jpg",
+    "duration": 329,
+    "addedAt": 1730000003000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-6qRcXEI9hoo",
+    "youtubeId": "6qRcXEI9hoo",
+    "youtubeUrl": "https://www.youtube.com/watch?v=6qRcXEI9hoo",
+    "title": "Sri Anjaneyam । Ooregi Raavayya Video Song | Nithin, Charmi",
+    "artist": "Shalimar Film Express",
+    "thumbnail": "https://i.ytimg.com/vi/6qRcXEI9hoo/hqdefault.jpg",
+    "duration": 364,
+    "addedAt": 1730000004000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-qmIC0_-7W4c",
+    "youtubeId": "qmIC0_-7W4c",
+    "youtubeUrl": "https://www.youtube.com/watch?v=qmIC0_-7W4c",
+    "title": "Hey Krishna Song Lyrical Vertical Video | Aatagadharaa Siva Songs | Chandra Siddarth | Mango Music",
+    "artist": "Mango Music",
+    "thumbnail": "https://i.ytimg.com/vi/qmIC0_-7W4c/hqdefault.jpg",
+    "duration": 247,
+    "addedAt": 1730000005000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-Hn9VoVh0vvM",
+    "youtubeId": "Hn9VoVh0vvM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=Hn9VoVh0vvM",
+    "title": "Om Namo Bhagavate Vasudevaya Lyrical Video-Telugu | Mahavatar Narsimha | Hombale Films | Sam CS",
+    "artist": "Think Music Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/Hn9VoVh0vvM/hqdefault.jpg",
+    "duration": 223,
+    "addedAt": 1730000006000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-hpNNFazxKo8",
+    "youtubeId": "hpNNFazxKo8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=hpNNFazxKo8",
+    "title": "Raghunandana |HanuMan(Telugu)|Prasanth Varma, GowraHari, Saicharan, Lokeshwar,Harshavardhan, Kalyana",
+    "artist": "Tips Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/hpNNFazxKo8/hqdefault.jpg",
+    "duration": 157,
+    "addedAt": 1730000007000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-_GrMe9Cipg4",
+    "youtubeId": "_GrMe9Cipg4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=_GrMe9Cipg4",
+    "title": "Ghibran's Spiritual Series | Garuda Gamana Tava Song Lyric Video | Ghibran",
+    "artist": "Think Divine",
+    "thumbnail": "https://i.ytimg.com/vi/_GrMe9Cipg4/hqdefault.jpg",
+    "duration": 415,
+    "addedAt": 1730000008000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-cHWs_W-r7I0",
+    "youtubeId": "cHWs_W-r7I0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=cHWs_W-r7I0",
+    "title": "Bhaje Bhaaje Video Song | Gopala Gopala | Venkatesh Daggubati, Pawan Kalyan, Shriya Saran |",
+    "artist": "Lahari Music",
+    "thumbnail": "https://i.ytimg.com/vi/cHWs_W-r7I0/hqdefault.jpg",
+    "duration": 229,
+    "addedAt": 1730000009000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-f0zCF7rV4bs",
+    "youtubeId": "f0zCF7rV4bs",
+    "youtubeUrl": "https://www.youtube.com/watch?v=f0zCF7rV4bs",
+    "title": "Sri Venkatesha Stotram | Shree Naval Kishori | Kamalakucha Choochuka Kunkumatho",
+    "artist": "Shree Naval Kishori",
+    "thumbnail": "https://i.ytimg.com/vi/f0zCF7rV4bs/hqdefault.jpg",
+    "duration": 273,
+    "addedAt": 1730000010000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-VnPFQ7nNu0U",
+    "youtubeId": "VnPFQ7nNu0U",
+    "youtubeUrl": "https://www.youtube.com/watch?v=VnPFQ7nNu0U",
+    "title": "Shiva Shiva Shankaraa Lyrical Video | Kannappa -Telugu | Vishnu Manchu | Mohan Babu | Mukesh Kumar S",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/VnPFQ7nNu0U/hqdefault.jpg",
+    "duration": 316,
+    "addedAt": 1730000011000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-CH8sA9Pd6Gc",
+    "youtubeId": "CH8sA9Pd6Gc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=CH8sA9Pd6Gc",
+    "title": "Raghunandana | HanuMan | GowraHari, Saicharan, Lokeshwar, Harshavardhan, Kalyana | Hanuman Jayanti",
+    "artist": "Tips Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/CH8sA9Pd6Gc/hqdefault.jpg",
+    "duration": 155,
+    "addedAt": 1730000012000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-il_1aAQnV_M",
+    "youtubeId": "il_1aAQnV_M",
+    "youtubeUrl": "https://www.youtube.com/watch?v=il_1aAQnV_M",
+    "title": "Krishna Trance | Karthikeya 2 | Nikhil & Anupama Parameswaran | Kaala Bhairava | Telugu Song",
+    "artist": "Zee Music South",
+    "thumbnail": "https://i.ytimg.com/vi/il_1aAQnV_M/hqdefault.jpg",
+    "duration": 179,
+    "addedAt": 1730000013000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-H7rJ2EIyZYU",
+    "youtubeId": "H7rJ2EIyZYU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=H7rJ2EIyZYU",
+    "title": "Anjanadri Theme Song | HanuMan (Telugu) | Prasanth Varma | Sai Charan, GowraHari, Siva Shakthi Datta",
+    "artist": "Tips Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/H7rJ2EIyZYU/hqdefault.jpg",
+    "duration": 124,
+    "addedAt": 1730000014000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-_P2aI9SYDbo",
+    "youtubeId": "_P2aI9SYDbo",
+    "youtubeUrl": "https://www.youtube.com/watch?v=_P2aI9SYDbo",
+    "title": "Garuda Gamana Tava | Shree Naval Kishori | Divine Dharohar",
+    "artist": "Telugu Devotional",
+    "thumbnail": "https://i.ytimg.com/vi/_P2aI9SYDbo/hqdefault.jpg",
+    "duration": 255,
+    "addedAt": 1730000015000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-iddCsp34hb8",
+    "youtubeId": "iddCsp34hb8",
+    "youtubeUrl": "https://www.youtube.com/watch?v=iddCsp34hb8",
+    "title": "Sri Rama Sambhavam (Extended Movie Version)|Mirai|Teja Sajja|Gowra Hari",
+    "artist": "Official Bgm and Score",
+    "thumbnail": "https://i.ytimg.com/vi/iddCsp34hb8/hqdefault.jpg",
+    "duration": 305,
+    "addedAt": 1730000016000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-avN-pUUUVKQ",
+    "youtubeId": "avN-pUUUVKQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=avN-pUUUVKQ",
+    "title": "\"The desire of a devotee is to serve only God.\" Shriman Lord Narasimha Prabhuji.",
+    "artist": " ISKCON SINNAR ",
+    "thumbnail": "https://i.ytimg.com/vi/avN-pUUUVKQ/hqdefault.jpg",
+    "duration": 189,
+    "addedAt": 1730000017000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-ASs4YXd_TRQ",
+    "youtubeId": "ASs4YXd_TRQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ASs4YXd_TRQ",
+    "title": "Dandalayya Undralayya Video Song | 4K | Vinayaka Chavithi Special Song | Suresh Productions",
+    "artist": "SureshProductions",
+    "thumbnail": "https://i.ytimg.com/vi/ASs4YXd_TRQ/hqdefault.jpg",
+    "duration": 293,
+    "addedAt": 1730000018000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-doRuY0eBQhc",
+    "youtubeId": "doRuY0eBQhc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=doRuY0eBQhc",
+    "title": "Aathma Rama ( Extended Version) ft Raghu",
+    "artist": "Raghotham R",
+    "thumbnail": "https://i.ytimg.com/vi/doRuY0eBQhc/hqdefault.jpg",
+    "duration": 203,
+    "addedAt": 1730000021000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-j6XCJtkvx9M",
+    "youtubeId": "j6XCJtkvx9M",
+    "youtubeUrl": "https://www.youtube.com/watch?v=j6XCJtkvx9M",
+    "title": "Garuda Gamana Tava (From \"Ghibran's Spiritual Series\")",
+    "artist": "Ghibran, Anurag Kulkarni - Topic",
+    "thumbnail": "https://i.ytimg.com/vi/j6XCJtkvx9M/hqdefault.jpg",
+    "duration": 421,
+    "addedAt": 1730000022000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-ir12Boxh__Q",
+    "youtubeId": "ir12Boxh__Q",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ir12Boxh__Q",
+    "title": "Dhasaavathaaram (Telugu) - Rayini Maatram Video | Kamal Haasan, Asin | Himesh",
+    "artist": "SonyMusicSouthVEVO",
+    "thumbnail": "https://i.ytimg.com/vi/ir12Boxh__Q/hqdefault.jpg",
+    "duration": 347,
+    "addedAt": 1730000023000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-ofaPL-8Gb98",
+    "youtubeId": "ofaPL-8Gb98",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ofaPL-8Gb98",
+    "title": "Jai Jai Ganesha Song With Telugu Lyrics | Jai Chiranjeeva|#HappyGaneshChaturthi | Maa Paata Mee Nota",
+    "artist": "Maa Paata Mee Nota",
+    "thumbnail": "https://i.ytimg.com/vi/ofaPL-8Gb98/hqdefault.jpg",
+    "duration": 342,
+    "addedAt": 1730000024000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-hHSAq8_TksQ",
+    "youtubeId": "hHSAq8_TksQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=hHSAq8_TksQ",
+    "title": "Om Mahaprana Dipam - Lyrical | Sri Manjunatha | Hamsalekha | Shankar Mahadevan",
+    "artist": "Saregama Kannada",
+    "thumbnail": "https://i.ytimg.com/vi/hHSAq8_TksQ/hqdefault.jpg",
+    "duration": 302,
+    "addedAt": 1730000025000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-C1qwFWm64nk",
+    "youtubeId": "C1qwFWm64nk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=C1qwFWm64nk",
+    "title": "Akhilanda Koti Full Video Song | Om Namo Venkatesaya - Nagarjuna, Anushka Shetty, M M Keeravani",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/C1qwFWm64nk/hqdefault.jpg",
+    "duration": 284,
+    "addedAt": 1730000026000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-tCsHPVO6uSU",
+    "youtubeId": "tCsHPVO6uSU",
+    "youtubeUrl": "https://www.youtube.com/watch?v=tCsHPVO6uSU",
+    "title": "Jaya Jaya Subhakara Vinayaka Song | S. P. Balasubrahmanyam",
+    "artist": "Ganesh Videos",
+    "thumbnail": "https://i.ytimg.com/vi/tCsHPVO6uSU/hqdefault.jpg",
+    "duration": 320,
+    "addedAt": 1730000027000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-c38wKCoezus",
+    "youtubeId": "c38wKCoezus",
+    "youtubeUrl": "https://www.youtube.com/watch?v=c38wKCoezus",
+    "title": "Full Video: Ram Sita Ram -Adipurush | Prabhas,Kriti |Sachet Parampara, Ramajogayya",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/c38wKCoezus/hqdefault.jpg",
+    "duration": 224,
+    "addedAt": 1730000029000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-B6Mxd4Bd-MM",
+    "youtubeId": "B6Mxd4Bd-MM",
+    "youtubeUrl": "https://www.youtube.com/watch?v=B6Mxd4Bd-MM",
+    "title": "Om Namo Bhagavate Vasudevaya Video Song -Tamil | Mahavatar Narsimha | Hombale Films | Sam CS",
+    "artist": "Think Music India",
+    "thumbnail": "https://i.ytimg.com/vi/B6Mxd4Bd-MM/hqdefault.jpg",
+    "duration": 205,
+    "addedAt": 1730000030000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-2gXNDr_6FcE",
+    "youtubeId": "2gXNDr_6FcE",
+    "youtubeUrl": "https://www.youtube.com/watch?v=2gXNDr_6FcE",
+    "title": "IRUMUDI KATTU (Song): Ravi Teja | GV Prakash | Ananthu | Shiva Nirvana | Irumudi |New Telugu Song",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/2gXNDr_6FcE/hqdefault.jpg",
+    "duration": 255,
+    "addedAt": 1730000031000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-ym4o5F8ncY0",
+    "youtubeId": "ym4o5F8ncY0",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ym4o5F8ncY0",
+    "title": "Ekadantaya Vakratundaya Gauri Tanaya Dhimi | Full Song with Lyrics | Shankar Mahadevan",
+    "artist": "Suprabha KV",
+    "thumbnail": "https://i.ytimg.com/vi/ym4o5F8ncY0/hqdefault.jpg",
+    "duration": 426,
+    "addedAt": 1730000032000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-l8pN_11Ilrc",
+    "youtubeId": "l8pN_11Ilrc",
+    "youtubeUrl": "https://www.youtube.com/watch?v=l8pN_11Ilrc",
+    "title": "CHANDRACHOODA ft Raghu",
+    "artist": "Raghotham R",
+    "thumbnail": "https://i.ytimg.com/vi/l8pN_11Ilrc/hqdefault.jpg",
+    "duration": 183,
+    "addedAt": 1730000033000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-kTAlVdyroH4",
+    "youtubeId": "kTAlVdyroH4",
+    "youtubeUrl": "https://www.youtube.com/watch?v=kTAlVdyroH4",
+    "title": "Raghukula Thilaka Ra Ra | Full Song | Parnika | Sri Rama Song | Kondala Swamy | Praveen Teja | Pavan",
+    "artist": "Kondala Swamy Ayyappa Bhajanalu",
+    "thumbnail": "https://i.ytimg.com/vi/kTAlVdyroH4/hqdefault.jpg",
+    "duration": 304,
+    "addedAt": 1730000034000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-re88S-5fpmA",
+    "youtubeId": "re88S-5fpmA",
+    "youtubeUrl": "https://www.youtube.com/watch?v=re88S-5fpmA",
+    "title": "Ekadantaya Vakratundaya Song |Shankar Mahadevan |Shree Ganeshay Dheemahi |Ganpati Aarti |Ganesh Song",
+    "artist": "Times Music Spiritual",
+    "thumbnail": "https://i.ytimg.com/vi/re88S-5fpmA/hqdefault.jpg",
+    "duration": 405,
+    "addedAt": 1730000035000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-ZePfHmZ1fVQ",
+    "youtubeId": "ZePfHmZ1fVQ",
+    "youtubeUrl": "https://www.youtube.com/watch?v=ZePfHmZ1fVQ",
+    "title": "Best Telugu Devotional Songs of 2017 | Telugu Devotional Video Songs | Nagarjuna, Anushka Shetty",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/ZePfHmZ1fVQ/hqdefault.jpg",
+    "duration": 1853,
+    "addedAt": 1730000037000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-7K6vifx_Slo",
+    "youtubeId": "7K6vifx_Slo",
+    "youtubeUrl": "https://www.youtube.com/watch?v=7K6vifx_Slo",
+    "title": "Jaya Jaya Subhakara Vinayaka Full Video Song🙏🙏 | S.P.Balasubramanyam | @jabardasthfunnycomedy",
+    "artist": "Jabardasth Funny Comedy",
+    "thumbnail": "https://i.ytimg.com/vi/7K6vifx_Slo/hqdefault.jpg",
+    "duration": 249,
+    "addedAt": 1730000038000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-YD4xclAqi5I",
+    "youtubeId": "YD4xclAqi5I",
+    "youtubeUrl": "https://www.youtube.com/watch?v=YD4xclAqi5I",
+    "title": "Sri Ramadasu Movie Songs Jukebox | Nagarjuna, Sneha | M. M. Keeravani | Telugu Devotional Songs",
+    "artist": "Aditya Music",
+    "thumbnail": "https://i.ytimg.com/vi/YD4xclAqi5I/hqdefault.jpg",
+    "duration": 2999,
+    "addedAt": 1730000039000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-OnTcMuv2Tsk",
+    "youtubeId": "OnTcMuv2Tsk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=OnTcMuv2Tsk",
+    "title": "మహాప్రాణ దీపం సాంగ్ | Mahapraana Deepam Song | Sri Manjunatha | Arjun, Chiranjeevi ,Soundarya",
+    "artist": "Volga Devotional",
+    "thumbnail": "https://i.ytimg.com/vi/OnTcMuv2Tsk/hqdefault.jpg",
+    "duration": 309,
+    "addedAt": 1730000040000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-GFr5NLL1b3A",
+    "youtubeId": "GFr5NLL1b3A",
+    "youtubeUrl": "https://www.youtube.com/watch?v=GFr5NLL1b3A",
+    "title": "Devullu Movie Songs | Andari Bandhuvaya Video Song | Rajendra Prasad | BhaktiOne",
+    "artist": "BhaktiOne",
+    "thumbnail": "https://i.ytimg.com/vi/GFr5NLL1b3A/hqdefault.jpg",
+    "duration": 334,
+    "addedAt": 1730000041000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-l1pezLiSbZY",
+    "youtubeId": "l1pezLiSbZY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=l1pezLiSbZY",
+    "title": "Veyi Naamaala Vaada Full Video Song | Om Namo Venkatesaya | Nagarjuna, Anushka Shetty | Telugu Songs",
+    "artist": "T-Series Telugu",
+    "thumbnail": "https://i.ytimg.com/vi/l1pezLiSbZY/hqdefault.jpg",
+    "duration": 323,
+    "addedAt": 1730000043000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-8U7x1mhPidk",
+    "youtubeId": "8U7x1mhPidk",
+    "youtubeUrl": "https://www.youtube.com/watch?v=8U7x1mhPidk",
+    "title": "Shri Ramchandra Kripalu Bhajman | Ram Stuti | Shree Naval Kishori | श्री रामचंद्र कृपालु भजमन",
+    "artist": "Shree Naval Kishori",
+    "thumbnail": "https://i.ytimg.com/vi/8U7x1mhPidk/hqdefault.jpg",
+    "duration": 158,
+    "addedAt": 1730000045000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-KHM8jTY2cfw",
+    "youtubeId": "KHM8jTY2cfw",
+    "youtubeUrl": "https://www.youtube.com/watch?v=KHM8jTY2cfw",
+    "title": "రామచంద్రాయ జనక - Ramachandraya Janaka Mangalam Full Song with Lyrics | Shree Naval Kishori",
+    "artist": "Shree Naval Kishori",
+    "thumbnail": "https://i.ytimg.com/vi/KHM8jTY2cfw/hqdefault.jpg",
+    "duration": 206,
+    "addedAt": 1730000046000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
+  },
+  {
+    "id": "track-telugu-devotional-7uBblxch1dY",
+    "youtubeId": "7uBblxch1dY",
+    "youtubeUrl": "https://www.youtube.com/watch?v=7uBblxch1dY",
+    "title": "Jaya Janardhana Krishna Radhika Pathe | Shree Naval Kishori",
+    "artist": "Shree Naval Kishori",
+    "thumbnail": "https://i.ytimg.com/vi/7uBblxch1dY/hqdefault.jpg",
+    "duration": 301,
+    "addedAt": 1730000047000,
+    "modePreference": "audio",
+    "tags": [
+      "Devotional",
+      "Telugu",
+      "Bhakti"
+    ]
   }
 ];
 
 export const INITIAL_PLAYLISTS: Playlist[] = [
+  {
+    "id": "playlist-telugu-devotional",
+    "name": "Telugu Devotional songs",
+    "description": "Telugu Devotional & Bhakti songs playlist by saichand nomula. Auto-syncs with YouTube.",
+    "coverUrl": "https://i.ytimg.com/vi/QnQnz9G2LNw/hqdefault.jpg",
+    "gradient": "from-amber-600 via-orange-700 to-neutral-900",
+    "createdAt": 1730000000000,
+    "updatedAt": 1790143365233,
+    "isCustom": false,
+    "youtubePlaylistId": "PLFs4t3Oc7pBw",
+    "lastSyncedAt": 1790143365233,
+    "autoSync": true,
+    "trackIds": [
+      "track-telugu-devotional-QnQnz9G2LNw",
+      "track-telugu-devotional-zGDjn2uZa5k",
+      "track-telugu-devotional-lWyFLohRF8E",
+      "track-telugu-devotional-yALvgZi-84o",
+      "track-telugu-devotional-6qRcXEI9hoo",
+      "track-telugu-devotional-qmIC0_-7W4c",
+      "track-telugu-devotional-Hn9VoVh0vvM",
+      "track-telugu-devotional-hpNNFazxKo8",
+      "track-telugu-devotional-_GrMe9Cipg4",
+      "track-telugu-devotional-cHWs_W-r7I0",
+      "track-telugu-devotional-f0zCF7rV4bs",
+      "track-telugu-devotional-VnPFQ7nNu0U",
+      "track-telugu-devotional-CH8sA9Pd6Gc",
+      "track-telugu-devotional-il_1aAQnV_M",
+      "track-telugu-devotional-H7rJ2EIyZYU",
+      "track-telugu-devotional-_P2aI9SYDbo",
+      "track-telugu-devotional-iddCsp34hb8",
+      "track-telugu-devotional-avN-pUUUVKQ",
+      "track-telugu-devotional-ASs4YXd_TRQ",
+      "yt-7w7LUaLpM4E",
+      "yt-pNGdT5obEys",
+      "track-telugu-devotional-doRuY0eBQhc",
+      "track-telugu-devotional-j6XCJtkvx9M",
+      "track-telugu-devotional-ir12Boxh__Q",
+      "track-telugu-devotional-ofaPL-8Gb98",
+      "track-telugu-devotional-hHSAq8_TksQ",
+      "track-telugu-devotional-C1qwFWm64nk",
+      "track-telugu-devotional-tCsHPVO6uSU",
+      "yt-gPH4erPbpPc",
+      "track-telugu-devotional-c38wKCoezus",
+      "track-telugu-devotional-B6Mxd4Bd-MM",
+      "track-telugu-devotional-2gXNDr_6FcE",
+      "track-telugu-devotional-ym4o5F8ncY0",
+      "track-telugu-devotional-l8pN_11Ilrc",
+      "track-telugu-devotional-kTAlVdyroH4",
+      "track-telugu-devotional-re88S-5fpmA",
+      "yt-IzePl-nFml8",
+      "track-telugu-devotional-ZePfHmZ1fVQ",
+      "track-telugu-devotional-7K6vifx_Slo",
+      "track-telugu-devotional-YD4xclAqi5I",
+      "track-telugu-devotional-OnTcMuv2Tsk",
+      "track-telugu-devotional-GFr5NLL1b3A",
+      "yt-FpjJgHkroDI",
+      "track-telugu-devotional-l1pezLiSbZY",
+      "yt-ov6T2FG-4wk",
+      "track-telugu-devotional-8U7x1mhPidk",
+      "track-telugu-devotional-KHM8jTY2cfw",
+      "track-telugu-devotional-7uBblxch1dY"
+    ]
+  },
   {
     "id": "pl-ayyappa-songs-2026",
     "name": "Ayyappa Song playlist 2026",
@@ -3165,7 +3900,10 @@ export const INITIAL_PLAYLISTS: Playlist[] = [
     "coverUrl": "https://i.ytimg.com/vi/7w7LUaLpM4E/hqdefault.jpg",
     "gradient": "from-amber-700 to-[#121212]",
     "createdAt": 1790136613864,
-    "updatedAt": 1790136613864
+    "updatedAt": 1790136613864,
+    "youtubePlaylistId": "PLU6g688UonFw",
+    "lastSyncedAt": 1790143401423,
+    "autoSync": true
   },
   {
     "id": "pl-telugu-trending-2026",

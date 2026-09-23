@@ -103,6 +103,9 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
         createdAt: Date.now(),
         updatedAt: Date.now(),
         isCustom: true,
+        youtubePlaylistId: detectedResult.id,
+        lastSyncedAt: Date.now(),
+        autoSync: true,
       };
 
       if (onCreatePlaylistWithTracks) {

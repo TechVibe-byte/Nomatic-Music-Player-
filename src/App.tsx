@@ -41,6 +41,7 @@ import { PlaylistView } from './components/views/PlaylistView';
 import { SearchView } from './components/views/SearchView';
 import { LibraryView } from './components/views/LibraryView';
 import { OfflineIndicator } from './components/common/OfflineIndicator';
+import { syncYouTubePlaylistWithLibrary } from './utils/youtubePlaylist';
 import { 
   initBackgroundAudioKeepAlive, 
   requestScreenWakeLock, 
@@ -552,6 +553,56 @@ export default function App() {
     savePlaylists(updated);
   };
 
+  const handleSyncPlaylist = useCallback(
+    async (playlistId: string): Promise<{ addedCount: number; totalCount: number }> => {
+      const pl = playlists.find((p) => p.id === playlistId);
+      if (!pl) throw new Error('Playlist not found');
+      if (!pl.youtubePlaylistId) throw new Error('This playlist is not linked to a YouTube playlist');
+
+      const result = await syncYouTubePlaylistWithLibrary(pl, tracks);
+
+      // If new tracks were discovered, add them to tracks state and storage
+      if (result.newTracks.length > 0) {
+        setTracks((prev) => {
+          const existingIds = new Set(prev.map((t) => t.id));
+          const toAdd = result.newTracks.filter((t) => !existingIds.has(t.id));
+          const updated = [...prev, ...toAdd];
+          saveTracks(updated);
+          return updated;
+        });
+      }
+
+      // Update the playlist in state and storage
+      setPlaylists((prev) => {
+        const updated = prev.map((p) => (p.id === playlistId ? result.updatedPlaylist : p));
+        savePlaylists(updated);
+        return updated;
+      });
+
+      return {
+        addedCount: result.addedCount,
+        totalCount: result.totalRemoteCount,
+      };
+    },
+    [playlists, tracks]
+  );
+
+  const handleUpdatePlaylist = useCallback(
+    (playlistId: string, updates: Partial<Playlist>) => {
+      setPlaylists((prev) => {
+        const updated = prev.map((p) => {
+          if (p.id === playlistId) {
+            return { ...p, ...updates, updatedAt: Date.now() };
+          }
+          return p;
+        });
+        savePlaylists(updated);
+        return updated;
+      });
+    },
+    []
+  );
+
   const handleDeleteTrackFromLibrary = (trackId: string) => {
     const updatedTracks = tracks.filter((t) => t.id !== trackId);
     setTracks(updatedTracks);
@@ -690,6 +741,9 @@ export default function App() {
               onRemoveTrackFromPlaylist={handleRemoveTrackFromPlaylist}
               likedTrackIds={likedTrackIds}
               onToggleLike={handleToggleLike}
+              onSyncPlaylist={handleSyncPlaylist}
+              onUpdatePlaylist={handleUpdatePlaylist}
+              onShowToast={setToastMessage}
             />
           )}
 
@@ -706,6 +760,7 @@ export default function App() {
               likedTrackIds={likedTrackIds}
               onToggleLike={handleToggleLike}
               isLikedSongsView={true}
+              onShowToast={setToastMessage}
             />
           )}
 

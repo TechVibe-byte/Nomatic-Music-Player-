@@ -2,7 +2,7 @@
  * Utilities for extracting YouTube playlist IDs, fetching playlist metadata and tracks,
  * and converting them into Nomatic Track and Playlist objects.
  */
-import { Track } from '../types';
+import { Track, Playlist } from '../types';
 import { normalizeYouTubeThumbnail } from './youtube';
 
 export interface YouTubePlaylistItem {
@@ -398,4 +398,83 @@ export function convertPlaylistItemsToTracks(
       tags: tag ? [tag] : ['YouTube Playlist'],
     };
   });
+}
+
+export interface SyncPlaylistResult {
+  updatedPlaylist: Playlist;
+  newTracks: Track[];
+  addedCount: number;
+  totalRemoteCount: number;
+}
+
+/**
+ * Synchronizes an existing Nomatic playlist with its upstream YouTube playlist.
+ * Fetches the latest track list, discovers any songs added by the YouTube playlist owner,
+ * creates track models for any new videos, and appends them to the playlist.
+ */
+export async function syncYouTubePlaylistWithLibrary(
+  playlist: Playlist,
+  existingTracks: Track[]
+): Promise<SyncPlaylistResult> {
+  const playlistId = playlist.youtubePlaylistId;
+  if (!playlistId) {
+    throw new Error('This playlist is not linked to a YouTube playlist.');
+  }
+
+  // Fetch latest playlist tracks from YouTube
+  const result = await fetchYouTubePlaylist(playlistId);
+  const remoteTracks = result.tracks;
+
+  // Build lookup maps
+  const trackByYtId = new Map<string, Track>();
+  for (const t of existingTracks) {
+    trackByYtId.set(t.youtubeId, t);
+  }
+
+  const existingTrackIdsInPlaylist = new Set(playlist.trackIds);
+  const newTracksCreated: Track[] = [];
+  const updatedTrackIds = [...playlist.trackIds];
+  const now = Date.now();
+
+  for (let idx = 0; idx < remoteTracks.length; idx++) {
+    const rItem = remoteTracks[idx];
+    let matchedTrack = trackByYtId.get(rItem.videoId);
+
+    if (!matchedTrack) {
+      // Create new Track object
+      matchedTrack = {
+        id: `yt-${rItem.videoId}`,
+        youtubeId: rItem.videoId,
+        youtubeUrl: `https://www.youtube.com/watch?v=${rItem.videoId}`,
+        title: rItem.title,
+        artist: rItem.author || playlist.name,
+        thumbnail: normalizeYouTubeThumbnail(rItem.thumbnail, rItem.videoId),
+        duration: rItem.duration || 180,
+        addedAt: now + idx,
+        modePreference: 'audio',
+        tags: [playlist.name, 'Synced YouTube Playlist'],
+      };
+      newTracksCreated.push(matchedTrack);
+      trackByYtId.set(matchedTrack.youtubeId, matchedTrack);
+    }
+
+    if (!existingTrackIdsInPlaylist.has(matchedTrack.id)) {
+      existingTrackIdsInPlaylist.add(matchedTrack.id);
+      updatedTrackIds.push(matchedTrack.id);
+    }
+  }
+
+  const updatedPlaylist: Playlist = {
+    ...playlist,
+    trackIds: updatedTrackIds,
+    lastSyncedAt: Date.now(),
+    updatedAt: Date.now(),
+  };
+
+  return {
+    updatedPlaylist,
+    newTracks: newTracksCreated,
+    addedCount: updatedTrackIds.length - playlist.trackIds.length,
+    totalRemoteCount: remoteTracks.length,
+  };
 }

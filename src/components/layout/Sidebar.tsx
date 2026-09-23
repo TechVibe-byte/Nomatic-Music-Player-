@@ -15,6 +15,7 @@ import {
 import { ActiveView, Playlist } from '../../types';
 import { PWAInstallButton } from '../common/PWAInstallButton';
 import { NomaticLogo } from '../common/NomaticLogo';
+import { TelegramIcon } from '../common/TelegramNotification';
 
 interface SidebarProps {
   activeView: ActiveView;
@@ -25,6 +26,8 @@ interface SidebarProps {
   onOpenAddModalWithMode?: (mode: 'single' | 'playlist' | 'bulk') => void;
   onOpenCreatePlaylistModal: () => void;
   onOpenConfigModal: () => void;
+  onOpenTelegramModal?: () => void;
+  isTelegramLive?: boolean;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -36,6 +39,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onOpenAddModalWithMode,
   onOpenCreatePlaylistModal,
   onOpenConfigModal,
+  onOpenTelegramModal,
+  isTelegramLive,
 }) => {
   return (
     <aside 
@@ -163,6 +168,29 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </button>
 
+        {onOpenTelegramModal && (
+          <button
+            id="btn-telegram-shortcut"
+            onClick={onOpenTelegramModal}
+            className="w-full flex items-center gap-4 px-3 py-2.5 rounded-md font-semibold text-sm text-neutral-300 hover:text-white hover:bg-neutral-900/60 transition group cursor-pointer"
+          >
+            <div className="w-6 h-6 rounded bg-[#229ED9]/20 text-[#229ED9] flex items-center justify-center group-hover:scale-105 transition-transform">
+              <TelegramIcon className="w-3.5 h-3.5 fill-current" />
+            </div>
+            <div className="flex items-center justify-between flex-1 truncate">
+              <span className="truncate">Telegram Sync</span>
+              {isTelegramLive ? (
+                <span className="flex items-center gap-1 text-[9px] bg-blue-950 text-[#229ED9] font-bold px-1.5 py-0.5 rounded border border-[#229ED9]/30">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#229ED9] animate-pulse" />
+                  Live
+                </span>
+              ) : (
+                <span className="text-[10px] text-neutral-500 font-mono">Sync</span>
+              )}
+            </div>
+          </button>
+        )}
+
         <button
           id="btn-create-playlist"
           onClick={onOpenCreatePlaylistModal}
@@ -228,6 +256,29 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Footer / Utilities: CFG Local & Install App */}
       <div className="p-4 border-t border-neutral-900 bg-black/50 space-y-2">
         <PWAInstallButton compact={false} />
+
+        {onOpenTelegramModal && (
+          <button
+            id="btn-telegram-footer"
+            onClick={onOpenTelegramModal}
+            className="w-full flex items-center justify-between px-3 py-2 rounded-lg bg-neutral-900/90 hover:bg-neutral-800 border border-[#229ED9]/30 text-xs font-medium text-neutral-300 hover:text-white transition cursor-pointer"
+          >
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 rounded-full bg-[#229ED9] text-white flex items-center justify-center">
+                <TelegramIcon className="w-2.5 h-2.5 fill-white" />
+              </div>
+              <span>Telegram Cloud Backup</span>
+            </div>
+            {isTelegramLive ? (
+              <span className="flex items-center gap-1 text-[10px] text-[#229ED9] font-mono">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#229ED9] animate-pulse" />
+                SYNC
+              </span>
+            ) : (
+              <span className="text-[10px] text-neutral-500 font-mono">OFF</span>
+            )}
+          </button>
+        )}
 
         <button
           id="btn-config-local"

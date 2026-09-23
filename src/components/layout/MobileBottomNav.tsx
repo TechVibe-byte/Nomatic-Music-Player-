@@ -1,6 +1,7 @@
 import React from 'react';
 import { Home, Search, Library, PlusCircle, Settings, Layers, ListMusic } from 'lucide-react';
 import { ActiveView } from '../../types';
+import { TelegramIcon } from '../common/TelegramNotification';
 
 interface MobileBottomNavProps {
   activeView: ActiveView;
@@ -8,6 +9,7 @@ interface MobileBottomNavProps {
   onOpenAddModal: () => void;
   onOpenAddModalWithMode?: (mode: 'single' | 'playlist' | 'bulk') => void;
   onOpenConfigModal: () => void;
+  onOpenTelegramModal?: () => void;
   likedCount: number;
   playlistsCount: number;
 }
@@ -18,6 +20,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
   onOpenAddModal,
   onOpenAddModalWithMode,
   onOpenConfigModal,
+  onOpenTelegramModal,
 }) => {
   const [showAddMenu, setShowAddMenu] = React.useState(false);
 
@@ -107,6 +110,25 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
                 <p className="text-xs text-neutral-400">Paste multiple links with auto duplicate filter</p>
               </div>
             </button>
+
+            {onOpenTelegramModal && (
+              <button
+                id="mobile-menu-telegram-btn"
+                onClick={() => {
+                  setShowAddMenu(false);
+                  onOpenTelegramModal();
+                }}
+                className="w-full flex items-center gap-3 p-3 rounded-xl bg-neutral-800/80 hover:bg-neutral-700 text-left transition cursor-pointer border border-[#229ED9]/40"
+              >
+                <div className="w-9 h-9 rounded-lg bg-[#229ED9] text-white flex items-center justify-center font-bold">
+                  <TelegramIcon className="w-5 h-5 fill-white" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-white">Telegram Remote & Cloud Backup</p>
+                  <p className="text-xs text-neutral-400">Send YouTube links via bot to load here</p>
+                </div>
+              </button>
+            )}
 
             <button
               id="mobile-menu-cancel-btn"

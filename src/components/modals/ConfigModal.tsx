@@ -8,11 +8,9 @@ import {
   Headphones, 
   Film, 
   Check, 
-  Sparkles,
-  Info,
-  Sliders,
-  Sun,
-  PictureInPicture2,
+  Sparkles, 
+  Sliders, 
+  Sun, 
   Radio
 } from 'lucide-react';
 import { AppConfig, Track, Playlist } from '../../types';
@@ -20,6 +18,7 @@ import {
   exportLocalConfigJSON, 
   importLocalConfigJSON 
 } from '../../utils/storage';
+import { TelegramIcon } from '../common/TelegramNotification';
 
 interface ConfigModalProps {
   isOpen: boolean;
@@ -31,6 +30,7 @@ interface ConfigModalProps {
   likedCount: number;
   onResetLibrary: () => void;
   onReloadAllData: () => void;
+  onOpenTelegramModal?: () => void;
 }
 
 export const ConfigModal: React.FC<ConfigModalProps> = ({
@@ -43,6 +43,7 @@ export const ConfigModal: React.FC<ConfigModalProps> = ({
   likedCount,
   onResetLibrary,
   onReloadAllData,
+  onOpenTelegramModal,
 }) => {
   const [importStatus, setImportStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [copiedExport, setCopiedExport] = useState(false);
@@ -241,6 +242,31 @@ export const ConfigModal: React.FC<ConfigModalProps> = ({
               <Download className="w-3.5 h-3.5 text-[#1ed760]" />
               Config Backup & Portability
             </h3>
+
+            {/* Telegram Cloud Backup Link */}
+            {onOpenTelegramModal && (
+              <div className="p-3 bg-gradient-to-r from-blue-950/40 via-neutral-900 to-neutral-900 rounded-xl border border-[#229ED9]/40 flex items-center justify-between gap-3">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-full bg-[#229ED9] text-white flex items-center justify-center flex-shrink-0 shadow">
+                    <TelegramIcon className="w-4 h-4 fill-white" />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold text-white">Telegram Cloud Backup & Remote</p>
+                    <p className="text-[11px] text-neutral-400">Push library backups & stream songs from your Telegram bot</p>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => {
+                    onClose();
+                    onOpenTelegramModal();
+                  }}
+                  className="px-3 py-1.5 bg-[#229ED9] hover:bg-[#2cb2f4] text-white font-bold text-xs rounded-lg transition cursor-pointer flex-shrink-0"
+                >
+                  Configure
+                </button>
+              </div>
+            )}
 
             <div className="grid grid-cols-2 gap-3">
               <button

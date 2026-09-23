@@ -35,6 +35,11 @@ import { LyricsModal } from './components/player/LyricsModal';
 import { AddTrackModal } from './components/modals/AddTrackModal';
 import { CreatePlaylistModal } from './components/modals/CreatePlaylistModal';
 import { ConfigModal } from './components/modals/ConfigModal';
+import { TelegramModal } from './components/modals/TelegramModal';
+import { TelegramNotification, TelegramBackupNotification } from './components/common/TelegramNotification';
+import { useTelegramListener } from './hooks/useTelegramListener';
+import { TelegramConfig } from './types/telegram';
+import { loadTelegramConfig, saveTelegramConfig } from './utils/telegram';
 import { QueueDrawer } from './components/modals/QueueDrawer';
 import { SleepTimerModal } from './components/modals/SleepTimerModal';
 import { HomeView } from './components/views/HomeView';
@@ -92,6 +97,8 @@ export default function App() {
   const [addModalInitialMode, setAddModalInitialMode] = useState<'single' | 'playlist' | 'bulk'>('single');
   const [isCreatePlaylistModalOpen, setIsCreatePlaylistModalOpen] = useState(false);
   const [isConfigModalOpen, setIsConfigModalOpen] = useState(false);
+  const [isTelegramModalOpen, setIsTelegramModalOpen] = useState(false);
+  const [telegramConfig, setTelegramConfig] = useState<TelegramConfig>(() => loadTelegramConfig());
 
   // 4b. Sleep Timer & Toast Notifications
   const [sleepTimerState, setSleepTimerState] = useState<SleepTimerState>({
@@ -675,6 +682,89 @@ export default function App() {
     setConfig(loadConfig());
   };
 
+  // Telegram Integration Handlers & Polling Listener
+  const handleAddSingleTrackOnly = useCallback((newTrack: Track) => {
+    setTracks((prev) => {
+      if (prev.some((t) => t.id === newTrack.id || t.youtubeId === newTrack.youtubeId)) {
+        return prev;
+      }
+      const updated = [newTrack, ...prev];
+      saveTracks(updated);
+      return updated;
+    });
+  }, []);
+
+  const handleAddToQueueFromTelegram = useCallback((track: Track) => {
+    setQueue((prev) => [...prev, track]);
+    setToastMessage(`Added "${track.title}" to queue`);
+  }, []);
+
+  const handleAddTracksToQueueFromTelegram = useCallback((tracksToAdd: Track[]) => {
+    setQueue((prev) => [...prev, ...tracksToAdd]);
+    setToastMessage(`Added ${tracksToAdd.length} tracks to queue`);
+  }, []);
+
+  const {
+    isPolling: isTelegramPolling,
+    incomingPrompt: incomingTelegramPrompt,
+    setIncomingPrompt: setIncomingTelegramPrompt,
+    incomingBackup: incomingTelegramBackup,
+    setIncomingBackup: setIncomingTelegramBackup,
+    handleRestoreFromIncomingBackup,
+    handleImportPlaylistFromTelegram,
+    getOrCreateTrack,
+  } = useTelegramListener({
+    config: telegramConfig,
+    onUpdateConfig: (newCfg) => {
+      setTelegramConfig(newCfg);
+      saveTelegramConfig(newCfg);
+    },
+    tracks,
+    onAddTrack: handleAddSingleTrackOnly,
+    onPlayTrack: (track, newQ) => {
+      handlePlayTrack(track, newQ);
+    },
+    onAddToQueue: handleAddToQueueFromTelegram,
+    onAddTracksToQueue: handleAddTracksToQueueFromTelegram,
+    onImportPlaylist: handleImportPlaylist,
+    onToggleLike: handleToggleLike,
+    likedTrackIds,
+    currentTrack,
+    isPlaying,
+    onShowToast: (msg) => setToastMessage(msg),
+    onReloadAllData: handleReloadAllData,
+  });
+
+  const isTelegramLive = isTelegramPolling && !!(telegramConfig.botToken && telegramConfig.chatId);
+
+  const handleTelegramPlaySingle = async (videoId: string) => {
+    const track = await getOrCreateTrack(videoId);
+    handlePlayTrack(track);
+    setIncomingTelegramPrompt(null);
+  };
+
+  const handleTelegramQueueSingle = async (videoId: string) => {
+    const track = await getOrCreateTrack(videoId);
+    handleAddToQueueFromTelegram(track);
+    setIncomingTelegramPrompt(null);
+  };
+
+  const handleTelegramLikeSingle = async (videoId: string) => {
+    const track = await getOrCreateTrack(videoId);
+    handleToggleLike(track.id);
+    setIncomingTelegramPrompt(null);
+  };
+
+  const handleTelegramImportPlaylist = async (playlistId: string) => {
+    await handleImportPlaylistFromTelegram(playlistId, true);
+    setIncomingTelegramPrompt(null);
+  };
+
+  const handleTelegramQueuePlaylist = async (playlistId: string) => {
+    await handleImportPlaylistFromTelegram(playlistId, false);
+    setIncomingTelegramPrompt(null);
+  };
+
   // Open modal with preselected playlist
   const handleOpenAddModalForPlaylist = (playlistId: string, mode: 'single' | 'bulk' = 'single') => {
     setAddModalInitialMode(mode);
@@ -714,6 +804,8 @@ export default function App() {
         onOpenAddModalWithMode={handleOpenAddModal}
         onOpenCreatePlaylistModal={() => setIsCreatePlaylistModalOpen(true)}
         onOpenConfigModal={() => setIsConfigModalOpen(true)}
+        onOpenTelegramModal={() => setIsTelegramModalOpen(true)}
+        isTelegramLive={isTelegramLive}
       />
 
       {/* 2. Main Content Canvas & Top Navigation */}
@@ -726,6 +818,8 @@ export default function App() {
           onOpenAddModal={() => handleOpenAddModal('single')}
           onOpenAddModalWithMode={handleOpenAddModal}
           onOpenConfigModal={() => setIsConfigModalOpen(true)}
+          onOpenTelegramModal={() => setIsTelegramModalOpen(true)}
+          isTelegramLive={isTelegramLive}
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onBack={handleBack}
@@ -1004,6 +1098,7 @@ export default function App() {
           onOpenAddModal={() => handleOpenAddModal('single')}
           onOpenAddModalWithMode={handleOpenAddModal}
           onOpenConfigModal={() => setIsConfigModalOpen(true)}
+          onOpenTelegramModal={() => setIsTelegramModalOpen(true)}
           likedCount={likedTrackIds.length}
           playlistsCount={playlists.length}
         />
@@ -1054,6 +1149,41 @@ export default function App() {
         likedCount={likedTrackIds.length}
         onResetLibrary={handleResetLibrary}
         onReloadAllData={handleReloadAllData}
+        onOpenTelegramModal={() => setIsTelegramModalOpen(true)}
+      />
+
+      <TelegramModal
+        isOpen={isTelegramModalOpen}
+        onClose={() => setIsTelegramModalOpen(false)}
+        config={telegramConfig}
+        onUpdateConfig={(newCfg) => {
+          setTelegramConfig(newCfg);
+          saveTelegramConfig(newCfg);
+        }}
+        tracks={tracks}
+        playlists={playlists}
+        likedCount={likedTrackIds.length}
+        isPolling={isTelegramPolling}
+        onReloadAllData={handleReloadAllData}
+        onShowToast={(msg) => setToastMessage(msg)}
+      />
+
+      {/* Telegram Incoming YouTube Link Popup */}
+      <TelegramNotification
+        item={incomingTelegramPrompt}
+        onDismiss={() => setIncomingTelegramPrompt(null)}
+        onPlaySingle={handleTelegramPlaySingle}
+        onQueueSingle={handleTelegramQueueSingle}
+        onLikeSingle={handleTelegramLikeSingle}
+        onImportPlaylist={handleTelegramImportPlaylist}
+        onQueuePlaylist={handleTelegramQueuePlaylist}
+      />
+
+      {/* Telegram Incoming Cloud Backup Restore Popup */}
+      <TelegramBackupNotification
+        backup={incomingTelegramBackup}
+        onDismiss={() => setIncomingTelegramBackup(null)}
+        onRestore={handleRestoreFromIncomingBackup}
       />
 
       <VisualizerModal

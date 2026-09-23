@@ -16,6 +16,7 @@ import { ActiveView, PlaybackMode } from '../../types';
 import { PWAInstallButton } from '../common/PWAInstallButton';
 import { NomaticLogo } from '../common/NomaticLogo';
 import { VlcConeIcon } from '../player/VlcVideoPlayer';
+import { TelegramIcon } from '../common/TelegramNotification';
 
 interface TopNavProps {
   activeView: ActiveView;
@@ -25,6 +26,8 @@ interface TopNavProps {
   onOpenAddModal: () => void;
   onOpenAddModalWithMode?: (mode: 'single' | 'playlist' | 'bulk') => void;
   onOpenConfigModal: () => void;
+  onOpenTelegramModal?: () => void;
+  isTelegramLive?: boolean;
   searchQuery: string;
   setSearchQuery: (q: string) => void;
   onBack: () => void;
@@ -42,6 +45,8 @@ export const TopNav: React.FC<TopNavProps> = ({
   onOpenAddModal,
   onOpenAddModalWithMode,
   onOpenConfigModal,
+  onOpenTelegramModal,
+  isTelegramLive,
   searchQuery,
   setSearchQuery,
   onBack,
@@ -199,6 +204,22 @@ export const TopNav: React.FC<TopNavProps> = ({
 
         {/* PWA Install Button (Always visible on mobile & desktop) */}
         <PWAInstallButton compact={true} />
+
+        {/* Telegram Remote & Cloud Backup Button */}
+        {onOpenTelegramModal && (
+          <button
+            id="top-telegram-btn"
+            onClick={onOpenTelegramModal}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-[#229ED9]/15 hover:bg-[#229ED9]/30 text-[#229ED9] hover:text-white text-xs font-bold transition cursor-pointer border border-[#229ED9]/40"
+            title="Telegram Cloud Backup & Remote Stream"
+          >
+            <TelegramIcon className="w-3.5 h-3.5 fill-current" />
+            <span className="hidden sm:inline">Telegram</span>
+            {isTelegramLive && (
+              <span className="w-1.5 h-1.5 rounded-full bg-[#229ED9] animate-pulse" />
+            )}
+          </button>
+        )}
 
         {/* Local Storage Config Button */}
         <button

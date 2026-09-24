@@ -8,10 +8,14 @@ import {
   fetchTelegramFileContent,
   parseTelegramMessageForYouTube,
   saveTelegramConfig,
+  createSongsListMessage,
+  createSongSearchMessage,
+  createHelpMessage,
+  editTelegramMessageText,
 } from '../utils/telegram';
 import { fetchYouTubeMetadata, getYouTubeThumbnail } from '../utils/youtube';
 import { fetchYouTubePlaylist, convertPlaylistItemsToTracks } from '../utils/youtubePlaylist';
-import { importLocalConfigJSON } from '../utils/storage';
+import { importLocalConfigJSON, loadPlaylists } from '../utils/storage';
 
 interface UseTelegramListenerProps {
   config: TelegramConfig;
@@ -211,6 +215,16 @@ export function useTelegramListener({
                 onPlayTrack(track);
                 onShowToast(`▶️ Telegram Remote: Playing "${track.title}"`);
                 setIncomingPrompt(null);
+
+                // Acknowledge in Telegram with clickable YouTube preview
+                if (cqChatId) {
+                  await sendTelegramMessage(
+                    token,
+                    cqChatId,
+                    `▶️ *Now Playing in Nomatic:*\n*${track.title}*\n👤 ${track.artist || 'Unknown Artist'}\n🔗 [Open Video/Audio](https://www.youtube.com/watch?v=${track.youtubeId})`,
+                    { parseMode: 'Markdown' }
+                  );
+                }
               } else if (cqData.startsWith('queue:')) {
                 const vid = cqData.replace('queue:', '');
                 await answerTelegramCallback(token, cq.id, '➕ Added to Queue!');
@@ -218,6 +232,15 @@ export function useTelegramListener({
                 onAddToQueue(track);
                 onShowToast(`➕ Added "${track.title}" to Queue`);
                 setIncomingPrompt(null);
+
+                if (cqChatId) {
+                  await sendTelegramMessage(
+                    token,
+                    cqChatId,
+                    `➕ *Added to Queue:*\n*${track.title}*`,
+                    { parseMode: 'Markdown' }
+                  );
+                }
               } else if (cqData.startsWith('like:')) {
                 const vid = cqData.replace('like:', '');
                 await answerTelegramCallback(token, cq.id, '❤️ Saved to Liked Songs!');
@@ -238,6 +261,97 @@ export function useTelegramListener({
                   onShowToast(`➕ Queued ${tracksToAdd.length} songs from Telegram playlist`);
                 }
                 setIncomingPrompt(null);
+              } else if (cqData.startsWith('page:')) {
+                const pageNum = parseInt(cqData.replace('page:', ''), 10) || 1;
+                const listData = createSongsListMessage(stateRef.current.tracks, pageNum, 5);
+                await answerTelegramCallback(token, cq.id, `Page ${pageNum}`);
+                if (cq.message?.message_id && cqChatId) {
+                  await editTelegramMessageText(token, cqChatId, cq.message.message_id, listData.text, {
+                    replyMarkup: listData.replyMarkup,
+                    parseMode: 'Markdown',
+                  });
+                } else if (cqChatId) {
+                  await sendTelegramMessage(token, cqChatId, listData.text, {
+                    replyMarkup: listData.replyMarkup,
+                    parseMode: 'Markdown',
+                  });
+                }
+              } else if (cqData === 'noop') {
+                await answerTelegramCallback(token, cq.id);
+              } else if (cqData === 'cmd:search_prompt') {
+                await answerTelegramCallback(token, cq.id, 'Type /search <song>');
+                if (cqChatId) {
+                  await sendTelegramMessage(
+                    token,
+                    cqChatId,
+                    `🔍 *Search Songs:*\n\nSend \`/search <song or artist>\` to find any track in your library.\nExample: \`/search blinding lights\``,
+                    { parseMode: 'Markdown' }
+                  );
+                }
+              } else if (cqData === 'cmd:backup') {
+                await answerTelegramCallback(token, cq.id, '⏳ Starting backup...');
+                if (cqChatId) {
+                  const backupRes = await executeTelegramBackup(token, cqChatId);
+                  if (backupRes.ok) {
+                    onShowToast('Cloud Backup sent to Telegram chat!');
+                  }
+                }
+              } else if (cqData === 'cmd:nowplaying') {
+                await answerTelegramCallback(token, cq.id);
+                const cur = stateRef.current.currentTrack;
+                if (cur && cqChatId) {
+                  await sendTelegramMessage(
+                    token,
+                    cqChatId,
+                    `🎶 *Now Playing on Nomatic:*\n\n*${cur.title}*\n👤 Artist: ${cur.artist}\n🔗 [Open Video/Audio](https://www.youtube.com/watch?v=${cur.youtubeId})`,
+                    {
+                      parseMode: 'Markdown',
+                      replyMarkup: {
+                        inline_keyboard: [
+                          [
+                            { text: '❤️ Like Track', callback_data: `like:${cur.youtubeId}` },
+                            { text: '➕ Queue Track', callback_data: `queue:${cur.youtubeId}` },
+                          ],
+                        ],
+                      },
+                    }
+                  );
+                } else if (cqChatId) {
+                  await sendTelegramMessage(token, cqChatId, '⏸️ No song is currently playing in Nomatic player.');
+                }
+              } else if (cqData === 'cmd:help') {
+                await answerTelegramCallback(token, cq.id, 'Commands Guide');
+                if (cqChatId) {
+                  const helpData = createHelpMessage(cq.from?.first_name || 'Music Lover');
+                  await sendTelegramMessage(token, cqChatId, helpData.text, {
+                    parseMode: 'Markdown',
+                    replyMarkup: helpData.replyMarkup,
+                  });
+                }
+              } else if (cqData === 'cmd:status') {
+                await answerTelegramCallback(token, cq.id);
+                if (cqChatId) {
+                  await sendTelegramMessage(
+                    token,
+                    cqChatId,
+                    `🟢 *Nomatic Web Player Status:*\n` +
+                    `• Player State: ${stateRef.current.isPlaying ? '▶️ Playing' : '⏸️ Paused / Idle'}\n` +
+                    `• Active Song: ${stateRef.current.currentTrack ? stateRef.current.currentTrack.title : 'None'}\n` +
+                    `• Library Size: ${stateRef.current.tracks.length} songs\n` +
+                    `• Auto-Play Incoming: ${stateRef.current.config.autoPlayIncoming ? 'ON' : 'OFF'}`,
+                    {
+                      parseMode: 'Markdown',
+                      replyMarkup: {
+                        inline_keyboard: [
+                          [
+                            { text: '🎵 View Songs (/songs)', callback_data: 'page:1' },
+                            { text: '📖 Help (/help)', callback_data: 'cmd:help' },
+                          ],
+                        ],
+                      },
+                    }
+                  );
+                }
               }
               continue;
             }
@@ -268,20 +382,67 @@ export function useTelegramListener({
 
             if (parsed.type === 'command') {
               const cmd = parsed.command?.toLowerCase();
-              if (cmd === '/start' || cmd === '/help') {
-                await sendTelegramMessage(
-                  token,
-                  chatId,
-                  `👋 *Hello, ${senderName}!*\n\n` +
-                  `I am your *Nomatic Music Remote Bot*.\n\n` +
-                  `🎵 *How to use:* Paste any YouTube link here!\n` +
-                  `• Single Video -> I will offer Play, Queue, and Like buttons.\n` +
-                  `• Playlist URL -> I will ask if you want the single song or full playlist.\n` +
-                  `• /backup -> Download instant backup of your playlists\n` +
-                  `• /nowplaying -> View current playing track\n` +
-                  `• /status -> Check connection`,
-                  { parseMode: 'Markdown' }
-                );
+              if (cmd === '/start' || cmd === '/help' || cmd === '/commands' || cmd === '/menu') {
+                const helpData = createHelpMessage(senderName);
+                await sendTelegramMessage(token, chatId, helpData.text, {
+                  parseMode: 'Markdown',
+                  replyMarkup: helpData.replyMarkup,
+                });
+              } else if (cmd === '/songs' || cmd === '/list' || cmd === '/library') {
+                const reqPage = parseInt(parsed.query || '1', 10) || 1;
+                const listData = createSongsListMessage(stateRef.current.tracks, reqPage, 5);
+                await sendTelegramMessage(token, chatId, listData.text, {
+                  parseMode: 'Markdown',
+                  replyMarkup: listData.replyMarkup,
+                });
+              } else if (cmd === '/search' || cmd === '/find') {
+                const searchData = createSongSearchMessage(stateRef.current.tracks, parsed.query || '');
+                await sendTelegramMessage(token, chatId, searchData.text, {
+                  parseMode: 'Markdown',
+                  replyMarkup: searchData.replyMarkup,
+                });
+              } else if (cmd === '/play') {
+                const q = (parsed.query || '').trim().toLowerCase();
+                if (!q) {
+                  await sendTelegramMessage(
+                    token,
+                    chatId,
+                    `▶️ *Play Command:*\n\nUsage: \`/play <song name or artist>\`\nExample: \`/play blinding lights\``,
+                    {
+                      parseMode: 'Markdown',
+                      replyMarkup: {
+                        inline_keyboard: [[{ text: '🎵 View Song List', callback_data: 'page:1' }]],
+                      },
+                    }
+                  );
+                } else {
+                  const match = stateRef.current.tracks.find(
+                    (t) =>
+                      t.title.toLowerCase().includes(q) ||
+                      (t.artist && t.artist.toLowerCase().includes(q))
+                  );
+                  if (match) {
+                    onPlayTrack(match);
+                    onShowToast(`▶️ Telegram Remote: Playing "${match.title}"`);
+                    await sendTelegramMessage(
+                      token,
+                      chatId,
+                      `▶️ *Now Playing in Nomatic:*\n*${match.title}*\n👤 ${match.artist || 'Unknown'}\n🔗 [Open Link](https://www.youtube.com/watch?v=${match.youtubeId})`,
+                      { parseMode: 'Markdown' }
+                    );
+                  } else {
+                    const searchData = createSongSearchMessage(stateRef.current.tracks, q);
+                    await sendTelegramMessage(
+                      token,
+                      chatId,
+                      `🔍 Could not find exact match for "${parsed.query}". Here are library results:`,
+                      {
+                        parseMode: 'Markdown',
+                        replyMarkup: searchData.replyMarkup,
+                      }
+                    );
+                  }
+                }
               } else if (cmd === '/backup') {
                 await sendTelegramMessage(token, chatId, '⏳ Generating library backup...');
                 const backupRes = await executeTelegramBackup(token, chatId);
@@ -321,8 +482,16 @@ export function useTelegramListener({
                   chatId,
                   `🟢 *Nomatic Web Player is Active & Connected!*\n` +
                   `• Auto-Play Incoming: ${stateRef.current.config.autoPlayIncoming ? 'ON' : 'OFF'}\n` +
-                  `• Stored Library Tracks: ${stateRef.current.tracks.length}`,
-                  { parseMode: 'Markdown' }
+                  `• Stored Library Tracks: ${stateRef.current.tracks.length}\n` +
+                  `• Stored Playlists: ${loadPlaylists().length}`,
+                  {
+                    parseMode: 'Markdown',
+                    replyMarkup: {
+                      inline_keyboard: [
+                        [{ text: '🎵 View Songs (/songs)', callback_data: 'page:1' }],
+                      ],
+                    },
+                  }
                 );
               }
               continue;

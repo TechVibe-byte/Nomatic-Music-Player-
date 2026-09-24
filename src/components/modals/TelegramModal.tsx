@@ -17,7 +17,8 @@ import {
   Radio, 
   MessageSquare,
   Bot,
-  Copy
+  Copy,
+  ListMusic
 } from 'lucide-react';
 import { TelegramConfig } from '../../types/telegram';
 import { TelegramIcon } from '../common/TelegramNotification';
@@ -25,7 +26,8 @@ import {
   testTelegramConnection, 
   sendTelegramMessage, 
   executeTelegramBackup, 
-  saveTelegramConfig 
+  saveTelegramConfig,
+  createHelpMessage,
 } from '../../utils/telegram';
 import { Track, Playlist } from '../../types';
 
@@ -170,6 +172,30 @@ export const TelegramModal: React.FC<TelegramModalProps> = ({
       onShowToast('Test message sent to Telegram chat! Check your app.');
     } else {
       onShowToast(`Failed to send test message: ${res.error}`);
+    }
+  };
+
+  const handleSendHelpMenu = async () => {
+    if (!config.botToken || !config.chatId) {
+      onShowToast('Please connect and verify your bot token & chat first');
+      return;
+    }
+
+    const helpData = createHelpMessage('Music Lover');
+    const res = await sendTelegramMessage(
+      config.botToken,
+      config.chatId,
+      helpData.text,
+      {
+        parseMode: 'Markdown',
+        replyMarkup: helpData.replyMarkup,
+      }
+    );
+
+    if (res.ok) {
+      onShowToast('Command list sent to your Telegram chat! 📖');
+    } else {
+      onShowToast(`Failed to send command list: ${res.error}`);
     }
   };
 
@@ -437,6 +463,72 @@ export const TelegramModal: React.FC<TelegramModalProps> = ({
                 />
                 <div className="w-9 h-5 bg-neutral-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-[#1ed760]"></div>
               </label>
+            </div>
+
+            {/* Remote Song Selection & Bot Commands Guide */}
+            <div className="p-3.5 rounded-xl bg-neutral-900 border border-neutral-800 text-xs text-neutral-300 space-y-2.5">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1.5 font-bold text-white">
+                  <ListMusic className="w-4 h-4 text-[#229ED9]" />
+                  <span>All Telegram Bot Commands</span>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleSendHelpMenu}
+                  disabled={!config.botToken || !config.chatId}
+                  className="flex items-center gap-1 px-2.5 py-1 rounded-lg bg-[#229ED9]/20 hover:bg-[#229ED9]/30 text-[#229ED9] border border-[#229ED9]/40 text-[10px] font-bold transition disabled:opacity-40 cursor-pointer"
+                  title="Sends full interactive guide to your Telegram chat"
+                >
+                  <Send className="w-3 h-3" />
+                  <span>Send /help to Chat</span>
+                </button>
+              </div>
+
+              <p className="text-[11px] text-neutral-400 leading-relaxed">
+                Send any command in chat or tap the <span className="text-[#229ED9] font-mono">[/]</span> menu button in Telegram:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-[11px]">
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[#229ED9] font-bold">/help</span>
+                    <span className="text-[9px] bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded">All Commands</span>
+                  </div>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Displays complete command list with quick action buttons.</p>
+                </div>
+
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-[#229ED9] font-bold">/songs</span>
+                    <span className="text-[9px] bg-neutral-800 text-neutral-400 px-1.5 py-0.5 rounded">or /list</span>
+                  </div>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Browse songs with interactive [▶️ Play] buttons & pages.</p>
+                </div>
+
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <span className="font-mono text-[#229ED9] font-bold">/search &lt;name&gt;</span>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Quick search by title or artist and tap to play.</p>
+                </div>
+
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <span className="font-mono text-[#229ED9] font-bold">/play &lt;name&gt;</span>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Instantly plays the matching song in Nomatic.</p>
+                </div>
+
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <span className="font-mono text-[#229ED9] font-bold">/nowplaying</span>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Shows current song with YouTube audio link & like button.</p>
+                </div>
+
+                <div className="p-2 rounded-lg bg-black/40 border border-neutral-800/80">
+                  <span className="font-mono text-[#229ED9] font-bold">/backup</span>
+                  <p className="text-neutral-400 text-[10px] mt-0.5">Sends full .json cloud backup to your chat.</p>
+                </div>
+              </div>
+
+              <div className="p-2 rounded-lg bg-[#229ED9]/10 border border-[#229ED9]/30 text-[11px] text-blue-200">
+                💡 <span className="font-semibold text-white">If your web app is closed:</span> Telegram queues your remote song choice. The moment you open Nomatic, it immediately resumes and plays your selected song!
+              </div>
             </div>
 
             {/* Smart Playlist vs Single Choice Info */}

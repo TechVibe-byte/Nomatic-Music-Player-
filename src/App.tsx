@@ -50,6 +50,7 @@ import { OfflineIndicator } from './components/common/OfflineIndicator';
 import { syncYouTubePlaylistWithLibrary } from './utils/youtubePlaylist';
 import { 
   initBackgroundAudioKeepAlive, 
+  attachUserGestureKeepAliveUnlock,
   requestScreenWakeLock, 
   releaseScreenWakeLock, 
   togglePictureInPicture,
@@ -57,6 +58,10 @@ import {
 } from './utils/backgroundAudio';
 
 export default function App() {
+  // Prime and unlock audio on initial user touch/click for background playback
+  useEffect(() => {
+    attachUserGestureKeepAliveUnlock();
+  }, []);
   // 1. Storage & Configuration State
   const [config, setConfig] = useState<AppConfig>(() => loadConfig());
   const [tracks, setTracks] = useState<Track[]>(() => loadTracks());
@@ -269,6 +274,7 @@ export default function App() {
 
   // Playback Control Handlers
   const handlePlayTrack = useCallback((track: Track, newQueue?: Track[]) => {
+    initBackgroundAudioKeepAlive();
     setCurrentTrack(track);
     setIsPlaying(true);
     setCurrentTime(0);
@@ -297,6 +303,7 @@ export default function App() {
   }, [queue]);
 
   const handleTogglePlay = useCallback(() => {
+    initBackgroundAudioKeepAlive();
     if (!currentTrack && tracks.length > 0) {
       handlePlayTrack(tracks[0], tracks);
       return;
@@ -305,6 +312,7 @@ export default function App() {
   }, [currentTrack, tracks, handlePlayTrack]);
 
   const handlePlayNext = useCallback(() => {
+    initBackgroundAudioKeepAlive();
     if (sleepTimerState.isActive && sleepTimerState.type === 'end_of_track') {
       setIsPlaying(false);
       setSleepTimerState({
@@ -349,6 +357,7 @@ export default function App() {
   }, [queue, queueIndex, repeatMode, isShuffled, sleepTimerState]);
 
   const handlePlayPrevious = useCallback(() => {
+    initBackgroundAudioKeepAlive();
     if (currentTime > 3) {
       setSeekTargetTime(0);
       return;
@@ -1089,6 +1098,8 @@ export default function App() {
             onOpenVlcFullMode={() => setIsVlcFullModeOpen(true)}
             isLyricsOpen={isLyricsOpen}
             onToggleLyrics={handleToggleLyrics}
+            isPiPActive={isPiPActiveState}
+            onTogglePiP={handleTogglePiP}
           />
         )}
 

@@ -2,14 +2,17 @@ import { Track } from '../types';
 
 /**
  * Background Audio & Keep-Alive Manager for Nomatic Music player
- * Ensures YouTube audio does not suspend when tabs switch, screen locks, or user minimizes app.
+ * Ensures YouTube audio does not suspend when tabs switch, screen locks, or user minimizes app in Firefox/Chrome.
  */
 
 let audioCtx: AudioContext | null = null;
 let oscillator: OscillatorNode | null = null;
 let gainNode: GainNode | null = null;
 let silentAudioEl: HTMLAudioElement | null = null;
+let silentAudioUrl: string | null = null;
 let wakeLockSentinel: any = null;
+let isKeepAliveActive = false;
+let userGestureUnlocked = false;
 
 // Picture-in-Picture Offscreen Canvas & Video
 let pipCanvas: HTMLCanvasElement | null = null;
@@ -18,61 +21,168 @@ let pipAnimationId: number | null = null;
 let onPipPlayToggleCallback: ((play: boolean) => void) | null = null;
 
 /**
- * Initialize the Web Audio API inaudible tone keep-alive.
- * This anchors the browser's audio daemon so OS doesn't sleep the tab process.
+ * Generates a valid 10-second silent PCM WAV audio Blob URL.
+ * Browsers (especially Firefox and Android Chrome) require a legitimate, well-formed
+ * audio container with valid duration (> 0) to maintain an active OS MediaSession
+ * and prevent the browser process from being throttled/killed in the background.
+ */
+function createSilentWavBlobUrl(durationSeconds = 10): string {
+  const sampleRate = 8000;
+  const numChannels = 1;
+  const bitsPerSample = 16;
+  const blockAlign = (numChannels * bitsPerSample) / 8;
+  const byteRate = sampleRate * blockAlign;
+  const numSamples = sampleRate * durationSeconds;
+  const dataSize = numSamples * blockAlign;
+  const buffer = new ArrayBuffer(44 + dataSize);
+  const view = new DataView(buffer);
+
+  function writeAscii(offset: number, str: string) {
+    for (let i = 0; i < str.length; i++) {
+      view.setUint8(offset + i, str.charCodeAt(i));
+    }
+  }
+
+  // RIFF container header
+  writeAscii(0, 'RIFF');
+  view.setUint32(4, 36 + dataSize, true);
+  writeAscii(8, 'WAVE');
+
+  // fmt sub-chunk
+  writeAscii(12, 'fmt ');
+  view.setUint32(16, 16, true); // Subchunk1Size = 16 (PCM)
+  view.setUint16(20, 1, true); // AudioFormat = 1 (PCM uncompressed)
+  view.setUint16(22, numChannels, true);
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, byteRate, true);
+  view.setUint16(32, blockAlign, true);
+  view.setUint16(34, bitsPerSample, true);
+
+  // data sub-chunk (all bytes default to 0x00 = perfect silence)
+  writeAscii(36, 'data');
+  view.setUint32(40, dataSize, true);
+
+  const blob = new Blob([buffer], { type: 'audio/wav' });
+  return URL.createObjectURL(blob);
+}
+
+/**
+ * Ensures the silent audio element exists and is configured for seamless looping
+ */
+function getSilentAudioElement(): HTMLAudioElement | null {
+  if (typeof document === 'undefined') return null;
+
+  if (!silentAudioEl) {
+    try {
+      if (!silentAudioUrl) {
+        silentAudioUrl = createSilentWavBlobUrl(10);
+      }
+      silentAudioEl = new Audio(silentAudioUrl);
+      silentAudioEl.id = 'nomatic-keepalive-audio';
+      silentAudioEl.loop = true;
+      silentAudioEl.volume = 0.001; // Infinitesimal volume so it produces zero audible sound
+      silentAudioEl.preload = 'auto';
+      silentAudioEl.setAttribute('playsinline', 'true');
+      silentAudioEl.setAttribute('webkit-playsinline', 'true');
+
+      // Loop listener safeguard
+      silentAudioEl.addEventListener('ended', () => {
+        if (silentAudioEl && isKeepAliveActive) {
+          silentAudioEl.currentTime = 0;
+          silentAudioEl.play().catch(() => {});
+        }
+      });
+    } catch (e) {
+      console.warn('Could not initialize silent audio element:', e);
+    }
+  }
+  return silentAudioEl;
+}
+
+/**
+ * Initialize the Web Audio API and HTML5 audio keep-alive.
+ * This establishes an active top-level audio stream so Firefox, Android, and iOS
+ * do not suspend the tab process when minimized, tab-switched, or locked.
  */
 export function initBackgroundAudioKeepAlive(): void {
   try {
     const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
-    if (!AudioContextClass) return;
+    if (AudioContextClass) {
+      if (!audioCtx) {
+        audioCtx = new AudioContextClass();
+      }
 
-    if (!audioCtx) {
-      audioCtx = new AudioContextClass();
+      if (audioCtx.state === 'suspended') {
+        audioCtx.resume().catch(() => {});
+      }
+
+      if (!oscillator && audioCtx) {
+        oscillator = audioCtx.createOscillator();
+        gainNode = audioCtx.createGain();
+
+        // Inaudible sub-bass frequency (20Hz) at infinitesimal gain (0.00001)
+        oscillator.type = 'sine';
+        oscillator.frequency.setValueAtTime(20, audioCtx.currentTime);
+        gainNode.gain.setValueAtTime(0.00001, audioCtx.currentTime);
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        oscillator.start();
+      }
     }
 
-    if (audioCtx.state === 'suspended') {
-      audioCtx.resume().catch(() => {});
-    }
-
-    if (!oscillator && audioCtx) {
-      oscillator = audioCtx.createOscillator();
-      gainNode = audioCtx.createGain();
-
-      // Inaudible sub-bass frequency (20Hz) at infinitesimal gain (0.00001)
-      oscillator.type = 'sine';
-      oscillator.frequency.setValueAtTime(20, audioCtx.currentTime);
-      gainNode.gain.setValueAtTime(0.00001, audioCtx.currentTime);
-
-      oscillator.connect(gainNode);
-      gainNode.connect(audioCtx.destination);
-      oscillator.start();
-    }
-
-    // Also prime silent audio loop element
-    if (!silentAudioEl) {
-      const silentWav = 'data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEARKwAAIhYAQACABAAAABkYXRhAgAAAAEA';
-      silentAudioEl = new Audio(silentWav);
-      silentAudioEl.loop = true;
-      silentAudioEl.volume = 0.01;
-    }
+    // Ensure the silent audio element is ready
+    getSilentAudioElement();
   } catch (e) {
     console.warn('Background audio keep-alive init warning:', e);
   }
 }
 
 /**
+ * Global unlocker attached to the first user gesture (touch, click, key)
+ * to bypass browser autoplay restrictions cleanly.
+ */
+export function attachUserGestureKeepAliveUnlock(): void {
+  if (typeof window === 'undefined' || userGestureUnlocked) return;
+
+  const unlock = () => {
+    userGestureUnlocked = true;
+    initBackgroundAudioKeepAlive();
+    window.removeEventListener('click', unlock, true);
+    window.removeEventListener('touchstart', unlock, true);
+    window.removeEventListener('keydown', unlock, true);
+  };
+
+  window.addEventListener('click', unlock, true);
+  window.addEventListener('touchstart', unlock, true);
+  window.addEventListener('keydown', unlock, true);
+}
+
+/**
  * Activate or pause the background keep-alive based on playback state
  */
 export function setBackgroundAudioActive(active: boolean): void {
+  isKeepAliveActive = active;
   try {
+    const el = getSilentAudioElement();
     if (active) {
       initBackgroundAudioKeepAlive();
       if (audioCtx && audioCtx.state === 'suspended') {
         audioCtx.resume().catch(() => {});
       }
-      silentAudioEl?.play().catch(() => {});
+      if (el) {
+        const playPromise = el.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Autoplay policy retry
+          });
+        }
+      }
     } else {
-      silentAudioEl?.pause();
+      if (el) {
+        el.pause();
+        el.currentTime = 0;
+      }
     }
   } catch {
     // Ignore audio activation restrictions
@@ -110,7 +220,7 @@ export function releaseScreenWakeLock(): void {
 /**
  * Picture-in-Picture (PiP) Engine for Background Playback
  * Generates an active canvas with album art and visualizer to give the user
- * a floating mini-player that guarantees uninterrupted background execution.
+ * a floating mini-player that guarantees uninterrupted background execution in any browser.
  */
 export function isPiPSupported(): boolean {
   return typeof document !== 'undefined' && ('pictureInPictureEnabled' in document);
@@ -206,7 +316,7 @@ function drawPiPFrame(track: Track | null, isPlaying: boolean) {
   const w = pipCanvas.width;
   const h = pipCanvas.height;
 
-  // 1. Dark Spotify background
+  // 1. Dark Spotify-style background
   const bgGrad = ctx.createLinearGradient(0, 0, w, h);
   bgGrad.addColorStop(0, '#121212');
   bgGrad.addColorStop(1, '#080808');
@@ -243,7 +353,7 @@ function drawPiPFrame(track: Track | null, isPlaying: boolean) {
   const textX = imgX + imgSize + 30;
   ctx.fillStyle = '#1ed760';
   ctx.font = 'bold 14px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';
-  ctx.fillText('SPOTFLOW BACKGROUND AUDIO', textX, imgY + 40);
+  ctx.fillText('NOMATIC MUSIC PLAYER', textX, imgY + 40);
 
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 24px -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif';

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Play, Pause, SkipForward, Heart, Moon, Mic2 } from 'lucide-react';
+import { Play, Pause, SkipForward, Heart, Moon, Mic2, PictureInPicture2 } from 'lucide-react';
 import { Track, PlaybackMode } from '../../types';
 import { TrackThumbnail } from '../common/TrackThumbnail';
 
@@ -20,6 +20,8 @@ interface MobileMiniPlayerProps {
   onOpenVlcFullMode?: () => void;
   isLyricsOpen?: boolean;
   onToggleLyrics?: () => void;
+  isPiPActive?: boolean;
+  onTogglePiP?: () => void;
 }
 
 export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
@@ -39,6 +41,8 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
   onOpenVlcFullMode,
   isLyricsOpen = false,
   onToggleLyrics,
+  isPiPActive = false,
+  onTogglePiP,
 }) => {
   const progressBarRef = useRef<HTMLDivElement>(null);
 
@@ -119,13 +123,26 @@ export const MobileMiniPlayer: React.FC<MobileMiniPlayerProps> = ({
           </div>
         </div>
 
-        {/* Right: Lyrics, Like, Play/Pause, Next */}
+        {/* Right: PiP, Lyrics, Like, Play/Pause, Next */}
         <div className="flex items-center gap-0.5 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
+          {onTogglePiP && (
+            <button
+              id="mobile-mini-pip-btn"
+              onClick={onTogglePiP}
+              className={`w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition cursor-pointer ${
+                isPiPActive ? 'text-[#1ed760]' : 'text-neutral-400 hover:text-white'
+              }`}
+              title={isPiPActive ? 'Close Picture-in-Picture Mini Player' : 'Picture-in-Picture Background Floating Player'}
+            >
+              <PictureInPicture2 className="w-3.5 h-3.5" />
+            </button>
+          )}
+
           {onToggleLyrics && (
             <button
               id="mobile-mini-lyrics-btn"
               onClick={onToggleLyrics}
-              className={`w-9 h-9 flex items-center justify-center rounded-full active:scale-90 transition cursor-pointer ${
+              className={`w-8 h-8 flex items-center justify-center rounded-full active:scale-90 transition cursor-pointer ${
                 isLyricsOpen ? 'text-[#1ed760]' : 'text-neutral-400 hover:text-white'
               }`}
               title={isLyricsOpen ? 'Disable / Close Lyrics' : 'Enable / Show Lyrics (English & Telugu)'}

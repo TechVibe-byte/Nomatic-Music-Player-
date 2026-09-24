@@ -286,16 +286,31 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
               onBufferingChange(false);
               setBackgroundAudioActive(true);
             } else if (state === 2) {
-              // If state is paused, check if it was paused because document was hidden
-              if (document.hidden && isPlayingRef.current) {
-                // Background playback protection: keep playing in background!
+              // If state is paused, check if user requested pause or if browser background throttled it
+              onBufferingChange(false);
+              if (isPlayingRef.current) {
+                // Background playback protection:
+                // When tab is hidden, screen locked, or window blurred, Firefox / mobile browsers
+                // attempt to auto-pause background video.
+                // Keep app state playing and assert playback revival!
+                setBackgroundAudioActive(true);
                 try {
                   event.target.playVideo();
-                  setBackgroundAudioActive(true);
                 } catch {}
+
+                setTimeout(() => {
+                  if (isPlayingRef.current && playerRef.current && typeof playerRef.current.playVideo === 'function') {
+                    try {
+                      const s = playerRef.current.getPlayerState();
+                      if (s === 2 || s === -1 || s === 3) {
+                        playerRef.current.playVideo();
+                      }
+                    } catch {}
+                  }
+                }, 200);
               } else {
                 onPlayStateChange(false);
-                onBufferingChange(false);
+                setBackgroundAudioActive(false);
               }
             } else if (state === 3) {
               onBufferingChange(true);
@@ -324,21 +339,24 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
         // Tab went to background or screen locked
         if (isPlayingRef.current) {
           setBackgroundAudioActive(true);
-          // YouTube often tries to auto-pause when tab is hidden; re-assert playback
-          setTimeout(() => {
-            if (playerRef.current && typeof playerRef.current.playVideo === 'function' && isPlayingRef.current) {
-              try {
-                const s = playerRef.current.getPlayerState();
-                if (s === 2 || s === -1) {
-                  playerRef.current.playVideo();
-                }
-              } catch {}
-            }
-          }, 150);
+          // YouTube often tries to auto-pause after tab is hidden; re-assert playback with staggered kicks
+          const retryDelays = [120, 350, 800, 1800];
+          retryDelays.forEach((delay) => {
+            setTimeout(() => {
+              if (isPlayingRef.current && playerRef.current && typeof playerRef.current.playVideo === 'function') {
+                try {
+                  const s = playerRef.current.getPlayerState();
+                  if (s !== 1) {
+                    playerRef.current.playVideo();
+                  }
+                } catch {}
+              }
+            }, delay);
+          });
         }
       } else {
-        // Tab brought to foreground
-        if (isPlayingRef.current && playerRef.current) {
+        // Tab brought to foreground / screen unlocked
+        if (isPlayingRef.current && playerRef.current && typeof playerRef.current.playVideo === 'function') {
           try {
             const s = playerRef.current.getPlayerState();
             if (s !== 1) {
@@ -350,11 +368,11 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
     };
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
-    window.addEventListener('blur', handleVisibilityChange);
+    window.addEventListener('pageshow', handleVisibilityChange);
 
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange);
-      window.removeEventListener('blur', handleVisibilityChange);
+      window.removeEventListener('pageshow', handleVisibilityChange);
     };
   }, []);
 
@@ -489,11 +507,21 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
       navigator.mediaSession.setActionHandler('play', () => {
         onPlayStateChange(true);
         setBackgroundAudioActive(true);
+        if (playerRef.current && typeof playerRef.current.playVideo === 'function') {
+          try {
+            playerRef.current.playVideo();
+          } catch {}
+        }
       });
 
       navigator.mediaSession.setActionHandler('pause', () => {
         onPlayStateChange(false);
         setBackgroundAudioActive(false);
+        if (playerRef.current && typeof playerRef.current.pauseVideo === 'function') {
+          try {
+            playerRef.current.pauseVideo();
+          } catch {}
+        }
       });
 
       navigator.mediaSession.setActionHandler('previoustrack', () => {
@@ -532,10 +560,13 @@ export const YouTubePlayerEngine: React.FC<YouTubePlayerEngineProps> = ({
 
   // Dedicated VLC Video Player vs Invisible Audio Thread:
   // When in video mode and full mode is open, expand into the dedicated VLC Video Player.
-  // When in audio mode or minimized, stay in the invisible background thread with persistent iframe.
+  // When in audio mode or minimized, stay in the persistent thread tucked under the bottom bar.
+  // Note: Firefox / mobile browsers suspend iframes with opacity < 0.01 or z < 0.
+  // Using opacity-20 and z-0 at bottom-0 right-0 ensures it stays underneath the player bar (z-30/z-40)
+  // while remaining active in background tabs.
   const wrapperClass = isVlcActive
     ? 'fixed inset-0 z-50 bg-[#121316] text-white flex flex-col select-none overflow-hidden font-sans'
-    : 'fixed bottom-1 right-1 w-32 h-20 opacity-[0.005] pointer-events-none z-[-1] overflow-hidden';
+    : 'fixed bottom-0 right-0 w-12 h-12 opacity-20 pointer-events-none z-0 overflow-hidden';
 
   return (
     <>

@@ -632,6 +632,56 @@ export default function App() {
     [playlists, tracks]
   );
 
+  const handleSyncAllPlaylists = useCallback(
+    async (): Promise<{ syncedPlaylistsCount: number; totalNewTracks: number }> => {
+      const linkedPlaylists = playlists.filter((p) => Boolean(p.youtubePlaylistId));
+      if (linkedPlaylists.length === 0) {
+        return { syncedPlaylistsCount: 0, totalNewTracks: 0 };
+      }
+
+      let allNewTracks: Track[] = [];
+      const updatedPlaylistsMap = new Map<string, Playlist>();
+      let totalAdded = 0;
+      let currentAccumulatedTracks = [...tracks];
+
+      for (const pl of linkedPlaylists) {
+        try {
+          const result = await syncYouTubePlaylistWithLibrary(pl, currentAccumulatedTracks);
+          updatedPlaylistsMap.set(pl.id, result.updatedPlaylist);
+          if (result.newTracks.length > 0) {
+            allNewTracks.push(...result.newTracks);
+            currentAccumulatedTracks = [...currentAccumulatedTracks, ...result.newTracks];
+          }
+          totalAdded += result.addedCount;
+        } catch (err) {
+          console.warn(`[SyncAll] Failed to refresh playlist "${pl.name}":`, err);
+        }
+      }
+
+      if (allNewTracks.length > 0) {
+        setTracks((prev) => {
+          const existingIds = new Set(prev.map((t) => t.id));
+          const toAdd = allNewTracks.filter((t) => !existingIds.has(t.id));
+          const updated = [...prev, ...toAdd];
+          saveTracks(updated);
+          return updated;
+        });
+      }
+
+      setPlaylists((prev) => {
+        const updated = prev.map((p) => updatedPlaylistsMap.get(p.id) || p);
+        savePlaylists(updated);
+        return updated;
+      });
+
+      return {
+        syncedPlaylistsCount: linkedPlaylists.length,
+        totalNewTracks: totalAdded,
+      };
+    },
+    [playlists, tracks]
+  );
+
   const handleUpdatePlaylist = useCallback(
     (playlistId: string, updates: Partial<Playlist>) => {
       setPlaylists((prev) => {
@@ -815,6 +865,8 @@ export default function App() {
         onOpenConfigModal={() => setIsConfigModalOpen(true)}
         onOpenTelegramModal={() => setIsTelegramModalOpen(true)}
         isTelegramLive={isTelegramLive}
+        onSyncAllPlaylists={handleSyncAllPlaylists}
+        onShowToast={setToastMessage}
       />
 
       {/* 2. Main Content Canvas & Top Navigation */}
@@ -930,6 +982,10 @@ export default function App() {
               onOpenCreatePlaylistModal={() => setIsCreatePlaylistModalOpen(true)}
               onOpenConfigModal={() => setIsConfigModalOpen(true)}
               setActiveView={setActiveView}
+              onSyncPlaylist={handleSyncPlaylist}
+              onSyncAllPlaylists={handleSyncAllPlaylists}
+              onUpdatePlaylist={handleUpdatePlaylist}
+              onShowToast={setToastMessage}
             />
           )}
         </main>

@@ -293,6 +293,7 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
           {/* YouTube Sync / Refresh Button */}
           {playlist.youtubePlaylistId && onSyncPlaylist && (
             <button
+              id="playlist-refresh-btn"
               onClick={() => handleSync(false)}
               disabled={isSyncing}
               className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full border text-xs font-bold transition shadow-sm cursor-pointer ${
@@ -300,10 +301,10 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
                   ? 'border-emerald-500/60 bg-emerald-950/80 text-emerald-300 cursor-wait'
                   : 'border-emerald-500/40 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 hover:text-emerald-100 hover:border-emerald-400'
               }`}
-              title="Fetch newly added songs from YouTube into this playlist immediately"
+              title="Refresh playlist: searches YouTube for newly added songs and adds them to your app immediately"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-emerald-400' : 'text-emerald-400'}`} />
-              <span>{isSyncing ? 'Syncing...' : 'Sync with YouTube'}</span>
+              <span>{isSyncing ? 'Refreshing...' : 'Refresh Playlist'}</span>
             </button>
           )}
 

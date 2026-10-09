@@ -10,7 +10,8 @@ import {
   Youtube,
   Radio,
   Layers,
-  ListMusic
+  ListMusic,
+  RefreshCw
 } from 'lucide-react';
 import { ActiveView, Playlist } from '../../types';
 import { PWAInstallButton } from '../common/PWAInstallButton';
@@ -28,6 +29,8 @@ interface SidebarProps {
   onOpenConfigModal: () => void;
   onOpenTelegramModal?: () => void;
   isTelegramLive?: boolean;
+  onSyncAllPlaylists?: () => Promise<{ syncedPlaylistsCount: number; totalNewTracks: number }>;
+  onShowToast?: (message: string) => void;
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
@@ -41,7 +44,30 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onOpenConfigModal,
   onOpenTelegramModal,
   isTelegramLive,
+  onSyncAllPlaylists,
+  onShowToast,
 }) => {
+  const [isSyncingAll, setIsSyncingAll] = React.useState(false);
+
+  const handleQuickSyncAll = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!onSyncAllPlaylists || isSyncingAll) return;
+    setIsSyncingAll(true);
+    try {
+      const res = await onSyncAllPlaylists();
+      if (res.totalNewTracks > 0) {
+        onShowToast?.(`🎉 Added ${res.totalNewTracks} new song${res.totalNewTracks === 1 ? '' : 's'} across ${res.syncedPlaylistsCount} playlists!`);
+      } else if (res.syncedPlaylistsCount > 0) {
+        onShowToast?.(`✅ All ${res.syncedPlaylistsCount} linked playlists are up to date.`);
+      } else {
+        onShowToast?.('Tip: Link playlists to YouTube to enable 1-click refreshes!');
+      }
+    } catch (err: any) {
+      onShowToast?.(err?.message || 'Failed to refresh playlists.');
+    } finally {
+      setIsSyncingAll(false);
+    }
+  };
   return (
     <aside 
       id="spotify-sidebar" 
@@ -228,6 +254,19 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Playlist List Header */}
       <div className="px-6 pt-5 pb-2 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-500">
         <span>Playlists ({playlists.length})</span>
+        {onSyncAllPlaylists && playlists.some((p) => Boolean(p.youtubePlaylistId)) && (
+          <button
+            id="sidebar-refresh-all-playlists-btn"
+            onClick={handleQuickSyncAll}
+            disabled={isSyncingAll}
+            className={`p-1 -mr-1 rounded hover:bg-neutral-800 text-neutral-400 hover:text-white transition cursor-pointer ${
+              isSyncingAll ? 'cursor-wait text-[#1ed760]' : ''
+            }`}
+            title="Refresh all linked playlists for new songs"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${isSyncingAll ? 'animate-spin text-[#1ed760]' : ''}`} />
+          </button>
+        )}
       </div>
 
       {/* Scrollable Playlists */}

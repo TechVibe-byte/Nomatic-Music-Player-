@@ -254,7 +254,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
       {/* Playlist List Header */}
       <div className="px-6 pt-5 pb-2 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-neutral-500">
         <span>Playlists ({playlists.length})</span>
-        {onSyncAllPlaylists && playlists.some((p) => Boolean(p.youtubePlaylistId)) && (
+        {onSyncAllPlaylists && playlists.length > 0 && (
           <button
             id="sidebar-refresh-all-playlists-btn"
             onClick={handleQuickSyncAll}
@@ -262,7 +262,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
             className={`p-1 -mr-1 rounded hover:bg-neutral-800 text-neutral-400 hover:text-white transition cursor-pointer ${
               isSyncingAll ? 'cursor-wait text-[#1ed760]' : ''
             }`}
-            title="Refresh all linked playlists for new songs"
+            title="Refresh playlists for new songs from YouTube"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${isSyncingAll ? 'animate-spin text-[#1ed760]' : ''}`} />
           </button>

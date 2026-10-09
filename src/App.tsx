@@ -599,12 +599,18 @@ export default function App() {
   };
 
   const handleSyncPlaylist = useCallback(
-    async (playlistId: string): Promise<{ addedCount: number; totalCount: number }> => {
+    async (playlistId: string, optionalYoutubeId?: string): Promise<{ addedCount: number; totalCount: number }> => {
       const pl = playlists.find((p) => p.id === playlistId);
       if (!pl) throw new Error('Playlist not found');
-      if (!pl.youtubePlaylistId) throw new Error('This playlist is not linked to a YouTube playlist');
+      const targetYoutubeId = optionalYoutubeId || pl.youtubePlaylistId;
+      if (!targetYoutubeId) throw new Error('This playlist is not linked to a YouTube playlist');
 
-      const result = await syncYouTubePlaylistWithLibrary(pl, tracks);
+      const playlistToSync: Playlist = {
+        ...pl,
+        youtubePlaylistId: targetYoutubeId,
+      };
+
+      const result = await syncYouTubePlaylistWithLibrary(playlistToSync, tracks);
 
       // If new tracks were discovered, add them to tracks state and storage
       if (result.newTracks.length > 0) {
@@ -1180,6 +1186,7 @@ export default function App() {
         onAddTrack={handleAddTrack}
         onAddTracksBulk={handleAddTracksBulk}
         onImportPlaylist={handleImportPlaylist}
+        onUpdatePlaylist={handleUpdatePlaylist}
         defaultPlaylistId={addModalDefaultPlaylistId}
         initialMode={addModalInitialMode}
       />

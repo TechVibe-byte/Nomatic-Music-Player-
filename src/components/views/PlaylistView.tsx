@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { 
   Play, 
   Pause, 
@@ -68,6 +68,19 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
   const isPlaylistActive = playlistTracks.some((t) => t.id === currentTrack?.id);
   const totalDurationSecs = playlistTracks.reduce((acc, t) => acc + (t.duration || 0), 0);
 
+  // Detect if any tracks in this playlist already contain a YouTube playlist ID
+  const detectedPlaylistUrlFromTracks = useMemo(() => {
+    for (const track of playlistTracks) {
+      if (track.youtubeUrl) {
+        const id = extractYouTubePlaylistId(track.youtubeUrl);
+        if (id) {
+          return `https://www.youtube.com/playlist?list=${id}`;
+        }
+      }
+    }
+    return null;
+  }, [playlistTracks]);
+
   const formatTotalTime = (secs: number) => {
     const mins = Math.floor(secs / 60);
     const hours = Math.floor(mins / 60);
@@ -107,6 +120,19 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
     } finally {
       setIsSyncing(false);
     }
+  };
+
+  // Handler for clicking the Refresh Playlist button
+  const handleRefreshClick = () => {
+    if (!playlist.youtubePlaylistId) {
+      // If we detected a playlist URL from songs, pre-populate linkInputUrl
+      if (detectedPlaylistUrlFromTracks && !linkInputUrl) {
+        setLinkInputUrl(detectedPlaylistUrlFromTracks);
+      }
+      setIsLinkModalOpen(true);
+      return;
+    }
+    handleSync(false);
   };
 
   // Automatic sync on view mount if enabled
@@ -150,22 +176,26 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
       onUpdatePlaylist(playlist.id, {
         youtubePlaylistId: extractedId,
         autoSync: true,
+        lastSyncedAt: Date.now(),
       });
       setIsLinkModalOpen(false);
       setLinkInputUrl('');
       onShowToast?.('🔗 Linked to YouTube playlist! Fetching latest songs...');
-      // Trigger sync immediately with new id
-      setTimeout(() => {
-        if (onSyncPlaylist) {
-          onSyncPlaylist(playlist.id)
-            .then((res) => {
-              onShowToast?.(`🎉 Successfully synced! ${res.addedCount} new tracks added.`);
-            })
-            .catch((err) => {
-              onShowToast?.(err?.message || 'Failed to sync linked YouTube playlist.');
-            });
-        }
-      }, 100);
+      
+      // Trigger sync immediately with new id passed directly
+      if (onSyncPlaylist) {
+        setIsSyncing(true);
+        setTimeout(async () => {
+          try {
+            const res = await onSyncPlaylist(playlist.id);
+            onShowToast?.(`🎉 Successfully synced! ${res.addedCount} new tracks added.`);
+          } catch (err: any) {
+            onShowToast?.(err?.message || 'Failed to sync linked YouTube playlist.');
+          } finally {
+            setIsSyncing(false);
+          }
+        }, 120);
+      }
     }
   };
 
@@ -290,25 +320,36 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
             <Shuffle className="w-5 h-5" />
           </button>
 
-          {/* YouTube Sync / Refresh Button */}
-          {playlist.youtubePlaylistId && onSyncPlaylist && (
+          {/* YouTube Sync / Refresh Button - ALWAYS visible on all custom & manual playlists */}
+          {!isLikedSongsView && onSyncPlaylist && (
             <button
               id="playlist-refresh-btn"
-              onClick={() => handleSync(false)}
+              onClick={handleRefreshClick}
               disabled={isSyncing}
               className={`flex items-center gap-2 px-3.5 sm:px-4 py-2 rounded-full border text-xs font-bold transition shadow-sm cursor-pointer ${
                 isSyncing
                   ? 'border-emerald-500/60 bg-emerald-950/80 text-emerald-300 cursor-wait'
-                  : 'border-emerald-500/40 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 hover:text-emerald-100 hover:border-emerald-400'
+                  : playlist.youtubePlaylistId
+                  ? 'border-emerald-500/40 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-300 hover:text-emerald-100 hover:border-emerald-400'
+                  : 'border-emerald-500/40 bg-neutral-900/90 hover:bg-neutral-800 text-neutral-200 hover:text-white hover:border-[#1ed760]'
               }`}
-              title="Refresh playlist: searches YouTube for newly added songs and adds them to your app immediately"
+              title={
+                playlist.youtubePlaylistId
+                  ? "Refresh playlist: searches YouTube for newly added songs and adds them immediately"
+                  : "Refresh playlist: link to YouTube playlist to sync newly added songs anytime"
+              }
             >
-              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-emerald-400' : 'text-emerald-400'}`} />
+              <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin text-emerald-400' : playlist.youtubePlaylistId ? 'text-emerald-400' : 'text-[#1ed760]'}`} />
               <span>{isSyncing ? 'Refreshing...' : 'Refresh Playlist'}</span>
+              {!playlist.youtubePlaylistId && (
+                <span className="text-[10px] font-semibold bg-[#1ed760]/20 text-[#1ed760] px-1.5 py-0.5 rounded-full border border-[#1ed760]/30 ml-0.5">
+                  Link YT
+                </span>
+              )}
             </button>
           )}
 
-          {/* Auto-Sync Toggle Badge */}
+          {/* Auto-Sync Toggle Badge (if linked) */}
           {playlist.youtubePlaylistId && onUpdatePlaylist && (
             <button
               onClick={handleToggleAutoSync}
@@ -324,15 +365,22 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
             </button>
           )}
 
-          {/* Link to YouTube Button (if not already linked and not liked playlist) */}
-          {!playlist.youtubePlaylistId && !isLikedSongsView && onUpdatePlaylist && (
+          {/* Link / Edit YouTube Link Button */}
+          {!isLikedSongsView && onUpdatePlaylist && (
             <button
-              onClick={() => setIsLinkModalOpen(true)}
+              onClick={() => {
+                if (detectedPlaylistUrlFromTracks && !linkInputUrl && !playlist.youtubePlaylistId) {
+                  setLinkInputUrl(detectedPlaylistUrlFromTracks);
+                } else if (playlist.youtubePlaylistId && !linkInputUrl) {
+                  setLinkInputUrl(`https://youtube.com/playlist?list=${playlist.youtubePlaylistId}`);
+                }
+                setIsLinkModalOpen(true);
+              }}
               className="flex items-center gap-1.5 px-3.5 py-2 rounded-full border border-neutral-700 bg-neutral-900/80 hover:bg-neutral-800 text-xs font-bold text-neutral-300 hover:text-white transition cursor-pointer"
-              title="Link this playlist to a YouTube playlist to automatically refresh new songs"
+              title={playlist.youtubePlaylistId ? "Edit linked YouTube playlist" : "Connect this playlist to a YouTube playlist to automatically refresh new songs"}
             >
               <Youtube className="w-3.5 h-3.5 text-red-500" />
-              <span>Link YouTube Playlist</span>
+              <span>{playlist.youtubePlaylistId ? 'Edit YT Link' : 'Link YouTube Playlist'}</span>
             </button>
           )}
 
@@ -507,14 +555,15 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
               Add songs from YouTube using the buttons above, or sync with YouTube if linked.
             </p>
             <div className="flex items-center justify-center gap-3 pt-2">
-              {playlist.youtubePlaylistId && onSyncPlaylist && (
+              {!isLikedSongsView && onSyncPlaylist && (
                 <button
-                  onClick={() => handleSync(false)}
+                  id="empty-playlist-refresh-btn"
+                  onClick={handleRefreshClick}
                   disabled={isSyncing}
                   className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full font-bold text-xs transition cursor-pointer flex items-center gap-2"
                 >
                   <RefreshCw className={`w-3.5 h-3.5 ${isSyncing ? 'animate-spin' : ''}`} />
-                  <span>Sync from YouTube Now</span>
+                  <span>{playlist.youtubePlaylistId ? 'Refresh from YouTube Now' : 'Refresh / Link from YouTube'}</span>
                 </button>
               )}
               <button
@@ -535,22 +584,39 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-white font-bold">
                 <Youtube className="w-5 h-5 text-red-500" />
-                <span>Link to YouTube Playlist</span>
+                <span>{playlist.youtubePlaylistId ? 'Edit YouTube Playlist Link' : 'Refresh Playlist from YouTube'}</span>
               </div>
               <button
                 onClick={() => {
                   setIsLinkModalOpen(false);
                   setLinkError(null);
                 }}
-                className="p-1 text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800"
+                className="p-1 text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800 cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             <p className="text-xs text-neutral-300 leading-relaxed">
-              Paste the public or unlisted YouTube playlist link. Whenever new songs are added on YouTube, Nomatic will automatically fetch and sync them into this playlist!
+              Paste a public or unlisted YouTube playlist link. Whenever you click <strong className="text-emerald-400">Refresh Playlist</strong>, Nomatic will search YouTube for newly added songs and import them automatically!
             </p>
+
+            {/* Quick detected playlist suggestion from tracks if available */}
+            {detectedPlaylistUrlFromTracks && !linkInputUrl && (
+              <div className="p-3 bg-emerald-950/40 border border-emerald-500/30 rounded-xl flex items-center justify-between gap-2">
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold text-emerald-300">YouTube link found in songs!</p>
+                  <p className="text-[10px] text-neutral-400 truncate font-mono">{detectedPlaylistUrlFromTracks}</p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setLinkInputUrl(detectedPlaylistUrlFromTracks)}
+                  className="px-2.5 py-1 bg-[#1ed760] hover:bg-[#1db954] text-black text-xs font-bold rounded-lg transition cursor-pointer flex-shrink-0"
+                >
+                  Auto-Fill
+                </button>
+              </div>
+            )}
 
             <form onSubmit={handleLinkSubmit} className="space-y-3">
               <div>
@@ -581,7 +647,7 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
                     setIsLinkModalOpen(false);
                     setLinkError(null);
                   }}
-                  className="px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-white hover:bg-neutral-800 transition"
+                  className="px-4 py-2 rounded-xl text-xs font-semibold text-neutral-400 hover:text-white hover:bg-neutral-800 transition cursor-pointer"
                 >
                   Cancel
                 </button>
@@ -591,7 +657,7 @@ export const PlaylistView: React.FC<PlaylistViewProps> = ({
                   className="px-5 py-2 bg-red-600 hover:bg-red-500 disabled:opacity-50 disabled:cursor-not-allowed text-white text-xs font-bold rounded-xl transition flex items-center gap-2 shadow-lg cursor-pointer"
                 >
                   <Link2 className="w-3.5 h-3.5" />
-                  <span>Link & Fetch Songs</span>
+                  <span>{playlist.youtubePlaylistId ? 'Update & Refresh' : 'Link & Refresh Now'}</span>
                 </button>
               </div>
             </form>

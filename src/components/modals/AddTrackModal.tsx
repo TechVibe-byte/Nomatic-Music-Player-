@@ -46,6 +46,7 @@ interface AddTrackModalProps {
   onAddTrack: (track: Track, targetPlaylistId?: string) => void;
   onAddTracksBulk?: (tracks: Track[], targetPlaylistId?: string) => void;
   onImportPlaylist?: (playlist: Playlist, tracks: Track[]) => void;
+  onUpdatePlaylist?: (playlistId: string, updates: Partial<Playlist>) => void;
   defaultPlaylistId?: string;
   initialMode?: 'single' | 'playlist' | 'bulk';
 }
@@ -124,6 +125,7 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
   onAddTrack,
   onAddTracksBulk,
   onImportPlaylist,
+  onUpdatePlaylist,
   defaultPlaylistId,
   initialMode = 'single',
 }) => {
@@ -314,7 +316,20 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
         : ['YouTube', modePreference === 'audio' ? 'Audio' : 'Video'],
     };
 
-    onAddTrack(newTrack, targetPlaylist === 'library-only' ? undefined : targetPlaylist);
+    const targetPlId = targetPlaylist === 'library-only' ? undefined : targetPlaylist;
+    const plIdFromUrl = extractYouTubePlaylistId(urlInput);
+    if (targetPlId && plIdFromUrl && onUpdatePlaylist) {
+      const pl = playlists.find((p) => p.id === targetPlId);
+      if (pl && !pl.youtubePlaylistId) {
+        onUpdatePlaylist(targetPlId, {
+          youtubePlaylistId: plIdFromUrl,
+          lastSyncedAt: Date.now(),
+          autoSync: true,
+        });
+      }
+    }
+
+    onAddTrack(newTrack, targetPlId);
     onClose();
     resetForm();
   };
@@ -439,6 +454,13 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
         }
       } else if (playlistDestination === 'existing-playlist') {
         const targetPlId = targetPlaylist === 'library-only' ? undefined : targetPlaylist;
+        if (targetPlId && onUpdatePlaylist && detectedPlaylist.id) {
+          onUpdatePlaylist(targetPlId, {
+            youtubePlaylistId: detectedPlaylist.id,
+            lastSyncedAt: Date.now(),
+            autoSync: true,
+          });
+        }
         if (onAddTracksBulk) {
           onAddTracksBulk(newTracks, targetPlId);
         } else {
@@ -473,6 +495,19 @@ export const AddTrackModal: React.FC<AddTrackModalProps> = ({
     const commonTags = tagInput
       ? tagInput.split(',').map((t) => t.trim()).filter(Boolean)
       : ['YouTube', 'BulkImport', modePreference === 'audio' ? 'Audio' : 'Video'];
+
+    // If bulk text or links contained a playlist ID and targeted a playlist, link it!
+    const detectedPlId = extractYouTubePlaylistId(bulkTextInput);
+    if (targetPlaylistId && detectedPlId && onUpdatePlaylist) {
+      const pl = playlists.find((p) => p.id === targetPlaylistId);
+      if (pl && !pl.youtubePlaylistId) {
+        onUpdatePlaylist(targetPlaylistId, {
+          youtubePlaylistId: detectedPlId,
+          lastSyncedAt: Date.now(),
+          autoSync: true,
+        });
+      }
+    }
 
     const newTracks: Track[] = bulkAnalysis.uniqueToImport.map((item, idx) => ({
       id: `track-${Date.now()}-${idx}-${item.videoId}`,

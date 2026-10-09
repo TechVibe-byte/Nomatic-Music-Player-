@@ -82,9 +82,20 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
     if (syncingPlaylistIds.has(pl.id)) return;
 
     if (!pl.youtubePlaylistId) {
-      // Prompt to link with YouTube first
+      // Prompt to link with YouTube first (auto-detect if any tracks in this playlist have a playlist ID)
+      const plTracks = tracks.filter((t) => pl.trackIds.includes(t.id));
+      let detectedUrl = '';
+      for (const t of plTracks) {
+        if (t.youtubeUrl) {
+          const id = extractYouTubePlaylistId(t.youtubeUrl);
+          if (id) {
+            detectedUrl = `https://www.youtube.com/playlist?list=${id}`;
+            break;
+          }
+        }
+      }
       setLinkingPlaylist(pl);
-      setLinkInputUrl('');
+      setLinkInputUrl(detectedUrl);
       setLinkError(null);
       return;
     }
@@ -406,8 +417,8 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                     <span className="text-xs text-neutral-400">{pl.trackIds.length} tracks</span>
 
                     <div className="flex items-center gap-2">
-                      {/* Refresh Button on individual playlist card */}
-                      {isLinked && onSyncPlaylist && (
+                      {/* Refresh Button on individual playlist card - ALWAYS VISIBLE */}
+                      {onSyncPlaylist && (
                         <button
                           id={`playlist-card-refresh-${pl.id}`}
                           onClick={(e) => handleRefreshSinglePlaylist(pl, e)}
@@ -415,11 +426,17 @@ export const LibraryView: React.FC<LibraryViewProps> = ({
                           className={`p-2 rounded-full border text-neutral-300 hover:text-white transition cursor-pointer shadow-md ${
                             isSyncingThis
                               ? 'border-emerald-500/60 bg-emerald-950/90 text-emerald-300 cursor-wait'
-                              : 'border-neutral-700 bg-neutral-900/90 hover:bg-neutral-800 hover:border-emerald-500/50'
+                              : isLinked
+                              ? 'border-neutral-700 bg-neutral-900/90 hover:bg-neutral-800 hover:border-emerald-500/50'
+                              : 'border-neutral-700 bg-neutral-900/90 hover:bg-neutral-800 hover:border-[#1ed760]/60'
                           }`}
-                          title="Refresh playlist: searches YouTube for newly added songs and adds them immediately"
+                          title={
+                            isLinked
+                              ? "Refresh playlist: searches YouTube for newly added songs and adds them immediately"
+                              : "Refresh playlist: connect to YouTube playlist to sync newly added songs anytime"
+                          }
                         >
-                          <RefreshCw className={`w-3.5 h-3.5 ${isSyncingThis ? 'animate-spin text-emerald-400' : 'text-emerald-400'}`} />
+                          <RefreshCw className={`w-3.5 h-3.5 ${isSyncingThis ? 'animate-spin text-emerald-400' : isLinked ? 'text-emerald-400' : 'text-[#1ed760]'}`} />
                         </button>
                       )}
 

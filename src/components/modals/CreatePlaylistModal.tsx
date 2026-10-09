@@ -30,6 +30,7 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [gradient, setGradient] = useState(GRADIENT_OPTIONS[0].value);
+  const [customYoutubeUrl, setCustomYoutubeUrl] = useState('');
 
   // YouTube Playlist import state
   const [youtubePlaylistUrl, setYoutubePlaylistUrl] = useState('');
@@ -114,6 +115,7 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
         onCreatePlaylist(newPlaylist);
       }
     } else {
+      const plId = customYoutubeUrl.trim() ? extractYouTubePlaylistId(customYoutubeUrl.trim()) : null;
       const newPlaylist: Playlist = {
         id: `pl-${Date.now()}`,
         name: name.trim(),
@@ -123,6 +125,9 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
         createdAt: Date.now(),
         updatedAt: Date.now(),
         isCustom: true,
+        youtubePlaylistId: plId || undefined,
+        lastSyncedAt: plId ? Date.now() : undefined,
+        autoSync: plId ? true : false,
       };
 
       onCreatePlaylist(newPlaylist);
@@ -135,6 +140,7 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
   const resetForm = () => {
     setName('');
     setDescription('');
+    setCustomYoutubeUrl('');
     setYoutubePlaylistUrl('');
     setDetectedResult(null);
     setDetectError(null);
@@ -304,6 +310,28 @@ export const CreatePlaylistModal: React.FC<CreatePlaylistModalProps> = ({
               className="w-full bg-[#282828] border border-neutral-700 rounded-lg px-3.5 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#1ed760] transition resize-none"
             />
           </div>
+
+          {/* Optional YouTube playlist link for empty playlist to enable auto-refresh */}
+          {activeTab === 'custom' && (
+            <div>
+              <div className="flex items-center justify-between mb-1.5">
+                <label className="block text-xs font-semibold text-neutral-300">
+                  YouTube Playlist Link (Optional)
+                </label>
+                <span className="text-[10px] text-emerald-400 font-medium">Enables 1-Click Refresh</span>
+              </div>
+              <input
+                type="text"
+                value={customYoutubeUrl}
+                onChange={(e) => setCustomYoutubeUrl(e.target.value)}
+                placeholder="https://youtube.com/playlist?list=PL... (Optional)"
+                className="w-full bg-[#282828] border border-neutral-700 rounded-lg px-3.5 py-2 text-xs text-white placeholder-neutral-500 focus:outline-none focus:border-[#1ed760] transition font-mono"
+              />
+              <p className="text-[11px] text-neutral-500 mt-1">
+                Link to YouTube so this playlist can be refreshed anytime with 1 click to fetch newly added songs!
+              </p>
+            </div>
+          )}
 
           <div>
             <label className="block text-xs font-semibold text-neutral-300 mb-2">
